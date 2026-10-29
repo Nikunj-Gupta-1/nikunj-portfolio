@@ -19,17 +19,17 @@ export function generateLocalAgentResponse(rawInput) {
   const q = input.toLowerCase();
 
   if (!q) {
-    return "Type a question about **Nikunj Gupta** (e.g., *\"What did he build at Jio and Leo Technosoft?\"* or *\"Tell me about his smaller/hobby projects\"*), or run `/help` for terminal commands.";
+    return "Type a question about **Nikunj Gupta** (e.g., *\"How does Nikunj combine AI and Cybersecurity?\"* or *\"Tell me about his smaller/hobby projects\"*), or run `/help` for terminal commands.";
   }
 
   // 1. Direct CLI / Slash commands
   if (q === "/help" || q === "help") {
     return [
       "### `nikunj-agent v2.6` — Command Reference",
-      "- `/whoami` — Core 3-pillar profile, BITS Pilani education (`8.6 CGPA`) & telemetry",
-      "- `/projects` — Summary of the **9 Flagship Engineering Systems** across all 3 pillars",
-      "- `/archive` — Inspect the **7 Additional & Hobby Projects** (`Scotland Yard`, `NetWatch`, `AQI-Forecast`, `Next Class`, `Multiverse RPG RAG`, etc.)",
-      "- `/experience` — Internships at **Jio Platforms**, **Hiroshima University (Japan)**, **Leo Technosoft** & **BITS TAships**",
+      "- `/whoami` — Core **AI + Cybersecurity** profile, 3 verticals (`01. AI Agents`, `02. Cybersecurity & VAPT`, `03. Distributed Systems & ML`) & BITS Pilani education (`8.6 CGPA`)",
+      "- `/projects` — Summary of the **9 Flagship Engineering Systems** across all 3 verticals",
+      "- `/archive` — Inspect the **7 Additional & Hobby Projects** (`NIPA`, `NetWatch`, `Multiverse RPG RAG`, `Scotland Yard`, `AQI-Forecast`, `Next Class`, etc.)",
+      "- `/experience` — Internships at **Jio Platforms (VAPT)**, **Leo Technosoft (Threat ML)**, **Hiroshima University (Japan)** & **BITS TAships**",
       "- `/skills` — Full technical stack grouped by domain",
       "- `/resumes` — Direct links to download the 3 privacy-sanitized Resume PDFs",
       "- `/contact` — Email, GitHub, LinkedIn & availability",
@@ -39,13 +39,30 @@ export function generateLocalAgentResponse(rawInput) {
     ].join("\n");
   }
 
-  if (q === "/whoami" || q === "whoami" || q.includes("who is nikunj") || q.includes("summarize his 3 pillars") || q.includes("three pillars") || q.includes("about nikunj")) {
+  // AI + Cybersecurity specific query or general profile
+  if (
+    q === "/whoami" ||
+    q === "whoami" ||
+    q.includes("who is nikunj") ||
+    q.includes("ai and cybersecurity") ||
+    q.includes("ai + cybersecurity") ||
+    q.includes("summarize") ||
+    q.includes("three pillars") ||
+    q.includes("verticals") ||
+    q.includes("about nikunj")
+  ) {
     return [
       `### ${PROFILE.name} — ${PROFILE.headline}`,
       `${PROFILE.subheadline}`,
       "",
-      "**Equal 3-Pillar Engineering Focus:**",
-      ...PILLARS.map((p) => `- **${p.title}**: ${p.summary}`),
+      "**Core Focus: AI + Cybersecurity & Systems Engineering (3 Verticals in Priority Order):**",
+      ...PILLARS.map((p, idx) => `${idx + 1}. **${p.title}**: ${p.summary}`),
+      "",
+      "**Key AI + Cybersecurity Highlights:**",
+      "- **Jio Platforms VAPT Internship:** Automated vulnerability assessments across `1,000+` enterprise servers (Nessus), Trend Micro SIEM analysis, Burp/Metasploit API pentesting, and Docker/K8s RBAC audits.",
+      "- **Autonomous Attack Surface Manager (`asm-tool` + `CYBER_MultiTool`):** Orchestrated 11 OSINT CLI scanners with an interactive HTML5 Canvas graph, `'Friday'` local LLM security analyst, and NVD/MITRE/CISA KEV PostgreSQL normalization (`100%` detection on `pentest-ground.com`).",
+      "- **Evidence-Removal Sensitivity Tester (`GENAI PROJECT`):** Scientific benchmark across `720` trials testing whether LLMs hallucinate `AFFECTED_CONFIRMED` vulnerability verdicts when proof facts ($I \\land V \\land R$) are removed, mitigated via `MinimumEvidenceGate`.",
+      "- **Real-Time Network Threat ML (`LTS-Files` & `ML-PROJECT`):** `2.0 Gbps` Linux `AF_XDP` DDoS detection pipeline (`73ms` SLA, `99.2%` ensemble accuracy) and a `264,925`-flow 7-class IoT NIDS (`0.98` DoS / `0.89` DDoS F1).",
       "",
       `**Education:** ${PROFILE.education.degree} @ **${PROFILE.education.institution}** (\`CGPA: ${PROFILE.education.cgpa}\`, ${PROFILE.education.graduation}).`,
       `**Contact:** [${PROFILE.links.email}](mailto:${PROFILE.links.email}) • [GitHub](${PROFILE.links.github}) • [LinkedIn](${PROFILE.links.linkedin})`
@@ -78,14 +95,14 @@ export function generateLocalAgentResponse(rawInput) {
           `${i + 1}. **${p.title}** (\`${p.date}\`)\n   - **Stack:** \`${p.stack.join("`, `")}\`\n   - **Highlights:** ${p.summary}`
       ),
       "",
-      "*Ask me about any specific one (e.g., \"How does Digital Scotland Yard prevent cheating?\" or \"Tell me about the Multiverse RPG vector search\") for a deep dive!*"
+      "*Ask me about any specific one (e.g., \"Tell me about NIPA Stacked Security Ensemble\", \"How does Digital Scotland Yard prevent cheating?\", or \"Tell me about the Multiverse RPG vector search\") for a deep dive!*"
     ].join("\n");
   }
 
   // Flagship projects overview command
   if (q === "/projects" || q === "projects") {
     return [
-      "### 9 Flagship Engineering Projects (3 Per Pillar)",
+      "### 9 Flagship Engineering Projects (Ordered: AI Agents → Cybersecurity & VAPT → Distributed Systems)",
       ...FLAGSHIP_PROJECTS.map(
         (p) => `- **[${p.code}] ${p.title}** (*${p.pillarLabel}*): ${p.subtitle} — \`${p.metrics.slice(0, 2).join(" | ")}\``
       ),
@@ -102,19 +119,19 @@ export function generateLocalAgentResponse(rawInput) {
 
   const projectKeywords = [
     { id: "local-agent", terms: ["local-agent", "local agent", "coding agent", "scratchpad", "react loop", "nemotron", "gemma 4"] },
-    { id: "ticket-triage-pipeline", terms: ["ticket", "triage", "deriv", "11-stage", "state machine", "gemini api", "human_review"] },
-    { id: "evidence-sensitivity-tester", terms: ["evidence-removal", "evidence removal", "sensitivity tester", "osv", "minimumevidencegate", "genai project", "ablation"] },
-    { id: "ddos-detection-pipeline", terms: ["ddos", "af_xdp", "af_packet", "kafka", "73ms", "73 ms", "2.0 gbps", "2 gbps", "lts-files", "healthcare predictor"] },
-    { id: "hiroshima-robotics-vision", terms: ["hiroshima", "robot", "teleoperation", "coppeliasim", "mediapipe", "inverse kinematics", "hip"] },
-    { id: "c-subset-optimizing-compiler", terms: ["compiler", "ply", "lex-yacc", "lalr", "three-address", "tac", "constant folding", "ccp"] },
+    { id: "evidence-sensitivity-tester", terms: ["evidence-removal", "evidence removal", "sensitivity tester", "osv", "minimumevidencegate", "genai project", "ablation", "vulnerability triage", "vulnerability benchmark"] },
+    { id: "ticket-triage-pipeline", terms: ["ticket", "deriv", "11-stage", "state machine", "gemini api", "human_review"] },
     { id: "autonomous-asm-platform", terms: ["asm", "attack surface", "friday", "osint", "subfinder", "nuclei", "naabu", "cyber_multitool", "nvd"] },
     { id: "multiclass-iot-nids", terms: ["nids", "264,925", "cic-iot-diad", "ml-project", "7-class", "intrusion detection"] },
     { id: "encrypted-p2p-chat-suite", terms: ["chatapp", "p2p", "diffie-hellman", "encrypted chat", "aes-256", "hmac", "perfect forward secrecy", "traffic padding"] },
+    { id: "ddos-detection-pipeline", terms: ["ddos", "af_xdp", "af_packet", "kafka", "73ms", "73 ms", "2.0 gbps", "2 gbps", "lts-files", "healthcare predictor"] },
+    { id: "hiroshima-robotics-vision", terms: ["hiroshima", "robot", "teleoperation", "coppeliasim", "mediapipe", "inverse kinematics", "hip"] },
+    { id: "c-subset-optimizing-compiler", terms: ["compiler", "ply", "lex-yacc", "lalr", "three-address", "tac", "constant folding", "ccp"] },
+    { id: "nipa-hybrid-datamining", terms: ["nipa", "smote", "anova", "ciciot2023", "dm-project", "stacked ensemble"] },
     { id: "multiverse-rpg-semantic-search", terms: ["multiverse", "rpg", "codex", "semantic", "all-minilm", "negation blindness", "384-d", "llm projects"] },
+    { id: "netwatch-port-dashboard", terms: ["netwatch", "port-dashboard", "port monitoring", "psutil", "lsof", "72-hour"] },
     { id: "scotland-yard-digital", terms: ["scotland yard", "mister x", "board game", "tabletop", "bezier", "suspect possibility cloud", "web audio"] },
     { id: "aqi-forecast-lstm", terms: ["aqi", "air quality", "lstm", "here traffic", "jamfactor"] },
-    { id: "netwatch-port-dashboard", terms: ["netwatch", "port-dashboard", "port monitoring", "psutil", "lsof", "72-hour"] },
-    { id: "nipa-hybrid-datamining", terms: ["nipa", "smote", "anova", "ciciot2023", "dm-project", "stacked ensemble"] },
     { id: "next-class-macos-app", terms: ["next class", "timetable", "rumps", "status bar", "py2app"] },
     { id: "grpc-and-gesturedeck", terms: ["grpc", "protobuf", "gesturedeck", "gesture_control", "50051"] }
   ];
@@ -157,7 +174,7 @@ export function generateLocalAgentResponse(rawInput) {
     q.includes("ta ")
   ) {
     return [
-      "### Professional Experience, Research & Teaching",
+      "### Professional Experience, Security Operations & Research",
       ...EXPERIENCE.map(
         (e) =>
           `#### ${e.role} @ **${e.organization}** (\`${e.period}\` • ${e.location})\n${e.highlights.map((h) => `- ${h}`).join("\n")}`
@@ -168,7 +185,7 @@ export function generateLocalAgentResponse(rawInput) {
   // Skills / Tech stack queries
   if (q === "/skills" || q === "skills" || q.includes("tech stack") || q.includes("languages") || q.includes("skills")) {
     return [
-      "### Technical Skills & Engineering Stack",
+      "### Technical Skills & Engineering Stack (AI + Cybersecurity + Systems)",
       ...SKILL_GROUPS.map((g) => `- **${g.category}:** \`${g.items.join("`, `")}\``),
       "",
       "**Certifications & Leadership:**",
@@ -191,7 +208,7 @@ export function generateLocalAgentResponse(rawInput) {
   if (q === "/resumes" || q === "resumes" || q.includes("resume") || q.includes("cv") || q.includes("pdf")) {
     return [
       "### Multi-Track Sanitized Resume PDFs",
-      "You can download Nikunj's role-tailored CVs directly from the top bar or Resume section:",
+      "You can download Nikunj's role-tailored CVs directly from the navigation menu or Resume section:",
       ...RESUME_TRACKS.map(
         (r) => `- **[${r.label}](${r.filename})** — *${r.focus}*`
       )
@@ -205,18 +222,18 @@ export function generateLocalAgentResponse(rawInput) {
       `- **Email:** [${PROFILE.links.email}](mailto:${PROFILE.links.email})`,
       `- **GitHub:** [${PROFILE.links.github}](${PROFILE.links.github})`,
       `- **LinkedIn:** [${PROFILE.links.linkedin}](${PROFILE.links.linkedin})`,
-      `- **Location:** ${PROFILE.location} (Graduating Q3 2027 • Open to AI/Data, Software/Systems, and Cybersecurity internships & roles)`
+      `- **Location:** ${PROFILE.location} (Graduating Q3 2027 • Focused on **AI + Cybersecurity**, AI Agents, VAPT, and Distributed Systems roles)`
     ].join("\n");
   }
 
   // General fallback summary with helpful pointers
   return [
-    `I indexed your query against **${PROFILE.name}'s** 16 engineering projects and experience profile:`,
+    `I indexed your query against **${PROFILE.name}'s** 16 engineering projects and **AI + Cybersecurity** profile:`,
     "",
-    "- **AI Agents & Data Science:** Built `local-agent` (pure Python ReAct coding runtime with 80% context window masking), an 11-stage `Google Gemini` support triage state machine, an `OSV Vulnerability Benchmark` (720 trials), and a 384-d `Dense Vector Semantic Search` engine.",
-    "- **Distributed Systems & ML:** Engineered a `2.0 Gbps` Linux `AF_XDP` + `Kafka` + `gRPC` DDoS pipeline (`73ms` median alert latency, `99.2%` ensemble accuracy at **Leo Technosoft**), a `30+ FPS` MediaPipe-to-CoppeliaSim robotics controller at **Hiroshima University (Japan)**, and an optimizing `LALR(1) C Compiler`.",
-    "- **Cybersecurity & VAPT:** Automated Nessus compliance across `1,000+` enterprise servers at **Jio Platforms**, unified 11 OSINT CLI tools with a local LLM copilot (`asm-tool`), and built a `264,925`-flow IoT NIDS + `RSA/Diffie-Hellman` E2EE chat suite.",
+    "- **01. AI Agents, LLMs & AI Security:** Built `local-agent` (pure Python ReAct runtime & macOS desktop app with 2-tier intent routing and 80% context window masking), an `OSV LLM Vulnerability Triage Benchmark` across 720 trials (`MinimumEvidenceGate`), and an 11-stage `Google Gemini` support triage state machine.",
+    "- **02. Cybersecurity, VAPT & Threat Intelligence:** Automated Nessus compliance & API/K8s VAPT across `1,000+` enterprise servers at **Jio Platforms**, unified 11 OSINT CLI tools with the `'Friday'` local LLM security copilot (`asm-tool` + `CYBER_MultiTool` CVE PostgreSQL pipeline), and built a `264,925`-flow IoT NIDS + `RSA/Diffie-Hellman` PFS E2EE chat suite.",
+    "- **03. Distributed Systems, ML & Software Engineering:** Engineered a `2.0 Gbps` Linux `AF_XDP` + `Kafka` + `gRPC` DDoS detection pipeline (`73ms` median alert latency, `99.2%` ensemble accuracy at **Leo Technosoft**), a `30+ FPS` MediaPipe-to-CoppeliaSim robotics controller at **Hiroshima University (Japan)**, and an optimizing `LALR(1) C Compiler`.",
     "",
-    "*Tip: Ask about a specific project (including hidden ones like `Digital Scotland Yard`, `NetWatch`, or `Next Class`), or type `/archive`, `/experience`, or `/help`!*"
+    "*Tip: Ask about a specific project (including hidden ones like `NIPA`, `NetWatch`, `Digital Scotland Yard`, or `Next Class`), or type `/archive`, `/experience`, or `/help`!*"
   ].join("\n");
 }

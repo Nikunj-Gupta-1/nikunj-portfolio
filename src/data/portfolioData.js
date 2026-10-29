@@ -6,9 +6,9 @@
 export const PROFILE = {
   name: "Nikunj Gupta",
   handle: "nikunj@command-center",
-  headline: "AI Agents & LLMs • Distributed Systems & ML • Cybersecurity & VAPT",
+  headline: "AI Agents & LLMs • Cybersecurity & VAPT • Distributed Systems & ML",
   subheadline:
-    "Final-year Computer Science & Data Science engineer at BITS Pilani Dubai (CGPA: 8.6/10) building autonomous tool-use AI agents, sub-100ms distributed ML telemetry pipelines, and enterprise security automation.",
+    "Final-year Computer Science & Data Science engineer at BITS Pilani Dubai (CGPA: 8.6/10) specializing in the intersection of AI + Cybersecurity — building autonomous security & coding agents, LLM vulnerability triage benchmarks, enterprise VAPT automation across 1,000+ servers, and 2.0 Gbps real-time threat detection pipelines.",
   location: "Dubai, UAE",
   education: {
     institution: "Birla Institute of Technology and Science (BITS Pilani), Dubai Campus",
@@ -21,9 +21,9 @@ export const PROFILE = {
       "Deep Learning",
       "Machine Learning",
       "Data Mining",
-      "Compiler Construction",
-      "Operating Systems",
       "Computer Networks",
+      "Operating Systems",
+      "Compiler Construction",
       "Database Systems",
       "Applied Statistical Methods"
     ]
@@ -34,10 +34,10 @@ export const PROFILE = {
     linkedin: "https://linkedin.com/in/nikunj-gupta-242630279"
   },
   telemetryMetrics: [
-    { label: "CGPA (BITS Pilani)", value: "8.6 / 10", detail: "CS Major + Data Science Minor" },
-    { label: "Packet Capture Line-Rate", value: "2.0 Gbps", detail: "Linux AF_XDP zero-copy kernel bypass" },
-    { label: "DDoS Alert Latency", value: "73 ms", detail: "Kafka + gRPC + Soft-Voting Ensemble (99.2% acc)" },
-    { label: "Enterprise VAPT Scope", value: "1,000+ Servers", detail: "Automated Nessus & container audits at Jio" }
+    { label: "Enterprise VAPT Scope", value: "1,000+ Servers", detail: "Automated Nessus, API & K8s audits at Jio" },
+    { label: "Packet Capture Line-Rate", value: "2.0 Gbps", detail: "Linux AF_XDP zero-copy DDoS threat engine" },
+    { label: "Threat Alert Latency", value: "73 ms", detail: "Kafka + gRPC + Soft-Voting Ensemble (99.2% acc)" },
+    { label: "CGPA (BITS Pilani)", value: "8.6 / 10", detail: "B.E. CS + Data Science Minor • Graduating 2027" }
   ]
 };
 
@@ -45,58 +45,59 @@ export const PILLARS = [
   {
     id: "ai-data",
     cmd: "--pillar=ai-data",
-    shortLabel: "AI Agents & Data Science",
-    title: "AI Agents, LLMs & Data Science",
+    shortLabel: "AI Agents & AI Security",
+    title: "AI Agents, LLMs & AI Security",
     accent: "cyan",
-    badge: "PILLAR 01 // AGENTIC AI",
+    badge: "PILLAR 01 // AGENTIC AI & LLMs",
     summary:
-      "Zero-framework ReAct coding agents, deterministic LLM evaluation harnesses, guardrailed enterprise triage state machines, and pure linear-algebra dense vector retrieval.",
+      "Zero-framework ReAct coding & security agents, deterministic LLM vulnerability triage benchmarks, guardrailed enterprise state machines, and pure linear-algebra dense vector retrieval.",
     highlights: [
-      "Scratchpad context masking (>80% window eviction) for 8B local & 550B NIM models",
+      "Propositional logic OSV vulnerability benchmark (I ∧ V ∧ R) across 720 LLM trials",
+      "Zero-framework ReAct runtime with 2-tier intent router & 80% context window masking",
       "11-stage logged Gemini state machine with 2-tier Pydantic v2 self-healing retry",
-      "Propositional logic benchmark (I ∧ V ∧ R) across 720 OSV vulnerability trials",
       "384-d dense vector semantic retrieval & negation-blindness geometry analysis"
-    ]
-  },
-  {
-    id: "systems-ml",
-    cmd: "--pillar=systems-ml",
-    shortLabel: "Systems, ML & Robotics",
-    title: "Software, Distributed Systems & ML Engineering",
-    accent: "emerald",
-    badge: "PILLAR 02 // SYSTEMS & ML",
-    summary:
-      "High-throughput Linux kernel-bypass packet engines, Apache Kafka streaming pipelines, multi-phase optimizing C compilers, and real-time computer vision robotic teleoperation.",
-    highlights: [
-      "2.0 Gbps AF_XDP packet capture + Kafka + gRPC pipeline with 73ms median SLA",
-      "30+ FPS MediaPipe 3D pose tracking driving CoppeliaSim inverse kinematics (<50ms)",
-      "End-to-end LALR(1) C-subset compiler with TAC quadruples, constant folding & DCE",
-      "Low-overhead FastAPI + SQLite telemetry daemons (<2% CPU, <50MB RAM)"
     ]
   },
   {
     id: "cyber-sec",
     cmd: "--pillar=cyber-sec",
     shortLabel: "Cybersecurity & VAPT",
-    title: "Cybersecurity, VAPT & Cryptographic Systems",
+    title: "Cybersecurity, VAPT & Threat Intelligence",
     accent: "amber",
-    badge: "PILLAR 03 // SECURITY & VAPT",
+    badge: "PILLAR 02 // CYBERSECURITY & VAPT",
     summary:
-      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM analysts, multi-class IoT NIDS, and Perfect Forward Secrecy E2EE.",
+      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM security analysts, multi-Source CVE SQL normalization, IoT NIDS, and Perfect Forward Secrecy E2EE.",
     highlights: [
-      "Automated Nessus compliance & Burp/Metasploit API pentesting at Jio Platforms",
+      "Automated Nessus compliance, Trend Micro SIEM & Burp/Metasploit VAPT at Jio Platforms",
       "11-tool OSINT recon orchestrator with HTML5 Canvas physics map & 'Friday' LLM copilot",
-      "264,925-flow CIC-IoT-DIAD2024 XGBoost NIDS (0.98 DoS / 0.89 DDoS F1, ~50ms CPU)",
-      "Signed ephemeral Diffie-Hellman (RSA-2048 + AES-256-CBC + HMAC-SHA256) P2P suite"
+      "Multi-source CVE/NVD/MITRE/CISA KEV ingestion & CPE normalization into PostgreSQL",
+      "264,925-flow CIC-IoT-DIAD2024 XGBoost NIDS (0.98 DoS / 0.89 DDoS F1, ~50ms CPU)"
+    ]
+  },
+  {
+    id: "systems-ml",
+    cmd: "--pillar=systems-ml",
+    shortLabel: "Systems, ML & Robotics",
+    title: "Distributed Systems, ML & Software Engineering",
+    accent: "emerald",
+    badge: "PILLAR 03 // SYSTEMS & ML",
+    summary:
+      "High-throughput Linux kernel-bypass packet engines, Apache Kafka streaming pipelines, multi-phase optimizing C compilers, and real-time computer vision robotic teleoperation.",
+    highlights: [
+      "2.0 Gbps AF_XDP packet capture + Kafka + gRPC DDoS pipeline with 73ms median SLA",
+      "30+ FPS MediaPipe 3D pose tracking driving CoppeliaSim inverse kinematics (<50ms)",
+      "End-to-end LALR(1) C-subset compiler with TAC quadruples, constant folding & DCE",
+      "Low-overhead FastAPI + SQLite network socket telemetry daemons (<2% CPU, <50MB RAM)"
     ]
   }
 ];
 
 /**
  * 9 Flagship Projects displayed on the main Command-Center Grid (3 per Pillar)
+ * Ordered: 01. AI Agents & AI Security -> 02. Cybersecurity & VAPT -> 03. Distributed Systems & ML
  */
 export const FLAGSHIP_PROJECTS = [
-  // ================= PILLAR 1: AI AGENTS, LLMs & DATA SCIENCE =================
+  // ================= PILLAR 1: AI AGENTS, LLMs & AI SECURITY =================
   {
     id: "local-agent",
     pillar: "ai-data",
@@ -138,10 +139,46 @@ export const FLAGSHIP_PROJECTS = [
 └──────────────────────────────────────────────────────────────────────────┘`
   },
   {
+    id: "evidence-sensitivity-tester",
+    pillar: "ai-data",
+    pillarLabel: "AI + Cybersecurity Eval",
+    code: "SYS-02",
+    title: "Evidence-Removal Sensitivity Tester (AI Security Benchmark)",
+    subtitle: "Propositional logic evaluation benchmark testing LLM vulnerability triage under missing evidence",
+    date: "Sep 2026",
+    repoPath: "GENAI PROJECT/",
+    metrics: ["720 Evaluation Trials", "6 Perturbation Conditions", "Zero False Positives (Gate)", "10k Bootstrap CI"],
+    stack: ["Python 3.11+", "Pydantic v2", "Ollama (Gemma 3 / Qwen 3)", "OSV Vulnerability API", "SciPy", "NumPy", "Pytest"],
+    summary:
+      "Scientific AI + Cybersecurity evaluation harness testing whether LLMs in automated vulnerability-triage pipelines erroneously preserve `AFFECTED_CONFIRMED` verdicts when decisive applicability facts are ablated, paired with an external deterministic `MinimumEvidenceGate`.",
+    bullets: [
+      "Formalized vulnerability applicability as a strict conjunction of three indispensable propositions: Package Identity (I), Installed Version (V), and Affected Range (R): Applicability ⟺ I ∧ V ∧ R.",
+      "Synthesized counterfactually anonymized OSV advisories across PyPI, npm, and Maven to eliminate pretraining memorization across 6 controlled perturbation conditions (`FULL`, `REMOVE_DECISIVE`, `REMOVE_DISTRACTOR`, `DISCONFIRM`, `CONFLICT`, `PARAPHRASE_ORDER`).",
+      "Engineered `MinimumEvidenceGate` to verify propositional proof sets prior to verdict emission, alongside 10,000 paired cluster bootstrap resamples and exact McNemar tests with Holm-Bonferroni corrections."
+    ],
+    architecture: `Real-World OSV Advisories (PyPI / npm / Maven)
+       │
+       ▼
+[Counterfactual Cryptographic Alias Anonymizer] (Eliminates LLM Memorization)
+       │
+       ├──► 1. FULL (I ∧ V ∧ R + Distractors)     ──► Ground Truth: AFFECTED_CONFIRMED
+       ├──► 2. REMOVE_DECISIVE (Ablate I, V, or R)──► Ground Truth: INSUFFICIENT_EVIDENCE
+       ├──► 3. REMOVE_DISTRACTOR (Drop CVSS/Date) ──► Ground Truth: AFFECTED_CONFIRMED
+       ├──► 4. DISCONFIRM (Safe Fixed Version)    ──► Ground Truth: NOT_AFFECTED_CONFIRMED
+       ├──► 5. CONFLICT (Contradictory Versions)  ──► Ground Truth: CONFLICTING_EVIDENCE
+       └──► 6. PARAPHRASE_ORDER (Surface Permute) ──► Ground Truth: AFFECTED_CONFIRMED
+       │
+       ▼
+[Local LLM Inference (Gemma 3 / Qwen 3) + Pydantic v2 Schema]
+       │
+       ▼
+[MinimumEvidenceGate: Verifies (I ∧ V ∧ R) ──► Guarantees 0% Unwarranted Persistence]`
+  },
+  {
     id: "ticket-triage-pipeline",
     pillar: "ai-data",
-    pillarLabel: "AI Agents & LLMs",
-    code: "SYS-02",
+    pillarLabel: "AI Agents & Guardrails",
+    code: "SYS-03",
     title: "AI Support Ticket Triage & Safe Reply Pipeline",
     subtitle: "11-stage state machine with dynamic schema ingestion, self-healing parser & safety guardrails",
     date: "Sep 2026",
@@ -173,49 +210,115 @@ export const FLAGSHIP_PROJECTS = [
                                                  ▼
                                  [SHA-256 Hashed llm_calls.jsonl Audit]`
   },
+
+  // ================= PILLAR 2: CYBERSECURITY, VAPT & THREAT INTELLIGENCE =================
   {
-    id: "evidence-sensitivity-tester",
-    pillar: "ai-data",
-    pillarLabel: "AI Agents & Security Eval",
-    code: "SYS-03",
-    title: "Evidence-Removal Sensitivity Tester (LLM Benchmark)",
-    subtitle: "Propositional logic evaluation benchmark testing LLM vulnerability triage under missing evidence",
-    date: "Sep 2026",
-    repoPath: "GENAI PROJECT/",
-    metrics: ["720 Evaluation Trials", "6 Perturbation Conditions", "Zero False Positives (Gate)", "10k Bootstrap CI"],
-    stack: ["Python 3.11+", "Pydantic v2", "Ollama (Gemma 3 / Qwen 3)", "OSV API", "SciPy", "NumPy", "Pytest"],
+    id: "autonomous-asm-platform",
+    pillar: "cyber-sec",
+    pillarLabel: "Cybersecurity & AI Copilot",
+    code: "SYS-04",
+    title: "Autonomous Attack Surface Manager & 'Friday' AI Copilot",
+    subtitle: "11-tool OSINT recon orchestrator, HTML5 Canvas physics graph, local LLM analyst & CVE SQL pipeline",
+    date: "Jun 2026",
+    repoPath: "asm-tool/ & CYBER_MultiTool/",
+    metrics: ["11 OSINT CLI Tools", "100% Detection Rate", "Force-Directed Graph", "Multi-Source CVE Sync"],
+    stack: ["Python", "Go", "Ollama / LM Studio", "SQLite & PostgreSQL", "HTML5 Canvas", "subfinder / naabu / nuclei / nmap"],
     summary:
-      "Scientific evaluation harness testing whether LLMs in vulnerability-triage pipelines erroneously preserve `AFFECTED_CONFIRMED` verdicts when decisive applicability facts are ablated, paired with an external deterministic `MinimumEvidenceGate`.",
+      "Unified offensive security reconnaissance platform orchestrating 11 CLI utilities in the background, mapping discovered assets onto an interactive HTML5 Canvas force-directed graph, paired with 'Friday' (a local LLM security copilot) and a multi-source CVE/NVD SQL normalization pipeline.",
     bullets: [
-      "Formalized vulnerability applicability as a strict conjunction of three indispensable propositions: Package Identity (I), Installed Version (V), and Affected Range (R): Applicability ⟺ I ∧ V ∧ R.",
-      "Synthesized counterfactually anonymized OSV advisories across PyPI, npm, and Maven to eliminate pretraining memorization across 6 controlled perturbation conditions (`FULL`, `REMOVE_DECISIVE`, `REMOVE_DISTRACTOR`, `DISCONFIRM`, `CONFLICT`, `PARAPHRASE_ORDER`).",
-      "Engineered `MinimumEvidenceGate` to verify propositional proof sets prior to verdict emission, alongside 10,000 paired cluster bootstrap resamples and exact McNemar tests with Holm-Bonferroni corrections."
+      "Orchestrated `subfinder`, `dnsx`, `naabu`, `nmap`, `httpx`, `katana`, `waybackurls`, and `nuclei` with thread-locked state persistence in SQLite, achieving a 100% finding detection rate on `pentest-ground.com`.",
+      "Built a custom HTML5 Canvas force-directed physics graph mapping root domains, subdomains, live servers, open ports, and critical CVEs with real-time node inspection.",
+      "Embedded 'Friday' local LLM analyst to parse raw scan logs and draft remediation reports, backed by `CYBER_MultiTool` syncing NVD, MITRE, CISA KEV, and OSV feeds into normalized PostgreSQL/SQLite tables."
     ],
-    architecture: `Real-World OSV Advisories (PyPI / npm / Maven)
+    architecture: `[Target Domain Input]
        │
        ▼
-[Counterfactual Cryptographic Alias Anonymizer] (Eliminates LLM Memorization)
+[Thread-Safe Python Recon Orchestrator]
+ ├── Discovery: subfinder, subdominator, dnsx, puredns
+ ├── Port & Service: naabu, nmap, httpx
+ └── Crawl & Vuln: katana, gau, waybackurls, nuclei
        │
-       ├──► 1. FULL (I ∧ V ∧ R + Distractors)     ──► Ground Truth: AFFECTED_CONFIRMED
-       ├──► 2. REMOVE_DECISIVE (Ablate I, V, or R)──► Ground Truth: INSUFFICIENT_EVIDENCE
-       ├──► 3. REMOVE_DISTRACTOR (Drop CVSS/Date) ──► Ground Truth: AFFECTED_CONFIRMED
-       ├──► 4. DISCONFIRM (Safe Fixed Version)    ──► Ground Truth: NOT_AFFECTED_CONFIRMED
-       ├──► 5. CONFLICT (Contradictory Versions)  ──► Ground Truth: CONFLICTING_EVIDENCE
-       └──► 6. PARAPHRASE_ORDER (Surface Permute) ──► Ground Truth: AFFECTED_CONFIRMED
+       ├──────────────────────────────┬──────────────────────────────┐
+       ▼                              ▼                              ▼
+[SQLite Telemetry Store]   [HTML5 Canvas Physics Map]   ["Friday" Local LLM Copilot]
+       │                   (Interactive Asset Graph)    (Parses Logs & Drafts Reports)
+       ▼
+[CYBER_MultiTool: NVD + MITRE + CISA KEV + OSV ──► CPE Normalization ──► PostgreSQL]`
+  },
+  {
+    id: "multiclass-iot-nids",
+    pillar: "cyber-sec",
+    pillarLabel: "Network Defense & Security ML",
+    code: "SYS-05",
+    title: "Multi-Class IoT Network Intrusion Detection System",
+    subtitle: "7-class anomaly NIDS trained on 264,925 CIC-IoT-DIAD2024 flows with ~50ms CPU inference",
+    date: "Sep – Dec 2025",
+    repoPath: "ML-PROJECT/",
+    metrics: ["264,925 Flow Records", "80 Flow Features", "0.98 DoS / 0.89 DDoS F1", "~50 ms CPU Inference"],
+    stack: ["Python", "XGBoost", "TensorFlow (CNN-LSTM)", "Scikit-learn", "Pandas", "NumPy", "Joblib"],
+    summary:
+      "End-to-end 7-class Network Intrusion Detection System classifying IoT and enterprise traffic (Brute Force, DDoS, DoS, Normal, Recon, Spoofing, Web Attacks) across 264,925 consolidated flows from the CIC-IoT-DIAD2024 dataset.",
+    bullets: [
+      "Engineered a multithreaded data consolidation pipeline (`prepare_dataset_custom.py`) to crawl 1,000+ raw CSVs, map 33 attack sub-types into 7 core classes, impute medians, deduplicate, and scale 80 flow attributes.",
+      "Benchmarked a deep hybrid CNN-LSTM network against gradient-boosted trees, deploying an optimized 300-tree XGBoost classifier (depth 8, lr 0.1) achieving 0.98 F1 on DoS and 0.89 F1 on DDoS.",
+      "Built `real_time_inference.py` (`NetworkFlowExtractor` + `RealTimeIDSPredictor` + `RealTimeMonitor`) delivering ~50ms per-sample inline CPU auditing and JSON forensic alerting."
+    ],
+    architecture: `[1,000+ Raw CIC-IoT-DIAD2024 CSV Files (33 Sub-Attack Types)]
        │
        ▼
-[Local LLM Inference (Gemma 3 / Qwen 3) + Pydantic v2 Schema]
+[Multithreaded ETL: Merge, Median Impute, Deduplicate, StandardScaler]
        │
        ▼
-[MinimumEvidenceGate: Verifies (I ∧ V ∧ R) ──► Guarantees 0% Unwarranted Persistence]`
+[Unified Dataset: 264,925 Rows × 80 Network Flow Features]
+       │
+       ├──► Benchmark A: Hybrid CNN-LSTM Deep Network
+       └──► Benchmark B: Optimized XGBoost (300 Trees, Max Depth 8) ◄── Selected
+                                     │
+                                     ▼
+[Production Engine: NetworkFlowExtractor ──► RealTimeIDSPredictor (~50 ms CPU)]
+                                     │
+                                     ▼
+         [Severity Classification (NONE..CRITICAL) + Forensic JSON Log]`
+  },
+  {
+    id: "encrypted-p2p-chat-suite",
+    pillar: "cyber-sec",
+    pillarLabel: "Cryptography & Protocol Security",
+    code: "SYS-06",
+    title: "ChatApp: E2EE Peer-to-Peer Cryptographic Suite",
+    subtitle: "Signed Ephemeral Diffie-Hellman (PFS), AES-256-CBC + HMAC-SHA256 & traffic-analysis padding",
+    date: "Feb 2026",
+    repoPath: "Message/",
+    metrics: ["Perfect Forward Secrecy", "RSA-2048 + Ephemeral DH", "Encrypt-then-MAC", "Anti-Replay & Padding"],
+    stack: ["Python", "PyCryptodome", "Flask & Socket.IO", "Tkinter (Sun Valley)", "Raw TCP Sockets", "WebSockets"],
+    summary:
+      "Multi-client end-to-end encrypted communication suite (Tkinter Desktop GUI, Flask/Socket.IO Web UI, and CLI) sharing a unified cryptographic protocol with Perfect Forward Secrecy, Encrypt-then-MAC integrity, and side-channel traffic padding.",
+    bullets: [
+      "Implemented RSA-2048 identity signatures over ephemeral Diffie-Hellman key exchanges to guarantee Perfect Forward Secrecy (PFS), deriving isolated `enc_key` and `mac_key` secrets via SHA-256 KDF.",
+      "Enforced Encrypt-then-MAC payload security: AES-256-CBC encryption paired with an HMAC-SHA256 tag computed over `(IV || 64-bit sequence counter || ciphertext)` to block bit-flipping and replay attacks.",
+      "Mitigated timing and packet-size side-channel analysis using adaptive dummy packet padding over 4-byte length-prefixed TCP streams, plus a 3-strike brute-force lockout gate."
+    ],
+    architecture: `[Node A (Desktop / Web / CLI)]                           [Node B (Desktop / Web / CLI)]
+       │                                                                │
+       ├─── 1. Exchange RSA-2048 Signed Ephemeral DH Public Keys ──────►│
+       │◄── 2. Verify Signature & Compute Shared Secret (PFS) ──────────┤
+       │                                                                │
+       ▼                                                                ▼
+[SHA-256 KDF ──► Separate Symmetric Keys: enc_key (AES-256) + mac_key (HMAC)]
+       │
+       ▼
+[Encrypt-then-MAC Frame Builder]
+ • Payload ──► AES-256-CBC(enc_key, random IV)
+ • Tag     ──► HMAC-SHA256(mac_key, IV || 64-bit SeqCounter || Ciphertext)
+ • Stream  ──► 4-Byte Big-Endian Length Header + Adaptive Dummy Traffic Padding`
   },
 
-  // ================= PILLAR 2: SOFTWARE, DISTRIBUTED SYSTEMS & ML =================
+  // ================= PILLAR 3: DISTRIBUTED SYSTEMS, ML & SOFTWARE ENGINEERING =================
   {
     id: "ddos-detection-pipeline",
     pillar: "systems-ml",
-    pillarLabel: "Distributed Systems & ML",
-    code: "SYS-04",
+    pillarLabel: "Distributed Systems & Threat ML",
+    code: "SYS-07",
     title: "Distributed Real-Time DDoS Detection Pipeline",
     subtitle: "2.0 Gbps Linux AF_XDP zero-copy packet capture, Kafka streaming & 73ms ensemble inference",
     date: "Jun – Aug 2025",
@@ -248,7 +351,7 @@ export const FLAGSHIP_PROJECTS = [
     id: "hiroshima-robotics-vision",
     pillar: "systems-ml",
     pillarLabel: "Robotics & Computer Vision",
-    code: "SYS-05",
+    code: "SYS-08",
     title: "Vision-Guided Robotic Teleoperation & Pose Tracking",
     subtitle: "30+ FPS MediaPipe 3D pose/gesture estimation driving CoppeliaSim inverse kinematics (<50ms)",
     date: "Jul 2026",
@@ -283,7 +386,7 @@ export const FLAGSHIP_PROJECTS = [
     id: "c-subset-optimizing-compiler",
     pillar: "systems-ml",
     pillarLabel: "Compilers & Systems",
-    code: "SYS-06",
+    code: "SYS-09",
     title: "PLY-Based C-Subset Optimizing Compiler",
     subtitle: "Multi-phase compiler from Lexer & LALR(1) AST parser to TAC optimization & virtual assembly",
     date: "Feb – May 2026",
@@ -316,108 +419,6 @@ export const FLAGSHIP_PROJECTS = [
        │
        ▼
 [Phase 6: Virtual Register Allocator (R0..Rn)] ──► Target Virtual Machine Assembly`
-  },
-
-  // ================= PILLAR 3: CYBERSECURITY, VAPT & CRYPTOGRAPHY =================
-  {
-    id: "autonomous-asm-platform",
-    pillar: "cyber-sec",
-    pillarLabel: "Cybersecurity & AI Copilot",
-    code: "SYS-07",
-    title: "Autonomous Attack Surface Manager & 'Friday' AI Copilot",
-    subtitle: "11-tool OSINT recon orchestrator, HTML5 Canvas physics graph, local LLM analyst & CVE SQL pipeline",
-    date: "Jun 2026",
-    repoPath: "asm-tool/ & CYBER_MultiTool/",
-    metrics: ["11 OSINT CLI Tools", "100% Detection Rate", "Force-Directed Graph", "Multi-Source CVE Sync"],
-    stack: ["Python", "Go", "Ollama / LM Studio", "SQLite & PostgreSQL", "HTML5 Canvas", "subfinder / naabu / nuclei / nmap"],
-    summary:
-      "Unified offensive security reconnaissance platform orchestrating 11 CLI utilities in the background, mapping discovered assets onto an interactive HTML5 Canvas force-directed graph, paired with 'Friday' (a local LLM security copilot) and a multi-source CVE/NVD SQL normalization pipeline.",
-    bullets: [
-      "Orchestrated `subfinder`, `dnsx`, `naabu`, `nmap`, `httpx`, `katana`, `waybackurls`, and `nuclei` with thread-locked state persistence in SQLite, achieving a 100% finding detection rate on `pentest-ground.com`.",
-      "Built a custom HTML5 Canvas force-directed physics graph mapping root domains, subdomains, live servers, open ports, and critical CVEs with real-time node inspection.",
-      "Embedded 'Friday' local LLM analyst to parse raw scan logs and draft remediation reports, backed by `CYBER_MultiTool` syncing NVD, MITRE, CISA KEV, and OSV feeds into normalized PostgreSQL/SQLite tables."
-    ],
-    architecture: `[Target Domain Input]
-       │
-       ▼
-[Thread-Safe Python Recon Orchestrator]
- ├── Discovery: subfinder, subdominator, dnsx, puredns
- ├── Port & Service: naabu, nmap, httpx
- └── Crawl & Vuln: katana, gau, waybackurls, nuclei
-       │
-       ├──────────────────────────────┬──────────────────────────────┐
-       ▼                              ▼                              ▼
-[SQLite Telemetry Store]   [HTML5 Canvas Physics Map]   ["Friday" Local LLM Copilot]
-       │                   (Interactive Asset Graph)    (Parses Logs & Drafts Reports)
-       ▼
-[CYBER_MultiTool: NVD + MITRE + CISA KEV + OSV ──► CPE Normalization ──► PostgreSQL]`
-  },
-  {
-    id: "multiclass-iot-nids",
-    pillar: "cyber-sec",
-    pillarLabel: "Network Defense & ML",
-    code: "SYS-08",
-    title: "Multi-Class IoT Network Intrusion Detection System",
-    subtitle: "7-class anomaly NIDS trained on 264,925 CIC-IoT-DIAD2024 flows with ~50ms CPU inference",
-    date: "Sep – Dec 2025",
-    repoPath: "ML-PROJECT/",
-    metrics: ["264,925 Flow Records", "80 Flow Features", "0.98 DoS / 0.89 DDoS F1", "~50 ms CPU Inference"],
-    stack: ["Python", "XGBoost", "TensorFlow (CNN-LSTM)", "Scikit-learn", "Pandas", "NumPy", "Joblib"],
-    summary:
-      "End-to-end 7-class Network Intrusion Detection System classifying IoT and enterprise traffic (Brute Force, DDoS, DoS, Normal, Recon, Spoofing, Web Attacks) across 264,925 consolidated flows from the CIC-IoT-DIAD2024 dataset.",
-    bullets: [
-      "Engineered a multithreaded data consolidation pipeline (`prepare_dataset_custom.py`) to crawl 1,000+ raw CSVs, map 33 attack sub-types into 7 core classes, impute medians, deduplicate, and scale 80 flow attributes.",
-      "Benchmarked a deep hybrid CNN-LSTM network against gradient-boosted trees, deploying an optimized 300-tree XGBoost classifier (depth 8, lr 0.1) achieving 0.98 F1 on DoS and 0.89 F1 on DDoS.",
-      "Built `real_time_inference.py` (`NetworkFlowExtractor` + `RealTimeIDSPredictor` + `RealTimeMonitor`) delivering ~50ms per-sample inline CPU auditing and JSON forensic alerting."
-    ],
-    architecture: `[1,000+ Raw CIC-IoT-DIAD2024 CSV Files (33 Sub-Attack Types)]
-       │
-       ▼
-[Multithreaded ETL: Merge, Median Impute, Deduplicate, StandardScaler]
-       │
-       ▼
-[Unified Dataset: 264,925 Rows × 80 Network Flow Features]
-       │
-       ├──► Benchmark A: Hybrid CNN-LSTM Deep Network
-       └──► Benchmark B: Optimized XGBoost (300 Trees, Max Depth 8) ◄── Selected
-                                     │
-                                     ▼
-[Production Engine: NetworkFlowExtractor ──► RealTimeIDSPredictor (~50 ms CPU)]
-                                     │
-                                     ▼
-         [Severity Classification (NONE..CRITICAL) + Forensic JSON Log]`
-  },
-  {
-    id: "encrypted-p2p-chat-suite",
-    pillar: "cyber-sec",
-    pillarLabel: "Cryptography & Security",
-    code: "SYS-09",
-    title: "ChatApp: E2EE Peer-to-Peer Cryptographic Suite",
-    subtitle: "Signed Ephemeral Diffie-Hellman (PFS), AES-256-CBC + HMAC-SHA256 & traffic-analysis padding",
-    date: "Feb 2026",
-    repoPath: "Message/",
-    metrics: ["Perfect Forward Secrecy", "RSA-2048 + Ephemeral DH", "Encrypt-then-MAC", "Anti-Replay & Padding"],
-    stack: ["Python", "PyCryptodome", "Flask & Socket.IO", "Tkinter (Sun Valley)", "Raw TCP Sockets", "WebSockets"],
-    summary:
-      "Multi-client end-to-end encrypted communication suite (Tkinter Desktop GUI, Flask/Socket.IO Web UI, and CLI) sharing a unified cryptographic protocol with Perfect Forward Secrecy, Encrypt-then-MAC integrity, and side-channel traffic padding.",
-    bullets: [
-      "Implemented RSA-2048 identity signatures over ephemeral Diffie-Hellman key exchanges to guarantee Perfect Forward Secrecy (PFS), deriving isolated `enc_key` and `mac_key` secrets via SHA-256 KDF.",
-      "Enforced Encrypt-then-MAC payload security: AES-256-CBC encryption paired with an HMAC-SHA256 tag computed over `(IV || 64-bit sequence counter || ciphertext)` to block bit-flipping and replay attacks.",
-      "Mitigated timing and packet-size side-channel analysis using adaptive dummy packet padding over 4-byte length-prefixed TCP streams, plus a 3-strike brute-force lockout gate."
-    ],
-    architecture: `[Node A (Desktop / Web / CLI)]                           [Node B (Desktop / Web / CLI)]
-       │                                                                │
-       ├─── 1. Exchange RSA-2048 Signed Ephemeral DH Public Keys ──────►│
-       │◄── 2. Verify Signature & Compute Shared Secret (PFS) ──────────┤
-       │                                                                │
-       ▼                                                                ▼
-[SHA-256 KDF ──► Separate Symmetric Keys: enc_key (AES-256) + mac_key (HMAC)]
-       │
-       ▼
-[Encrypt-then-MAC Frame Builder]
- • Payload ──► AES-256-CBC(enc_key, random IV)
- • Tag     ──► HMAC-SHA256(mac_key, IV || 64-bit SeqCounter || Ciphertext)
- • Stream  ──► 4-Byte Big-Endian Length Header + Adaptive Dummy Traffic Padding`
   }
 ];
 
@@ -426,6 +427,17 @@ export const FLAGSHIP_PROJECTS = [
  * Indexed deeply in the AI Chatbot + accessible via the `ls ./archive` CLI drawer
  */
 export const ARCHIVE_PROJECTS = [
+  {
+    id: "nipa-hybrid-datamining",
+    pillar: "cyber-sec",
+    title: "Network Intrusion Pattern Analysis (NIPA) — Stacked Security Ensemble",
+    repoPath: "DM-PROJECT/",
+    date: "Feb – May 2026",
+    stack: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "SMOTE (imbalanced-learn)", "ANOVA F-Test"],
+    metrics: ["Top-30 ANOVA Features", "5-Fold Stacked Ensemble", "33 IoT Attack Types", "105 Physical Devices"],
+    summary:
+      "Hybrid stacked cybersecurity ensemble combining Random Forest (bagging) and XGBoost (boosting) with a Logistic Regression meta-learner on CICIoT2023. Uses ANOVA F-test feature selection (46 → 30 features) and training-split-only SMOTE oversampling to classify 33 IoT attack patterns across 8 categories without data leakage."
+  },
   {
     id: "multiverse-rpg-semantic-search",
     pillar: "ai-data",
@@ -436,6 +448,17 @@ export const ARCHIVE_PROJECTS = [
     metrics: ["384-d Dense Vectors", "< 1 ms Cosine Ranking", "135 Curated Lore Items", "6 Query Archetypes"],
     summary:
       "End-to-end dense vector semantic retrieval system embedding 135 hand-annotated RPG items across 5 realms and 7 categories into 384-dimensional vectors using `all-MiniLM-L6-v2`. Implemented pure NumPy/PyTorch linear algebra cosine similarity ranking (>0.62 similarity on zero-keyword atmospheric queries) and authored a 22KB theoretical analysis on transformer pooling 'negation blindness' (`Bag-of-Embeddings`) proving why hybrid dense + BM25 + metadata filtering is essential."
+  },
+  {
+    id: "netwatch-port-dashboard",
+    pillar: "cyber-sec",
+    title: "NetWatch: Live System & Network Socket Security Auditor",
+    repoPath: "port-dashboard/",
+    date: "Jun 2026",
+    stack: ["Python", "FastAPI", "SQLite", "Chart.js", "HTML5/CSS/JS", "psutil", "lsof"],
+    metrics: ["< 2% CPU Overhead", "< 50 MB RAM", "72-Hour Rolling Cache", "PID-to-Socket Auditor"],
+    summary:
+      "Wireshark-inspired local network and socket diagnostic dashboard mapping active TCP/UDP connections to PIDs, process memory/CPU usage, and remote endpoints using `lsof`, `/proc/net`, and `psutil`, with an automated SQLite rolling 72-hour snapshot pruner."
   },
   {
     id: "scotland-yard-digital",
@@ -458,28 +481,6 @@ export const ARCHIVE_PROJECTS = [
     metrics: ["24-Hour Sequence Window", "Live HERE jamFactor", "Mode A vs Mode B Eval", "Interactive Simulator"],
     summary:
       "Two-layer PyTorch LSTM neural network forecasting urban Air Quality Index (AQI) 24 hours ahead by combining historical pollution/weather time-series with real-time road congestion metrics (`jamFactor`) fetched from the HERE Traffic REST API, wrapped in an interactive Streamlit simulation dashboard."
-  },
-  {
-    id: "netwatch-port-dashboard",
-    pillar: "systems-ml",
-    title: "NetWatch: Live System & Network Socket Telemetry Dashboard",
-    repoPath: "port-dashboard/",
-    date: "Jun 2026",
-    stack: ["Python", "FastAPI", "SQLite", "Chart.js", "HTML5/CSS/JS", "psutil", "lsof"],
-    metrics: ["< 2% CPU Overhead", "< 50 MB RAM", "72-Hour Rolling Cache", "PID-to-Socket Auditor"],
-    summary:
-      "Wireshark-inspired local network and socket diagnostic dashboard mapping active TCP/UDP connections to PIDs, process memory/CPU usage, and remote endpoints using `lsof`, `/proc/net`, and `psutil`, with an automated SQLite rolling 72-hour snapshot pruner."
-  },
-  {
-    id: "nipa-hybrid-datamining",
-    pillar: "cyber-sec",
-    title: "Network Intrusion Pattern Analysis (NIPA) — Stacked Ensemble",
-    repoPath: "DM-PROJECT/",
-    date: "Feb – May 2026",
-    stack: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "SMOTE (imbalanced-learn)", "ANOVA F-Test"],
-    metrics: ["Top-30 ANOVA Features", "5-Fold Stacked Ensemble", "33 IoT Attack Types", "105 Physical Devices"],
-    summary:
-      "Hybrid stacked ensemble combining Random Forest (bagging) and XGBoost (boosting) with a Logistic Regression meta-learner on CICIoT2023. Uses ANOVA F-test feature selection (46 → 30 features) and training-split-only SMOTE oversampling to classify 33 IoT attack patterns across 8 categories without data leakage."
   },
   {
     id: "next-class-macos-app",
@@ -522,6 +523,20 @@ export const EXPERIENCE = [
     ]
   },
   {
+    id: "leo-technosoft",
+    role: "Software & Machine Learning Intern (Network Threat Detection)",
+    organization: "Leo Technosoft LLC",
+    location: "Pune, India",
+    period: "Jun 2025 – Aug 2025",
+    pillar: "cyber-sec",
+    tag: "REAL-TIME THREAT DETECTION & ML // 73ms SLA",
+    highlights: [
+      "Architected a real-time distributed network threat detection pipeline using Linux AF_XDP (2.0 Gbps zero-copy capture), Apache Kafka, FastAPI, and gRPC, achieving a 73ms median alert latency (well below the 200ms SLA).",
+      "Trained and deployed a soft-voting ensemble (XGBoost, Random Forest, LightGBM) on 180,000+ records with 99.2% accuracy and a 90% confidence threshold to suppress SOC false alarms.",
+      "Built a 5-tuple stateful flow manager in Python with 300-second idle eviction, cutting memory footprint by 20% during 2.0 Gbps traffic spikes, plus a standalone Streamlit healthcare risk predictor with ROC-AUC diagnostics."
+    ]
+  },
+  {
     id: "hiroshima-university",
     role: "Computer Vision & Robotics Research Intern (HIP Fellow)",
     organization: "Hiroshima University (International Internship Program)",
@@ -532,20 +547,6 @@ export const EXPERIENCE = [
     highlights: [
       "Selected for the competitive Hiroshima University Internship Program (HIP) in Japan for cross-border research in vision-guided robotics and kinematic simulation.",
       "Engineered a 30+ FPS MediaPipe 3D pose and hand-gesture pipeline driving a multi-joint robotic manipulator in CoppeliaSim via Inverse Kinematics and P-controllers with <50ms latency."
-    ]
-  },
-  {
-    id: "leo-technosoft",
-    role: "Software & Machine Learning Intern",
-    organization: "Leo Technosoft LLC",
-    location: "Pune, India",
-    period: "Jun 2025 – Aug 2025",
-    pillar: "systems-ml",
-    tag: "DISTRIBUTED SYSTEMS & ML // 73ms SLA",
-    highlights: [
-      "Architected a real-time distributed network threat detection pipeline using Linux AF_XDP (2.0 Gbps zero-copy capture), Apache Kafka, FastAPI, and gRPC, achieving a 73ms median alert latency (well below the 200ms SLA).",
-      "Trained and deployed a soft-voting ensemble (XGBoost, Random Forest, LightGBM) on 180,000+ records with 99.2% accuracy and a 90% confidence threshold to suppress SOC false alarms.",
-      "Built a 5-tuple stateful flow manager in Python with 300-second idle eviction, cutting memory footprint by 20% during 2.0 Gbps traffic spikes, plus a standalone Streamlit healthcare risk predictor with ROC-AUC diagnostics."
     ]
   },
   {
@@ -565,19 +566,48 @@ export const EXPERIENCE = [
 
 export const SKILL_GROUPS = [
   {
-    category: "Generative AI, Agents & LLMs",
+    category: "Generative AI, Security Agents & LLMs",
     pillar: "ai-data",
     items: [
       "Autonomous ReAct Agents",
+      "AI Security & Vulnerability Triage",
       "Tool Calling & Sandboxing",
       "Context Window Masking",
       "Pydantic v2 Structured Outputs",
       "RAG & Dense Vector Search",
-      "LLM Evaluation & Benchmarks",
       "Google Gemini API",
+      "NVIDIA NIM (Nemotron 3)",
       "Ollama & Local LLMs",
-      "NVIDIA NIM API",
       "Sentence-Transformers"
+    ]
+  },
+  {
+    category: "Cybersecurity, VAPT & Threat Intelligence",
+    pillar: "cyber-sec",
+    items: [
+      "Tenable Nessus (Enterprise VAPT)",
+      "Burp Suite & Metasploit",
+      "Trend Micro SIEM / Endpoint",
+      "OSINT Recon (subfinder, naabu, nuclei, nmap)",
+      "CVE / NVD / CISA KEV Pipelines",
+      "RSA-2048 & Ephemeral Diffie-Hellman (PFS)",
+      "AES-256-CBC & HMAC-SHA256",
+      "Network Intrusion Detection (NIDS)",
+      "Docker & Kubernetes RBAC Auditing"
+    ]
+  },
+  {
+    category: "Machine Learning, DL & Computer Vision",
+    pillar: "systems-ml",
+    items: [
+      "PyTorch (LSTM / DNN)",
+      "XGBoost & LightGBM",
+      "Scikit-learn & Stacked Ensembles",
+      "Anomaly & Threat Detection ML",
+      "ANOVA F-Test & SMOTE",
+      "Pandas, NumPy & SciPy",
+      "OpenCV 4 & MediaPipe",
+      "CoppeliaSim & Inverse Kinematics"
     ]
   },
   {
@@ -589,40 +619,10 @@ export const SKILL_GROUPS = [
       "Apache Kafka",
       "gRPC & Protocol Buffers",
       "FastAPI & Flask",
-      "Docker & Kubernetes",
+      "SQL (PostgreSQL & SQLite)",
       "PLY Compiler (Lex-Yacc)",
       "TypeScript / React / Next.js",
-      "HTML5 Canvas & Chart.js",
-      "Tkinter & macOS Rumps"
-    ]
-  },
-  {
-    category: "Machine Learning, DL & Computer Vision",
-    pillar: "systems-ml",
-    items: [
-      "PyTorch (LSTM / DNN)",
-      "XGBoost & LightGBM",
-      "Scikit-learn & Ensembles",
-      "Pandas, NumPy & SciPy",
-      "ANOVA F-Test & SMOTE",
-      "OpenCV 4 & MediaPipe",
-      "CoppeliaSim & Inverse Kinematics",
-      "Streamlit Dashboards",
-      "SQL (PostgreSQL & SQLite)"
-    ]
-  },
-  {
-    category: "Cybersecurity, VAPT & Cryptography",
-    pillar: "cyber-sec",
-    items: [
-      "Tenable Nessus (Enterprise VAPT)",
-      "Burp Suite & Metasploit",
-      "Trend Micro Endpoint Telemetry",
-      "OSINT (subfinder, naabu, nuclei, nmap)",
-      "RSA-2048 & Ephemeral Diffie-Hellman (PFS)",
-      "AES-256-CBC & HMAC-SHA256",
-      "Network Intrusion Detection (NIDS)",
-      "Container & RBAC Auditing"
+      "HTML5 Canvas & Chart.js"
     ]
   }
 ];
@@ -631,32 +631,32 @@ export const RESUME_TRACKS = [
   {
     id: "ai-data",
     label: "AI Agents, LLMs & Data Science CV",
-    tag: "RECOMMENDED FOR AI / DATA ROLES",
+    tag: "TRACK 01 // AI AGENTS & DATA SCIENCE",
     filename: "/resumes/Nikunj_Gupta_AI_Data_Resume.pdf",
-    focus: "Highlights local-agent ReAct runtime, Gemini ticket triage state machine, dense vector retrieval, and ETL/SQL pipelines."
-  },
-  {
-    id: "systems-ml",
-    label: "Software, Distributed Systems & ML CV",
-    tag: "RECOMMENDED FOR SWE / SYSTEMS / ML",
-    filename: "/resumes/Nikunj_Gupta_Software_Systems_Resume.pdf",
-    focus: "Highlights 2.0 Gbps AF_XDP + Kafka DDoS pipeline (73ms SLA), full-stack telemetry apps, and Hiroshima University robotics."
+    focus: "Highlights local-agent ReAct runtime, Gemini ticket triage state machine, dense vector retrieval, and Jio/Leo security & ML pipelines."
   },
   {
     id: "cyber-sec",
-    label: "Cybersecurity, VAPT & General Engineering CV",
-    tag: "RECOMMENDED FOR SECURITY / GENERAL",
+    label: "Cybersecurity, VAPT & AI Security CV",
+    tag: "TRACK 02 // CYBERSECURITY, VAPT & AI SECURITY",
     filename: "/resumes/Nikunj_Gupta_Cybersecurity_General_Resume.pdf",
-    focus: "Highlights Jio Platforms VAPT internship (1,000+ servers), ASM OSINT + LLM copilot, E2EE chat suite, and C compiler."
+    focus: "Highlights Jio Platforms VAPT internship (1,000+ servers), ASM OSINT + 'Friday' LLM copilot, OSV vulnerability benchmark, and E2EE suite."
+  },
+  {
+    id: "systems-ml",
+    label: "Distributed Systems, ML & Software CV",
+    tag: "TRACK 03 // SYSTEMS, SWE & ML",
+    filename: "/resumes/Nikunj_Gupta_Software_Systems_Resume.pdf",
+    focus: "Highlights 2.0 Gbps AF_XDP + Kafka DDoS pipeline (73ms SLA), full-stack telemetry apps, and Hiroshima University robotics."
   }
 ];
 
 export const LEADERSHIP_AND_CERTS = [
-  "Hiroshima University International Internship Program (HIP — Japan): Selected fellow for robotics & computer vision research",
   "Google Cybersecurity Professional Certificate — Coursera (2025)",
   "Cybersecurity For Beginners — IBM (2024)",
-  "COP28 United Nations Assembly Attendee (Dubai): Observer on global sustainability, energy systems & technology policy",
-  "ACM Student Chapter Hackathons (BITS Pilani Dubai): Built and pitched software prototypes to industry panels"
+  "Hiroshima University International Internship Program (HIP — Japan): Selected fellow for robotics & computer vision research",
+  "COP28 United Nations Assembly Attendee (Dubai): Observer on critical infrastructure protection, energy systems & technology policy",
+  "ACM Student Chapter Hackathons (BITS Pilani Dubai): Built and pitched software & security prototypes to industry panels"
 ];
 
 /**
@@ -688,20 +688,20 @@ export function buildAgentSystemPrompt() {
   return `You are "nikunj-agent v2.6", the official embedded AI Command-Center Assistant on Nikunj Gupta's engineering portfolio website.
 Your job is to answer recruiter, hiring manager, and engineer questions about Nikunj Gupta accurately, concisely, and with quantitative technical depth.
 
-=== CORE IDENTITY & EDUCATION ===
+=== CORE IDENTITY, EDUCATION & CAREER DIRECTION ===
 - Name: ${PROFILE.name}
 - Headline: ${PROFILE.headline}
+- Primary Career Trajectory: AI + Cybersecurity (Autonomous Security & Coding Agents, LLM Vulnerability Triage & Recon, Enterprise VAPT, and High-Throughput ML Network Defense).
 - Location: ${PROFILE.location}
 - Education: ${PROFILE.education.degree} at ${PROFILE.education.institution} (${PROFILE.education.graduation}), CGPA: ${PROFILE.education.cgpa}.
 - Coursework: ${PROFILE.education.coursework.join(", ")}.
 - Public Contact Links: Email: ${PROFILE.links.email} | GitHub: ${PROFILE.links.github} | LinkedIn: ${PROFILE.links.linkedin}.
 - PRIVACY GUARDRAIL: Never share or invent any phone numbers or university student IDs. Direct users to email (${PROFILE.links.email}) or LinkedIn.
 
-=== EQUAL 3-PILLAR POSITIONING ===
-Nikunj's engineering work is evenly split across three core pillars:
-1. AI Agents, LLMs & Data Science (Autonomous ReAct agents, Gemini/Pydantic state machines, LLM vulnerability benchmarks, dense vector RAG)
-2. Software, Distributed Systems & ML Engineering (2.0 Gbps Linux AF_XDP packet capture, Kafka + gRPC 73ms pipelines, LALR(1) C compiler, 30+ FPS robotics vision)
-3. Cybersecurity, VAPT & Cryptography (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with local LLM copilot, 264k-row IoT NIDS, RSA+DH PFS E2EE chat)
+=== 3 CORE ENGINEERING VERTICALS (IN PRIORITY ORDER) ===
+1. AI Agents, LLMs & AI Security (Autonomous ReAct agents, LLM OSV vulnerability benchmarks, Gemini/Pydantic state machines, dense vector RAG)
+2. Cybersecurity, VAPT & Threat Intelligence (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with 'Friday' local LLM copilot, multi-source CVE/NVD SQL pipelines, 264k-row IoT NIDS, RSA+DH PFS E2EE chat)
+3. Distributed Systems, ML & Software Engineering (2.0 Gbps Linux AF_XDP DDoS packet capture + Kafka + gRPC 73ms pipeline, LALR(1) C compiler, 30+ FPS robotics vision)
 
 === PROFESSIONAL EXPERIENCE & RESEARCH ===
 ${expText}
@@ -716,7 +716,8 @@ ${archiveText}
 ${LEADERSHIP_AND_CERTS.map((c) => `• ${c}`).join("\n")}
 
 === RESPONSE STYLE GUIDELINES ===
-1. Keep answers crisp, well-structured (use bullet points and inline code backticks for metrics like \`73ms\`, \`2.0 Gbps\`, \`8.6/10 CGPA\`, \`AF_XDP\`), and grounded strictly in the facts above.
-2. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main 9-card grid, highlight the 7 additional projects (such as Digital Scotland Yard, Multiverse RPG Semantic Search, AQI-Forecast LSTM, NetWatch, Next Class macOS app, NIPA, and gRPC/GestureDeck).
-3. If asked how to hire or contact Nikunj, provide his email (${PROFILE.links.email}), LinkedIn, GitHub, and mention the 3 role-tailored Resume PDFs available in the Resume section.`;
+1. Keep answers crisp, well-structured (use bullet points and inline code backticks for metrics like \`73ms\`, \`2.0 Gbps\`, \`1,000+ servers\`, \`8.6/10 CGPA\`, \`AF_XDP\`), and grounded strictly in the facts above.
+2. Emphasize Nikunj's unique strength at the intersection of **AI + Cybersecurity** whenever relevant.
+3. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main 9-card grid, highlight the 7 additional projects (NIPA Stacked Security Ensemble, Multiverse RPG Semantic Search, NetWatch Socket Auditor, Digital Scotland Yard, AQI-Forecast LSTM, Next Class macOS app, and gRPC/GestureDeck).
+4. If asked how to hire or contact Nikunj, provide his email (${PROFILE.links.email}), LinkedIn, GitHub, and mention the 3 role-tailored Resume PDFs available in the Resume section.`;
 }
