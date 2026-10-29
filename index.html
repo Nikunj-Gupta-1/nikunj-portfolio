@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikunj Gupta // AI Agents • Distributed Systems • Cybersecurity</title>
+  <meta
+    name="description"
+    content="Engineering portfolio & interactive AI Command-Center for Nikunj Gupta — Final-year Computer Science & Data Science engineer at BITS Pilani Dubai (CGPA 8.6/10) specializing in Autonomous AI Agents, Distributed Systems & ML, and Cybersecurity/VAPT."
+  />
+  <meta name="theme-color" content="#070b12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Background Command-Center Grid Overlay -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Collapsible Navigation Drawer (modern-web-guidance: navigation-drawer + scrollspy) -->
+  <div class="Drawer" id="navDrawer" popover="manual">
+    <div class="Drawer-scroller">
+      <nav class="Drawer-sheet" tabindex="-1" aria-label="Primary site navigation">
+        <div class="drawer-header">
+          <div class="drawer-brand">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>COMMAND_MENU</span>
+          </div>
+          <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+            [ESC / ×]
+          </button>
+        </div>
+
+        <div class="drawer-body">
+          <div class="drawer-clock-box">
+            <span class="drawer-clock-label">TELEMETRY CLOCK</span>
+            <span class="hud-clock" id="hudClock" aria-live="off">DXB // UTC+4</span>
+          </div>
+
+          <div class="drawer-section-label">SECTIONS // JUMP_TO</div>
+          <ul class="drawer-nav-list">
+            <li><a href="#pillars" class="drawer-nav-link"><span class="nav-idx">01</span> Equal 3-Pillar Architecture</a></li>
+            <li><a href="#ai-terminal" class="drawer-nav-link"><span class="nav-idx">02</span> Interactive AI Agent (<code>nikunj-agent</code>)</a></li>
+            <li><a href="#projects" class="drawer-nav-link"><span class="nav-idx">03</span> 9 Flagship Engineering Systems</a></li>
+            <li><a href="#experience" class="drawer-nav-link"><span class="nav-idx">04</span> Experience &amp; Research Log</a></li>
+            <li><a href="#skills" class="drawer-nav-link"><span class="nav-idx">05</span> Technical Stack &amp; Education</a></li>
+            <li><a href="#resumes" class="drawer-nav-link"><span class="nav-idx">06</span> Resumes &amp; Direct Contact</a></li>
+          </ul>
+
+          <div class="drawer-section-label">QUICK RESUME DOWNLOADS (PDF)</div>
+          <div class="drawer-resume-links">
+            <a href="/resumes/Nikunj_Gupta_AI_Data_Resume.pdf" download class="drawer-resume-pill">
+              ↓ AI Agents &amp; Data Science CV
+            </a>
+            <a href="/resumes/Nikunj_Gupta_Software_Systems_Resume.pdf" download class="drawer-resume-pill">
+              ↓ Software &amp; Distributed Systems CV
+            </a>
+            <a href="/resumes/Nikunj_Gupta_Cybersecurity_General_Resume.pdf" download class="drawer-resume-pill">
+              ↓ Cybersecurity &amp; General CV
+            </a>
+          </div>
+        </div>
+
+        <div class="drawer-footer">
+          <a href="mailto:nikunj0123@outlook.com">nikunj0123@outlook.com</a>
+          <div class="drawer-social-row">
+            <a href="https://github.com/Nikunj-Gupta-1" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://linkedin.com/in/nikunj-gupta-242630279" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Minimal, Uncluttered Top Telemetry HUD Bar -->
+  <header class="hud-header">
+    <div class="hud-inner container">
+      <a href="#top" class="hud-brand" aria-label="Nikunj Gupta Command Center Home">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="brand-prompt">nikunj@command-center</span>
+        <span class="brand-cursor">~ $</span>
+      </a>
+
+      <div class="hud-actions">
+        <button type="button" class="btn-cmd-trigger" id="openAgentModalBtn" aria-label="Jump to AI Agent Command Terminal">
+          <span class="cmd-icon">⌘K</span>
+          <span>Ask AI Agent</span>
+        </button>
+
+        <button
+          type="button"
+          id="drawerOpenBtn"
+          class="btn-menu-toggle"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="navDrawer"
+        >
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO & 3-PILLAR COMMAND MATRIX ================= -->
+    <section class="hero-section container">
+      <div class="terminal-window hero-terminal">
+        <div class="terminal-titlebar">
+          <div class="window-dots" aria-hidden="true">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-amber"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="window-title">session: nikunj_gupta_portfolio.sh — zsh — 120×38</div>
+          <div class="window-badge">STATUS: AVAILABLE FOR 2026/2027 ROLES</div>
+        </div>
+
+        <div class="terminal-body hero-body">
+          <div class="cli-line">
+            <span class="prompt-user">nikunj@bits-dubai</span>:<span class="prompt-path">~/portfolio</span>$
+            <span class="prompt-cmd">./inspect_engineer --profile --pillars=all</span>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-intro">
+              <div class="eyebrow-tag">
+                <span>B.E. COMPUTER SCIENCE + DATA SCIENCE MINOR @ BITS PILANI DUBAI</span>
+                <span class="eyebrow-sep">•</span>
+                <span class="eyebrow-highlight">CGPA 8.6 / 10.0</span>
+              </div>
+
+              <h1 class="hero-title">
+                NIKUNJ <span class="text-gradient">GUPTA</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                Engineering across <strong>three equal pillars</strong>:
+                <span class="pill-inline pill-cyan">AI Agents &amp; LLMs</span>,
+                <span class="pill-inline pill-emerald">Distributed Systems &amp; ML</span>, and
+                <span class="pill-inline pill-amber">Cybersecurity &amp; VAPT</span>.
+                From zero-framework ReAct coding runtimes and <code>2.0 Gbps AF_XDP</code> packet engines to
+                enterprise vulnerability automation across <code>1,000+</code> production servers.
+              </p>
+
+              <div class="hero-cta-row">
+                <a href="#ai-terminal" class="btn btn-primary">
+                  <span>&gt;_ Interview My AI Agent</span>
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                  <span>Explore 9 Flagship Systems</span>
+                </a>
+                <a href="#resumes" class="btn btn-ghost">
+                  <span>Download Role-Tailored CV ↓</span>
+                </a>
+              </div>
+
+              <div class="hero-quick-links">
+                <a href="mailto:nikunj0123@outlook.com" class="quick-link">
+                  <span class="ql-prefix">[MAIL]</span> nikunj0123@outlook.com
+                </a>
+                <a href="https://github.com/Nikunj-Gupta-1" target="_blank" rel="noopener noreferrer" class="quick-link">
+                  <span class="ql-prefix">[GH]</span> github.com/Nikunj-Gupta-1 ↗
+                </a>
+                <a href="https://linkedin.com/in/nikunj-gupta-242630279" target="_blank" rel="noopener noreferrer" class="quick-link">
+                  <span class="ql-prefix">[IN]</span> linkedin.com/in/nikunj-gupta-242630279 ↗
+                </a>
+                <span class="quick-link ql-static">
+                  <span class="ql-prefix">[LOC]</span> Dubai, UAE
+                </span>
+              </div>
+            </div>
+
+            <!-- Live Quantitative Telemetry Panel -->
+            <aside class="telemetry-panel" aria-label="Key Engineering Telemetry Metrics">
+              <div class="telemetry-header">
+                <span>LIVE BENCHMARK TELEMETRY</span>
+                <span class="telemetry-tag">VERIFIED METRICS</span>
+              </div>
+              <div class="telemetry-grid" id="telemetryMetricsGrid">
+                <!-- Populated by main.js -->
+              </div>
+              <div class="telemetry-footer">
+                <span class="tf-label">INTERNSHIPS:</span>
+                <span class="tf-val">Jio Platforms • Hiroshima Univ. (Japan) • Leo Technosoft</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 01. EQUAL 3-PILLAR ARCHITECTURE ================= -->
+    <section id="pillars" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">01 // CORE_ENGINEERING_PILLARS</div>
+        <h2 class="section-title">Equal 3-Pillar Architecture</h2>
+        <p class="section-desc">
+          Click any pillar below to filter the flagship systems grid or query the AI agent on that domain.
+        </p>
+      </div>
+
+      <div class="pillars-grid" id="pillarsGrid">
+        <!-- Populated by main.js -->
+      </div>
+    </section>
+
+    <!-- ================= 02. INTERACTIVE AI AGENT TERMINAL ================= -->
+    <section id="ai-terminal" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">02 // INTERACTIVE_AI_AGENT_API</div>
+        <div class="section-title-row">
+          <div>
+            <h2 class="section-title">Ask <code>nikunj-agent v2.6</code> Anything</h2>
+            <p class="section-desc">
+              Powered by Google Gemini API &amp; NVIDIA NIM via Serverless Function (with instant local RAG fallback).
+              Knows all <strong>16 projects</strong> (including smaller/hobby builds not on the main grid), internships, and architecture specs.
+            </p>
+          </div>
+          <span class="agent-engine-badge" id="agentEngineBadge">ENGINE: READY (SERVERLESS + RAG)</span>
+        </div>
+      </div>
+
+      <div class="terminal-window agent-terminal-shell">
+        <div class="terminal-titlebar">
+          <div class="window-dots" aria-hidden="true">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-amber"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="window-title">nikunj-agent — /api/chat — Full 16-Project Knowledge Base</div>
+          <button type="button" class="btn-clear-chat" id="clearChatBtn">clear [⌘L]</button>
+        </div>
+
+        <!-- Prompt Chips for 1-Click Recruiter Questions -->
+        <div class="agent-prompt-bar" aria-label="Suggested questions for the AI agent">
+          <span class="prompt-bar-label">QUICK PROMPTS:</span>
+          <button type="button" class="prompt-chip" data-prompt="Summarize Nikunj's 3 core engineering pillars and top metrics.">
+            3-Pillar Summary
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="What are the smaller, specialized, or hobby projects not shown on the main flagship grid?">
+            Show Hidden / Hobby Projects (7)
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="What did Nikunj build during his internships at Jio Platforms, Leo Technosoft, and Hiroshima University?">
+            Internships (Jio, Leo, Japan)
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="How does Nikunj's Autonomous Local AI Coding Agent (local-agent) manage context windows and tool execution?">
+            Deep Dive: local-agent
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="Tell me about Digital Scotland Yard and how its zero-cheat deduction engine works.">
+            Hobby: Digital Scotland Yard
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="/help">
+            /help
+          </button>
+        </div>
+
+        <!-- Chat Messages Log -->
+        <div class="agent-chat-log" id="agentChatLog" role="log" aria-live="polite">
+          <!-- Initial boot greeting injected by main.js -->
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="agent-input-form" id="agentChatForm">
+          <label for="agentChatInput" class="sr-only">Ask a question about Nikunj Gupta</label>
+          <span class="input-prompt-prefix" aria-hidden="true">guest@recruiter:~$</span>
+          <textarea
+            id="agentChatInput"
+            name="message"
+            rows="1"
+            placeholder="Ask anything about Nikunj's 16 projects, internships, CGPA, or type /archive, /skills, /help..."
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-primary btn-send" id="agentSendBtn">
+            <span>Execute ↵</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= 03. 9 FLAGSHIP PROJECTS GRID ================= -->
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">03 // FLAGSHIP_ENGINEERING_SYSTEMS</div>
+        <div class="section-title-row">
+          <div>
+            <h2 class="section-title">Flagship Systems Showcase (9 Core Builds)</h2>
+            <p class="section-desc">
+              3 flagship architectures per pillar. Click <strong>[Inspect Architecture]</strong> on any card to view its system pipeline diagram and technical defense specs, or ask the AI Agent above about the 7 additional projects.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="filter-tabs" role="tablist" aria-label="Filter flagship projects by engineering pillar">
+            <button type="button" role="tab" aria-selected="true" class="filter-tab active" data-filter="all">
+              ALL (9)
+            </button>
+            <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="ai-data">
+              AI &amp; DATA (3)
+            </button>
+            <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="systems-ml">
+              SYSTEMS &amp; ML (3)
+            </button>
+            <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="cyber-sec">
+              CYBERSECURITY (3)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="flagshipProjectsGrid">
+        <!-- Populated by main.js -->
+      </div>
+
+      <!-- Compact Pointer to the 7 Additional Projects in the AI Chatbot -->
+      <div class="archive-callout">
+        <div class="archive-callout-text">
+          <span class="archive-badge">+7 MORE PROJECTS IN AI AGENT MEMORY</span>
+          <p>
+            Looking for <strong>Multiverse RPG Dense Vector Search</strong>, <strong>Digital Scotland Yard (60 FPS Canvas Game)</strong>,
+            <strong>AQI-Forecast LSTM</strong>, <strong>NetWatch Port Auditor</strong>, <strong>Next Class macOS App</strong>,
+            <strong>NIPA Stacked Ensemble</strong>, or <strong>gRPC &amp; GestureDeck</strong>?
+          </p>
+        </div>
+        <button type="button" class="btn btn-secondary" id="askArchiveProjectsBtn">
+          <span>Query All 7 in AI Terminal ↑</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= 04. EXPERIENCE, RESEARCH & TEACHING ================= -->
+    <section id="experience" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">04 // EXECUTION_LOG: INDUSTRY_&_RESEARCH</div>
+        <h2 class="section-title">Professional Experience, Research &amp; Teaching</h2>
+        <p class="section-desc">
+          Across enterprise security operations, high-throughput distributed ML systems, international robotics research in Japan, and university lab instruction.
+        </p>
+      </div>
+
+      <div class="timeline-list" id="experienceTimeline">
+        <!-- Populated by main.js -->
+      </div>
+    </section>
+
+    <!-- ================= 05. TECHNICAL SKILLS & EDUCATION MATRIX ================= -->
+    <section id="skills" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">05 // SYSTEM_CAPABILITIES_&_ACADEMICS</div>
+        <h2 class="section-title">Technical Stack, Education &amp; Certifications</h2>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Populated by main.js -->
+      </div>
+
+      <div class="edu-cert-grid">
+        <article class="terminal-card edu-card">
+          <div class="card-cmd-header">EDUCATION // BITS_PILANI_DUBAI</div>
+          <h3>Birla Institute of Technology and Science (BITS Pilani), Dubai Campus</h3>
+          <p class="edu-degree">Bachelor of Engineering (B.E.) in Computer Science • Minor in Data Science</p>
+          <div class="edu-meta-row">
+            <span class="metric-pill pill-cyan">CGPA: 8.6 / 10.0</span>
+            <span class="metric-pill">Aug 2023 – Jul 2027 (Expected)</span>
+            <span class="metric-pill">Dubai, UAE</span>
+          </div>
+          <p class="edu-coursework">
+            <strong>Key Coursework:</strong> Large Language Models (BITS F471), Generative AI (CS F437), Deep Learning,
+            Machine Learning, Data Mining, Compiler Construction, Operating Systems, Computer Networks, Database Systems,
+            Applied Statistical Methods.
+          </p>
+        </article>
+
+        <article class="terminal-card cert-card">
+          <div class="card-cmd-header">LEADERSHIP_&_CERTIFICATIONS</div>
+          <ul class="cert-list" id="certList">
+            <!-- Populated by main.js -->
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= 06. MULTI-TRACK RESUMES & NETLIFY CONTACT ================= -->
+    <section id="resumes" class="section container">
+      <div class="section-header">
+        <div class="section-cmd">06 // RESUME_ARTIFACTS_&_DIRECT_TRANSMISSION</div>
+        <h2 class="section-title">Role-Tailored Resumes &amp; Direct Contact</h2>
+        <p class="section-desc">
+          Download the resume track aligned with your team's focus, or send a direct transmission via the serverless terminal form below.
+        </p>
+      </div>
+
+      <div class="resume-contact-grid">
+        <!-- 3 Sanitized Resume Tracks -->
+        <div class="resume-tracks-column">
+          <h3 class="sub-heading">Select Resume Track (Public-Safe PDFs)</h3>
+          <div class="resume-cards-stack" id="resumeTracksList">
+            <!-- Populated by main.js -->
+          </div>
+        </div>
+
+        <!-- Netlify Contact Form (100% Free Serverless Forms) -->
+        <div class="contact-form-column">
+          <div class="terminal-card contact-card">
+            <div class="card-cmd-header">NETLIFY_FORMS // SEND_MESSAGE</div>
+            <form
+              name="portfolio-contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              id="contactForm"
+              class="contact-form"
+            >
+              <input type="hidden" name="form-name" value="portfolio-contact" />
+              <p class="sr-only">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-field">
+                <label for="senderName">NAME / ORGANIZATION *</label>
+                <input
+                  type="text"
+                  id="senderName"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Jane Doe // Acme AI Labs"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="senderEmail">RETURN EMAIL *</label>
+                <input
+                  type="email"
+                  id="senderEmail"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="jane@company.com"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="rolePillar">PRIMARY DOMAIN OF INTEREST</label>
+                <select id="rolePillar" name="domain">
+                  <option value="AI Agents, LLMs & Data Science">AI Agents, LLMs &amp; Data Science</option>
+                  <option value="Software, Distributed Systems & ML">Software, Distributed Systems &amp; ML</option>
+                  <option value="Cybersecurity, VAPT & Security Engineering">Cybersecurity, VAPT &amp; Security Engineering</option>
+                  <option value="General Engineering / Full-Stack">General Engineering / Multi-Disciplinary</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="senderMessage">TRANSMISSION PAYLOAD *</label>
+                <textarea
+                  id="senderMessage"
+                  name="message"
+                  required
+                  placeholder="Hi Nikunj, we're hiring for an AI / Systems Engineering role..."
+                ></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary">
+                  <span>Transmit Message ↵</span>
+                </button>
+                <span class="form-status" id="contactFormStatus" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>NIKUNJ GUPTA // COMMAND-CENTER PORTFOLIO v2.6</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:nikunj0123@outlook.com">nikunj0123@outlook.com</a>
+        <a href="https://github.com/Nikunj-Gupta-1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/nikunj-gupta-242630279" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ARCHITECTURE INSPECTOR MODAL (<dialog closedby="any">) ================= -->
+  <dialog id="archDialog" class="cmd-dialog" closedby="any" aria-labelledby="archDialogTitle">
+    <div class="dialog-shell">
+      <div class="terminal-titlebar">
+        <div class="window-dots" aria-hidden="true">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-amber"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="window-title" id="archDialogCode">ARCHITECTURE_INSPECTOR</div>
+        <button type="button" class="dialog-close-btn" id="closeArchDialogBtn" aria-label="Close Architecture Inspector">
+          [ESC / CLOSE]
+        </button>
+      </div>
+      <div class="dialog-content" id="archDialogBody">
+        <h2 id="archDialogTitle" class="dialog-title">Project Architecture</h2>
+        <!-- Populated dynamically by main.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
