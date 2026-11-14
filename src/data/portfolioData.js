@@ -54,8 +54,8 @@ export const PILLARS = [
     highlights: [
       "Propositional logic OSV vulnerability benchmark (I ∧ V ∧ R) across 720 LLM trials",
       "Zero-framework ReAct runtime with 2-tier intent router & 80% context window masking",
-      "11-stage logged Gemini state machine with 2-tier Pydantic v2 self-healing retry",
-      "384-d dense vector semantic retrieval & negation-blindness geometry analysis"
+      "Deterministic Decimal + 8-pass OCR financial RAG with local DLP gatekeeper",
+      "11-stage logged Gemini state machine with 2-tier Pydantic v2 self-healing retry"
     ]
   },
   {
@@ -66,12 +66,12 @@ export const PILLARS = [
     accent: "amber",
     badge: "PILLAR 02 // CYBERSECURITY & VAPT",
     summary:
-      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM security analysts, multi-Source CVE SQL normalization, IoT NIDS, and Perfect Forward Secrecy E2EE.",
+      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM security analysts, multi-source CVE SQL normalization, IoT NIDS, and Perfect Forward Secrecy E2EE.",
     highlights: [
       "Automated Nessus compliance, Trend Micro SIEM & Burp/Metasploit VAPT at Jio Platforms",
       "11-tool OSINT recon orchestrator with HTML5 Canvas physics map & 'Friday' LLM copilot",
       "Multi-source CVE/NVD/MITRE/CISA KEV ingestion & CPE normalization into PostgreSQL",
-      "264,925-flow CIC-IoT-DIAD2024 XGBoost NIDS (0.98 DoS / 0.89 DDoS F1, ~50ms CPU)"
+      "264,925-flow CIC-IoT-DIAD2024 & CICIoT2023 XGBoost / stacked NIDS ensembles"
     ]
   },
   {
@@ -82,18 +82,18 @@ export const PILLARS = [
     accent: "emerald",
     badge: "PILLAR 03 // SYSTEMS & ML",
     summary:
-      "High-throughput Linux kernel-bypass packet engines, Apache Kafka streaming pipelines, multi-phase optimizing C compilers, and real-time computer vision robotic teleoperation.",
+      "Offline local vision/biometric media engines, Linux kernel-bypass packet pipelines, Apache Kafka threat streaming, optimizing C compilers, and real-time computer vision robotic teleoperation.",
     highlights: [
+      "Offline 5-stage media intelligence engine (<2.5 GB RAM VLM, ArcFace 512-d, FTS5)",
       "2.0 Gbps AF_XDP packet capture + Kafka + gRPC DDoS pipeline with 73ms median SLA",
       "30+ FPS MediaPipe 3D pose tracking driving CoppeliaSim inverse kinematics (<50ms)",
-      "End-to-end LALR(1) C-subset compiler with TAC quadruples, constant folding & DCE",
-      "Low-overhead FastAPI + SQLite network socket telemetry daemons (<2% CPU, <50MB RAM)"
+      "End-to-end LALR(1) C-subset compiler with TAC quadruples, constant folding & DCE"
     ]
   }
 ];
 
 /**
- * 9 Flagship Projects displayed on the main Command-Center Grid (3 per Pillar)
+ * 12 Flagship Projects displayed on the main Command-Center Grid (4 per Pillar)
  * Ordered: 01. AI Agents & AI Security -> 02. Cybersecurity & VAPT -> 03. Distributed Systems & ML
  */
 export const FLAGSHIP_PROJECTS = [
@@ -105,16 +105,17 @@ export const FLAGSHIP_PROJECTS = [
     code: "SYS-01",
     title: "Autonomous Local AI Coding Agent & Desktop Runtime",
     subtitle: "Zero-framework Python ReAct engine, macOS desktop GUI, 2-tier intent router & SQLite memory RAG",
-    date: "Jul – Oct 2026",
+    date: "Jul – Nov 2026",
     repoPath: "local-agent/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/local-agent",
     metrics: ["Zero Frameworks", "80% Context Eviction", "Multi-Provider + Local RAG", "2-Tier Intent Router"],
     stack: ["Python 3.11+", "Google Gemini 2.5", "NVIDIA NIM (Nemotron 3 Ultra)", "Ollama (Gemma 4)", "Flask SSE", "SQLite Memory RAG"],
     summary:
-      "Built an autonomous coding agent and macOS desktop app from scratch in pure Python (no LangChain/AutoGen) featuring a 2-tier prompt intent classifier (0ms `DIRECT` fast-path vs. 20-step `PLAN` DAG decomposition), persistent SQLite long-term memory RAG, sandboxed ReAct tool loops, and a temperature-0.1 satisfaction evaluator.",
+      "Built an autonomous coding agent and macOS desktop app from scratch in pure Python (no LangChain/AutoGen) featuring a 2-tier prompt intent classifier (0ms `DIRECT` fast-path vs. 20-step `PLAN` DAG decomposition), persistent SQLite long-term memory RAG, sandboxed ReAct tool loops, automated presentation tooling, and a temperature-0.1 satisfaction evaluator.",
     bullets: [
       "Engineered a 2-Tier `PromptClassifier` (`DIRECT` vs. `PLAN`) so conversational/math prompts bypass heavy DAG decomposition while complex engineering tasks trigger hierarchical planning and `ScratchpadManager` (>80% context window eviction).",
       "Integrated multi-provider streaming (Google Gemini 2.5, NVIDIA NIM `nemotron-3-ultra-550b-a55b` on vLLM V2 with fast-fail 4xx/410 diagnostics, Ollama `gemma4-e4b-64k`, and LM Studio) plus an in-process SQLite semantic/keyword Long-Term Memory store.",
-      "Built a macOS Antigravity/Codex-inspired desktop GUI over Server-Sent Events (SSE) with Safe/Auto/Strict human-in-the-loop `[Authorize]` / `[Reject]` tool cards, `.bak` file rollbacks, and live execution interrupts."
+      "Built a macOS Antigravity/Codex-inspired desktop GUI over Server-Sent Events (SSE) with Safe/Auto/Strict human-in-the-loop `[Authorize]` / `[Reject]` tool cards, `.bak` file rollbacks, live execution interrupts, and Google Slides/deck batch generation scripts."
     ],
     architecture: `┌──────────────────────────────────────────────────────────────────────────┐
 │ USER PROMPT ──► 2-TIER INTENT CLASSIFIER (core/classifier.py)            │
@@ -183,6 +184,7 @@ export const FLAGSHIP_PROJECTS = [
     subtitle: "11-stage state machine with dynamic schema ingestion, self-healing parser & safety guardrails",
     date: "Sep 2026",
     repoPath: "Deriv-Interview/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/ticket-triage-pipeline",
     metrics: ["11-Stage State Machine", "0.65 Confidence Gate", "100% Guardrail Adherence", "SHA-256 Audit Log"],
     stack: ["Python 3.11+", "Google Gemini API", "Pydantic v2", "JSON Schema", "Pytest", "State Machine"],
     summary:
@@ -210,17 +212,54 @@ export const FLAGSHIP_PROJECTS = [
                                                  ▼
                                  [SHA-256 Hashed llm_calls.jsonl Audit]`
   },
+  {
+    id: "accounting-document-assistant",
+    pillar: "ai-data",
+    pillarLabel: "Grounded RAG & DLP Security",
+    code: "SYS-04",
+    title: "Evidence-Grounded AI Accounting Document Assistant",
+    subtitle: "Deterministic Python Decimal engine, 8-pass OCR/table RAG, local DLP gatekeeper & citation verifier",
+    date: "Nov 2026",
+    repoPath: "KEMA - RAG system/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/accounting-document-assistant",
+    metrics: ["Exact Decimal Arithmetic", "8-Pass Table + OCR", "Local DLP Gatekeeper", "11/11 Integration Tests"],
+    stack: ["Python 3.11+", "SQLite (WAL)", "Sentence-Transformers", "pdfplumber & Tesseract OCR", "httpx (Gemini / OpenRouter / Ollama)", "Streamlit"],
+    summary:
+      "Evidence-grounded AI accounting and audit assistant solving LLM arithmetic hallucination and floating-point drift by pairing an 8-pass table-aware PDF/OCR ingestion pipeline and Python `Decimal` financial engines with hybrid SQLite RAG, a local sensitive-data DLP gatekeeper, and `[S#]` citation verification.",
+    bullets: [
+      "Engineered an 8-pass accounting parser (`pdfplumber` + `pypdf` + `pypdfium2`/`pytesseract` 2x OCR fallback) extracting Customer Open-Item Ledgers, invoices, cash receipts, credit notes, unallocated cash, and control totals into WAL-mode SQLite.",
+      "Eliminated LLM arithmetic drift via deterministic `decimal.Decimal` (`ROUND_HALF_UP` to `0.01`) calculations with strict multi-currency isolation, disputed balance separation, and page-bounded `[S#]` citation validation.",
+      "Enforced a pre-flight deterministic regex/keyword Sensitive-Data Gatekeeper (`scan_for_sensitive_data()`) blocking outbound cloud LLM calls when credentials, PEM keys, or card numbers appear, verified across an 11-stage 40-invoice ground-truth test suite."
+    ],
+    architecture: `[PDF Upload (Native / Scanned)] ──► [3-Tier Extractor: pdfplumber + pypdf + Tesseract OCR]
+                                                   │
+                                                   ▼
+                            [Local Sensitive-Data Gatekeeper (Regex/DLP)]
+                                    │                                │
+                                    ▼                                ▼
+                    [8-Pass Table Accounting Parser]   [Page-Bounded Chunks + MiniLM 384-d]
+                                    │                                │
+                                    └──────────────┬─────────────────┘
+                                                   ▼
+                                   [SQLite WAL DB (accounting.db)]
+                                                   │
+[User Query] ──► [Intent Router] ──► [Deterministic Decimal Engines + Hybrid RAG]
+                                                   │
+                                                   ▼
+                 [Gatekeeper Check ──► OpenRouter / Gemini / Ollama ──► [S#] Verifier]`
+  },
 
   // ================= PILLAR 2: CYBERSECURITY, VAPT & THREAT INTELLIGENCE =================
   {
     id: "autonomous-asm-platform",
     pillar: "cyber-sec",
     pillarLabel: "Cybersecurity & AI Copilot",
-    code: "SYS-04",
+    code: "SYS-05",
     title: "Autonomous Attack Surface Manager & 'Friday' AI Copilot",
     subtitle: "11-tool OSINT recon orchestrator, HTML5 Canvas physics graph, local LLM analyst & CVE SQL pipeline",
     date: "Jun 2026",
     repoPath: "asm-tool/ & CYBER_MultiTool/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/Attack-Surface-Management-AIO",
     metrics: ["11 OSINT CLI Tools", "100% Detection Rate", "Force-Directed Graph", "Multi-Source CVE Sync"],
     stack: ["Python", "Go", "Ollama / LM Studio", "SQLite & PostgreSQL", "HTML5 Canvas", "subfinder / naabu / nuclei / nmap"],
     summary:
@@ -249,11 +288,12 @@ export const FLAGSHIP_PROJECTS = [
     id: "multiclass-iot-nids",
     pillar: "cyber-sec",
     pillarLabel: "Network Defense & Security ML",
-    code: "SYS-05",
+    code: "SYS-06",
     title: "Multi-Class IoT Network Intrusion Detection System",
     subtitle: "7-class anomaly NIDS trained on 264,925 CIC-IoT-DIAD2024 flows with ~50ms CPU inference",
     date: "Sep – Dec 2025",
     repoPath: "ML-PROJECT/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/iot-multiclass-nids",
     metrics: ["264,925 Flow Records", "80 Flow Features", "0.98 DoS / 0.89 DDoS F1", "~50 ms CPU Inference"],
     stack: ["Python", "XGBoost", "TensorFlow (CNN-LSTM)", "Scikit-learn", "Pandas", "NumPy", "Joblib"],
     summary:
@@ -284,11 +324,12 @@ export const FLAGSHIP_PROJECTS = [
     id: "encrypted-p2p-chat-suite",
     pillar: "cyber-sec",
     pillarLabel: "Cryptography & Protocol Security",
-    code: "SYS-06",
+    code: "SYS-07",
     title: "ChatApp: E2EE Peer-to-Peer Cryptographic Suite",
     subtitle: "Signed Ephemeral Diffie-Hellman (PFS), AES-256-CBC + HMAC-SHA256 & traffic-analysis padding",
     date: "Feb 2026",
     repoPath: "Message/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/ChatApp",
     metrics: ["Perfect Forward Secrecy", "RSA-2048 + Ephemeral DH", "Encrypt-then-MAC", "Anti-Replay & Padding"],
     stack: ["Python", "PyCryptodome", "Flask & Socket.IO", "Tkinter (Sun Valley)", "Raw TCP Sockets", "WebSockets"],
     summary:
@@ -312,17 +353,86 @@ export const FLAGSHIP_PROJECTS = [
  • Tag     ──► HMAC-SHA256(mac_key, IV || 64-bit SeqCounter || Ciphertext)
  • Stream  ──► 4-Byte Big-Endian Length Header + Adaptive Dummy Traffic Padding`
   },
+  {
+    id: "nipa-hybrid-datamining",
+    pillar: "cyber-sec",
+    pillarLabel: "Security ML & Data Mining",
+    code: "SYS-08",
+    title: "Network Intrusion Pattern Analysis (NIPA) Stacked Ensemble",
+    subtitle: "ANOVA F-test feature selection, leakage-free SMOTE & RF+XGBoost+LR meta-stack on CICIoT2023",
+    date: "Feb – May 2026",
+    repoPath: "DM-PROJECT/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/nipa-network-intrusion-analysis",
+    metrics: ["Top-30 ANOVA Features", "5-Fold Stacked Ensemble", "33 IoT Attack Types", "105 Physical Devices"],
+    stack: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "SMOTE (imbalanced-learn)", "ANOVA F-Test"],
+    summary:
+      "Hybrid stacked cybersecurity ensemble combining Random Forest (bagging) and XGBoost (boosting) with a Logistic Regression meta-learner on CICIoT2023, applying ANOVA F-test feature selection (46 → 30 features) and training-split-only SMOTE oversampling to classify 33 IoT attack patterns across 8 categories without data leakage.",
+    bullets: [
+      "Engineered a two-level stacked ensemble pairing Random Forest (bagging) and XGBoost (boosting) with a Logistic Regression meta-learner evaluated via 5-fold stratified cross-validation.",
+      "Reduced 46 raw CICIoT2023 flow attributes down to the top 30 most discriminative features via ANOVA F-tests to accelerate training and reduce overfitting.",
+      "Applied training-split-only SMOTE (k=5 nearest neighbors) to balance rare IoT attacks (Brute Force, Spoofing, Mirai) across 260,000+ records while preventing test-set leakage."
+    ],
+    architecture: `[CICIoT2023 Dataset (105 IoT Devices • 33 Attack Types → 8 Categories)]
+       │
+       ▼
+[Stratified Train/Test Split] ──► [ANOVA F-Test Selector: 46 → Top 30 Features]
+       │
+       ▼ (Training Split Only — Zero Data Leakage)
+[SMOTE Minority Oversampling (k = 5)]
+       │
+       ├──────────────────────────┐
+       ▼                          ▼
+[Base 1: Random Forest]    [Base 2: XGBoost]
+       │                          │
+       └────────────┬─────────────┘
+                    ▼
+[Level-2 Logistic Regression Meta-Learner (5-Fold CV)]`
+  },
 
   // ================= PILLAR 3: DISTRIBUTED SYSTEMS, ML & SOFTWARE ENGINEERING =================
+  {
+    id: "memory-setup-offline-museum",
+    pillar: "systems-ml",
+    pillarLabel: "Local Vision AI & Systems",
+    code: "SYS-09",
+    title: "Memory Setup: Local Media Intelligence & Offline Museum",
+    subtitle: "5-stage offline pipeline, ArcFace 512-d clustering, KD-Tree geocoder & RAM-bounded Ollama VLM",
+    date: "Nov 2026",
+    repoPath: "Memory_Setup/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/memory-setup",
+    metrics: ["< 2.5 GB RAM Ceiling", "15k-City KD-Tree Geo", "512-d ArcFace BLAS", "29/29 Offline Tests"],
+    stack: ["Python 3.12", "InsightFace ArcFace", "Ollama (Moondream)", "SQLite FTS5", "PyWebView", "NumPy & SciPy", "Pytest"],
+    summary:
+      "Privacy-first, 100% offline media intelligence engine and Offline Museum desktop application organizing arbitrary photo, video, HEIC, and Live Photo folders under a strict two-folder contract (`content/` + `viewer/`) with offline reverse-geocoding, ArcFace facial clustering, memory-bounded Vision AI captions, and SQLite FTS5 search.",
+    bullets: [
+      "Engineered a 5-stage deterministic pipeline with magic-byte sniffing, SHA-256 deduplication, Live Photo companion pairing, offline 3D ECEF `cKDTree` reverse-geocoding (15k world cities, 150 km Haversine cutoff), and a 15.0 GiB free-disk safety floor.",
+      "Built vectorized NumPy BLAS Leader Centroid clustering (`thresh=0.48`) over 512-d InsightFace ArcFace ResNet-50 embeddings alongside a high-precision document/homework quarantine classifier.",
+      "Solved upstream `llama-server` host cache bloat via a single-worker `MemoryBoundedOllamaClient` (`cache_prompt: false`, `LLAMA_ARG_CACHE_RAM=0`, Whisper 50-item / Turbo 200-item runner recycling + RSS watchdog), wrapped in a native macOS/Windows PyWebView Control Center (`29/29` offline pytest checks passing)."
+    ],
+    architecture: `[Unsorted Media / SD Card] ──► [Stage 1-3: Magic Sniffer + Live Photo Pairing + SHA-256]
+                                              │
+                                              ├──► [3D ECEF cKDTree Offline Geocoder (15k Cities)]
+                                              ▼
+                                 [content/YYYY/ + Immutable Media IDs]
+                                              │
+                 ┌────────────────────────────┴────────────────────────────┐
+                 ▼                                                         ▼
+[Stage 4A: ArcFace 512-d + BLAS Clustering]       [Stage 4B: Single-Worker Ollama Moondream]
+                 │                                (cache_prompt:false, <2.5 GB RAM Watchdog)
+                 └────────────────────────────┬────────────────────────────┘
+                                              ▼
+[Stage 5: SQLite FTS5 + Anti-Clobber Museum Server + PyWebView Desktop Control Center]`
+  },
   {
     id: "ddos-detection-pipeline",
     pillar: "systems-ml",
     pillarLabel: "Distributed Systems & Threat ML",
-    code: "SYS-07",
+    code: "SYS-10",
     title: "Distributed Real-Time DDoS Detection Pipeline",
     subtitle: "2.0 Gbps Linux AF_XDP zero-copy packet capture, Kafka streaming & 73ms ensemble inference",
     date: "Jun – Aug 2025",
     repoPath: "LTS-Files/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/PS1-distributed-ddos-detection",
     metrics: ["2.0 Gbps Line-Rate", "73 ms Median Latency", "99.2% Ensemble Acc", "-20% Memory Footprint"],
     stack: ["Python 3.11", "Linux AF_XDP / AF_PACKET", "Apache Kafka", "gRPC & Protobuf", "FastAPI", "XGBoost / LightGBM", "Docker & K8s"],
     summary:
@@ -351,11 +461,11 @@ export const FLAGSHIP_PROJECTS = [
     id: "hiroshima-robotics-vision",
     pillar: "systems-ml",
     pillarLabel: "Robotics & Computer Vision",
-    code: "SYS-08",
+    code: "SYS-11",
     title: "Vision-Guided Robotic Teleoperation & Pose Tracking",
     subtitle: "30+ FPS MediaPipe 3D pose/gesture estimation driving CoppeliaSim inverse kinematics (<50ms)",
     date: "Jul 2026",
-    repoPath: "HU/",
+    repoPath: "JAPAN/02-Hiroshima-Immersion-Program/HU-Robotics-And-Vision/",
     metrics: ["< 50 ms Loop Latency", "30+ FPS 3D Tracking", "Inverse Kinematics", "Hiroshima Univ. (Japan)"],
     stack: ["Python", "OpenCV 4", "Google MediaPipe", "CoppeliaSim (V-REP)", "Inverse Kinematics (IK)", "Proportional Control"],
     summary:
@@ -386,11 +496,12 @@ export const FLAGSHIP_PROJECTS = [
     id: "c-subset-optimizing-compiler",
     pillar: "systems-ml",
     pillarLabel: "Compilers & Systems",
-    code: "SYS-09",
+    code: "SYS-12",
     title: "PLY-Based C-Subset Optimizing Compiler",
     subtitle: "Multi-phase compiler from Lexer & LALR(1) AST parser to TAC optimization & virtual assembly",
     date: "Feb – May 2026",
     repoPath: "CCP/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/Compiler-Creation",
     metrics: ["6-Phase Pipeline", "LALR(1) + LL(1) Sim", "Constant Folding & DCE", "Register Assembler"],
     stack: ["Python", "PLY (Lex-Yacc)", "C Grammar Specs", "AST & Symbol Tables", "Three-Address Code (TAC)", "Virtual Assembly"],
     summary:
@@ -423,37 +534,38 @@ export const FLAGSHIP_PROJECTS = [
 ];
 
 /**
- * 7 Additional Specialized & Hobby Projects
+ * 7 Additional Specialized, Coursework & Hobby Projects
  * Indexed deeply in the AI Chatbot + accessible via the `ls ./archive` CLI drawer
  */
 export const ARCHIVE_PROJECTS = [
   {
-    id: "nipa-hybrid-datamining",
-    pillar: "cyber-sec",
-    title: "Network Intrusion Pattern Analysis (NIPA) — Stacked Security Ensemble",
-    repoPath: "DM-PROJECT/",
-    date: "Feb – May 2026",
-    stack: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "SMOTE (imbalanced-learn)", "ANOVA F-Test"],
-    metrics: ["Top-30 ANOVA Features", "5-Fold Stacked Ensemble", "33 IoT Attack Types", "105 Physical Devices"],
-    summary:
-      "Hybrid stacked cybersecurity ensemble combining Random Forest (bagging) and XGBoost (boosting) with a Logistic Regression meta-learner on CICIoT2023. Uses ANOVA F-test feature selection (46 → 30 features) and training-split-only SMOTE oversampling to classify 33 IoT attack patterns across 8 categories without data leakage."
-  },
-  {
     id: "multiverse-rpg-semantic-search",
     pillar: "ai-data",
-    title: "Multiverse RPG Codex Dense Vector Retrieval Engine",
-    repoPath: "LLM PROJECTS/Assignment-1/",
-    date: "Sep 2026",
+    title: "Multiverse RPG Codex Dense Vector Search & Campus Services RAG",
+    repoPath: "LLM PROJECTS/Assignment-1 & Assignment-2/",
+    date: "Sep – Nov 2026",
     stack: ["Python 3.11+", "PyTorch", "Sentence-Transformers (all-MiniLM-L6-v2)", "NumPy", "Pandas", "Jupyter"],
-    metrics: ["384-d Dense Vectors", "< 1 ms Cosine Ranking", "135 Curated Lore Items", "6 Query Archetypes"],
+    metrics: ["384-d Dense Vectors", "< 1 ms Cosine Ranking", "135 Curated Lore Items", "Campus RAG Suite"],
     summary:
-      "End-to-end dense vector semantic retrieval system embedding 135 hand-annotated RPG items across 5 realms and 7 categories into 384-dimensional vectors using `all-MiniLM-L6-v2`. Implemented pure NumPy/PyTorch linear algebra cosine similarity ranking (>0.62 similarity on zero-keyword atmospheric queries) and authored a 22KB theoretical analysis on transformer pooling 'negation blindness' (`Bag-of-Embeddings`) proving why hybrid dense + BM25 + metadata filtering is essential."
+      "Two LLM retrieval coursework systems (Private Repo): (1) an end-to-end dense vector semantic retrieval engine embedding 135 hand-annotated RPG items across 5 realms and 7 categories into 384-d `all-MiniLM-L6-v2` vectors with pure NumPy/PyTorch cosine ranking (>0.62 similarity on zero-keyword queries) plus a 22KB analysis of transformer 'negation blindness', and (2) an automated Campus Event Announcement Generator & Student Services RAG Assistant."
+  },
+  {
+    id: "portable-smart-room-iot",
+    pillar: "systems-ml",
+    title: "Portable Smart Room IoT Devices & Fog/AWS Telemetry Lab",
+    repoPath: "IOT/",
+    date: "Sep – Nov 2026",
+    stack: ["Python", "Raspberry Pi 4", "ESP32 & ESP8266", "Seeed XIAO nRF52840", "Ollama & Whisper", "BLE / MQTT"],
+    metrics: ["Zero Electrical Rewiring", "100% Local AI Hub", "4 Edge Microcontrollers", "MQTT / AWS Telemetry"],
+    summary:
+      "Modular retrofit smart-room hardware and fog/cloud IoT suite (Private Repo) uniting a local Mac Ollama/Moondream/Whisper AI hub, Raspberry Pi 4 Camera & BLE sentry, ESP32 Classic Bluetooth A2DP wireless audio gateway, Seeed XIAO nRF52840 Sense double-tap/OpenHaystack beacon, and NodeMCU ESP8266 SG90 light-switch flipper with DHT-22 & MQ-4 safety monitoring."
   },
   {
     id: "netwatch-port-dashboard",
     pillar: "cyber-sec",
     title: "NetWatch: Live System & Network Socket Security Auditor",
     repoPath: "port-dashboard/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/Netwatch-Port-Dashboard",
     date: "Jun 2026",
     stack: ["Python", "FastAPI", "SQLite", "Chart.js", "HTML5/CSS/JS", "psutil", "lsof"],
     metrics: ["< 2% CPU Overhead", "< 50 MB RAM", "72-Hour Rolling Cache", "PID-to-Socket Auditor"],
@@ -465,6 +577,7 @@ export const ARCHIVE_PROJECTS = [
     pillar: "systems-ml",
     title: "Digital Scotland Yard (60 FPS Multiplayer Tabletop Engine)",
     repoPath: "Scotland yard/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/scotland-yard",
     date: "Oct 2026 (Hobby Project)",
     stack: ["Next.js 16", "React 19", "TypeScript", "Node.js 26", "Socket.io 4", "HTML5 Canvas 2D", "Web Audio API"],
     metrics: ["60 FPS Bezier Cartography", "3 Cities (up to 1,212 routes)", "Zero-Cheat State Sanitizer", "BFS Evasive AI"],
@@ -476,6 +589,7 @@ export const ARCHIVE_PROJECTS = [
     pillar: "ai-data",
     title: "AQI-Forecast: Urban Air Quality Prediction via LSTM & HERE Traffic API",
     repoPath: "DL PROJECT- NIKUNJ GUPTA 0229/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/aqi-forecast-lstm",
     date: "Feb – May 2026",
     stack: ["Python", "PyTorch (2-Layer LSTM)", "Streamlit", "HERE Traffic REST API", "Pandas", "NumPy"],
     metrics: ["24-Hour Sequence Window", "Live HERE jamFactor", "Mode A vs Mode B Eval", "Interactive Simulator"],
@@ -487,6 +601,7 @@ export const ARCHIVE_PROJECTS = [
     pillar: "systems-ml",
     title: "Next Class: Desktop GUI & macOS Status Bar Timetable Companion",
     repoPath: "timetable-app/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/menubar-timetable-app",
     date: "May 2026",
     stack: ["Python", "Tkinter (Sun Valley TTK)", "Rumps (macOS Status Bar)", "py2app", "PyInstaller", "JSON"],
     metrics: ["Dock-Free Status Bar App", "15-Min Native OS Alerts", "Live Countdown Timers", "Standalone .app Bundle"],
@@ -498,11 +613,24 @@ export const ARCHIVE_PROJECTS = [
     pillar: "systems-ml",
     title: "Python gRPC Microservice & GestureDeck MediaPipe Controller",
     repoPath: "gRPC project/ & gesture_control/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/gesturedeck",
     date: "Jun – Jul 2026",
     stack: ["Python", "gRPC", "Protocol Buffers (Protobuf)", "MediaPipe", "OpenCV"],
     metrics: ["Protobuf Stubs (Port 50051)", "Real-Time Hand Landmarks", "Low-Latency IPC"],
     summary:
       "Two focused systems utilities: (1) a low-latency Python gRPC microservice using compiled `helloworld.proto` Protocol Buffer stubs on port 50051, and (2) `GestureDeck`, a real-time webcam hand-gesture recognition engine built with MediaPipe."
+  },
+  {
+    id: "docker-kubernetes-devsecops",
+    pillar: "cyber-sec",
+    title: "Docker & Kubernetes DevSecOps Mastery Guide",
+    repoPath: "github.com/Nikunj-Gupta-1/docker-kubernetes-mastery",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/docker-kubernetes-mastery",
+    date: "2026",
+    stack: ["Docker", "Kubernetes", "RBAC", "Multi-Stage Containers", "DevSecOps"],
+    metrics: ["Container Hardening", "K8s RBAC & Network Policies", "Production Runbooks"],
+    summary:
+      "Comprehensive DevSecOps engineering reference covering container isolation, multi-stage builds, image security hygiene, Kubernetes workload orchestration, RBAC policy auditing, and cluster hardening workflows."
   }
 ];
 
@@ -574,10 +702,11 @@ export const SKILL_GROUPS = [
       "Tool Calling & Sandboxing",
       "Context Window Masking",
       "Pydantic v2 Structured Outputs",
-      "RAG & Dense Vector Search",
+      "Hybrid RAG & SQLite FTS5",
+      "Local DLP Guardrails & Citation Verification",
       "Google Gemini API",
       "NVIDIA NIM (Nemotron 3)",
-      "Ollama & Local LLMs",
+      "Ollama & Local VLMs (Moondream)",
       "Sentence-Transformers"
     ]
   },
@@ -603,26 +732,27 @@ export const SKILL_GROUPS = [
       "PyTorch (LSTM / DNN)",
       "XGBoost & LightGBM",
       "Scikit-learn & Stacked Ensembles",
-      "Anomaly & Threat Detection ML",
+      "InsightFace ArcFace (512-d Biometrics)",
+      "Tesseract OCR & pdfplumber",
       "ANOVA F-Test & SMOTE",
-      "Pandas, NumPy & SciPy",
+      "Pandas, NumPy & SciPy (KD-Tree)",
       "OpenCV 4 & MediaPipe",
       "CoppeliaSim & Inverse Kinematics"
     ]
   },
   {
-    category: "Distributed Systems, Web & Compilers",
+    category: "Distributed Systems, IoT, Web & Compilers",
     pillar: "systems-ml",
     items: [
-      "Python 3.11+ (Advanced)",
+      "Python 3.12 (Advanced)",
       "Linux AF_XDP / AF_PACKET",
       "Apache Kafka",
       "gRPC & Protocol Buffers",
-      "FastAPI & Flask",
-      "SQL (PostgreSQL & SQLite)",
+      "FastAPI, Flask & PyWebView",
+      "SQL (PostgreSQL & SQLite WAL/FTS5)",
       "PLY Compiler (Lex-Yacc)",
-      "TypeScript / React / Next.js",
-      "HTML5 Canvas & Chart.js"
+      "Raspberry Pi, ESP32 & BLE/MQTT",
+      "TypeScript / React / Next.js"
     ]
   }
 ];
@@ -685,7 +815,7 @@ export function buildAgentSystemPrompt() {
       `• ${e.role} @ ${e.organization} (${e.location}, ${e.period}): ${e.highlights.join(" ")}`
   ).join("\n");
 
-  return `You are "nikunj-agent v2.6", the official embedded AI Command-Center Assistant on Nikunj Gupta's engineering portfolio website.
+  return `You are "nikunj-agent v2.7", the official embedded AI Command-Center Assistant on Nikunj Gupta's engineering portfolio website.
 Your job is to answer recruiter, hiring manager, and engineer questions about Nikunj Gupta accurately, concisely, and with quantitative technical depth.
 
 === CORE IDENTITY, EDUCATION & CAREER DIRECTION ===
@@ -699,25 +829,25 @@ Your job is to answer recruiter, hiring manager, and engineer questions about Ni
 - PRIVACY GUARDRAIL: Never share or invent any phone numbers or university student IDs. Direct users to email (${PROFILE.links.email}) or LinkedIn.
 
 === 3 CORE ENGINEERING VERTICALS (IN PRIORITY ORDER) ===
-1. AI Agents, LLMs & AI Security (Autonomous ReAct agents, LLM OSV vulnerability benchmarks, Gemini/Pydantic state machines, dense vector RAG)
-2. Cybersecurity, VAPT & Threat Intelligence (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with 'Friday' local LLM copilot, multi-source CVE/NVD SQL pipelines, 264k-row IoT NIDS, RSA+DH PFS E2EE chat)
-3. Distributed Systems, ML & Software Engineering (2.0 Gbps Linux AF_XDP DDoS packet capture + Kafka + gRPC 73ms pipeline, LALR(1) C compiler, 30+ FPS robotics vision)
+1. AI Agents, LLMs & AI Security (Autonomous ReAct agents, LLM OSV vulnerability benchmarks, Gemini/Pydantic state machines, deterministic Decimal + DLP-gated Accounting RAG)
+2. Cybersecurity, VAPT & Threat Intelligence (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with 'Friday' local LLM copilot, multi-source CVE/NVD SQL pipelines, 264k-row IoT NIDS & NIPA stacked ensembles, RSA+DH PFS E2EE chat)
+3. Distributed Systems, ML & Software Engineering (Memory Setup offline VLM/ArcFace/FTS5 desktop engine, 2.0 Gbps Linux AF_XDP DDoS packet capture + Kafka + gRPC 73ms pipeline, 30+ FPS robotics vision, LALR(1) C compiler)
 
 === PROFESSIONAL EXPERIENCE & RESEARCH ===
 ${expText}
 
-=== 9 FLAGSHIP PROJECTS (SHOWN ON MAIN PORTFOLIO GRID) ===
+=== 12 FLAGSHIP PROJECTS (SHOWN ON MAIN PORTFOLIO GRID) ===
 ${flagshipText}
 
-=== 7 ADDITIONAL / SPECIALIZED & HOBBY PROJECTS (INDEXED IN YOUR MEMORY) ===
+=== 8 ADDITIONAL / SPECIALIZED & HOBBY PROJECTS (INDEXED IN YOUR MEMORY) ===
 ${archiveText}
 
 === CERTIFICATIONS & LEADERSHIP ===
 ${LEADERSHIP_AND_CERTS.map((c) => `• ${c}`).join("\n")}
 
 === RESPONSE STYLE GUIDELINES ===
-1. Keep answers crisp, well-structured (use bullet points and inline code backticks for metrics like \`73ms\`, \`2.0 Gbps\`, \`1,000+ servers\`, \`8.6/10 CGPA\`, \`AF_XDP\`), and grounded strictly in the facts above.
+1. Keep answers crisp, well-structured (use bullet points and inline code backticks for metrics like \`73ms\`, \`2.0 Gbps\`, \`1,000+ servers\`, \`8.6/10 CGPA\`, \`AF_XDP\`, \`<2.5 GB RAM\`), and grounded strictly in the facts above.
 2. Emphasize Nikunj's unique strength at the intersection of **AI + Cybersecurity** whenever relevant.
-3. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main 9-card grid, highlight the 7 additional projects (NIPA Stacked Security Ensemble, Multiverse RPG Semantic Search, NetWatch Socket Auditor, Digital Scotland Yard, AQI-Forecast LSTM, Next Class macOS app, and gRPC/GestureDeck).
+3. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main 12-card grid, highlight the 8 additional projects (Multiverse RPG & Campus RAG, Portable Smart Room IoT & Fog Lab, NetWatch Socket Auditor, Digital Scotland Yard, AQI-Forecast LSTM, Next Class macOS app, gRPC/GestureDeck, and Docker/K8s DevSecOps Mastery).
 4. If asked how to hire or contact Nikunj, provide his email (${PROFILE.links.email}), LinkedIn, GitHub, and mention the 3 role-tailored Resume PDFs available in the Resume section.`;
 }

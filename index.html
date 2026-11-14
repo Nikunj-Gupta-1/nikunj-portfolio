@@ -45,7 +45,7 @@
           <ul class="drawer-nav-list">
             <li><a href="#pillars" class="drawer-nav-link"><span class="nav-idx">01</span> Core Verticals (AI + Cyber + Systems)</a></li>
             <li><a href="#ai-terminal" class="drawer-nav-link"><span class="nav-idx">02</span> Interactive AI Agent (<code>nikunj-agent</code>)</a></li>
-            <li><a href="#projects" class="drawer-nav-link"><span class="nav-idx">03</span> 9 Flagship Engineering Systems</a></li>
+            <li><a href="#projects" class="drawer-nav-link"><span class="nav-idx">03</span> 12 Flagship Engineering Systems</a></li>
             <li><a href="#experience" class="drawer-nav-link"><span class="nav-idx">04</span> Experience &amp; Security Operations</a></li>
             <li><a href="#skills" class="drawer-nav-link"><span class="nav-idx">05</span> Technical Stack &amp; Education</a></li>
             <li><a href="#resumes" class="drawer-nav-link"><span class="nav-idx">06</span> Resumes &amp; Direct Contact</a></li>
@@ -156,7 +156,7 @@
                   <span>&gt;_ Interview My AI Agent</span>
                 </a>
                 <a href="#projects" class="btn btn-secondary">
-                  <span>Explore 9 Flagship Systems</span>
+                  <span>Explore 12 Flagship Systems</span>
                 </a>
                 <a href="#resumes" class="btn btn-ghost">
                   <span>Download Role-Tailored CV ↓</span>
@@ -219,10 +219,10 @@
         <div class="section-cmd">02 // INTERACTIVE_AI_AGENT_API</div>
         <div class="section-title-row">
           <div>
-            <h2 class="section-title">Ask <code>nikunj-agent v2.6</code> Anything</h2>
+            <h2 class="section-title">Ask <code>nikunj-agent v2.7</code> Anything</h2>
             <p class="section-desc">
               Powered by Google Gemini API &amp; NVIDIA NIM via Serverless Function (with instant local RAG fallback).
-              Knows all <strong>16 projects</strong> (including smaller/hobby builds not on the main grid), VAPT &amp; AI security work, and architecture specs.
+              Knows all <strong>20 projects</strong> (12 Flagships including <code>Memory Setup</code> &amp; <code>Accounting Document Assistant</code>, plus 8 specialized/hobby builds), VAPT &amp; AI security work, and architecture specs.
             </p>
           </div>
           <span class="agent-engine-badge" id="agentEngineBadge">ENGINE: READY (SERVERLESS + RAG)</span>
@@ -236,7 +236,7 @@
             <span class="dot dot-amber"></span>
             <span class="dot dot-green"></span>
           </div>
-          <div class="window-title">nikunj-agent — /api/chat — Full 16-Project Knowledge Base</div>
+          <div class="window-title">nikunj-agent — /api/chat — Full 20-Project Knowledge Base</div>
           <button type="button" class="btn-clear-chat" id="clearChatBtn">clear [⌘L]</button>
         </div>
 
@@ -246,17 +246,17 @@
           <button type="button" class="prompt-chip" data-prompt="How does Nikunj combine AI and Cybersecurity across his projects and internships?">
             AI + Cybersecurity Focus
           </button>
-          <button type="button" class="prompt-chip" data-prompt="What did Nikunj build during his VAPT & security internships at Jio Platforms and Leo Technosoft?">
-            Jio VAPT &amp; Leo Threat ML
+          <button type="button" class="prompt-chip" data-prompt="Tell me about Memory Setup (Local Media Intelligence Engine) and its RAM-bounded Ollama VLM + ArcFace clustering.">
+            Memory Setup (Offline VLM)
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="How does Accounting Document Assistant combine Python Decimal engines, OCR RAG, and a local DLP gatekeeper?">
+            Accounting RAG + DLP
           </button>
           <button type="button" class="prompt-chip" data-prompt="Tell me about his Autonomous Attack Surface Manager (asm-tool) with the Friday local LLM security copilot and CVE pipeline.">
             ASM + 'Friday' Security LLM
           </button>
-          <button type="button" class="prompt-chip" data-prompt="How does Nikunj's Evidence-Removal Sensitivity Tester benchmark LLM vulnerability triage?">
-            LLM Vulnerability Benchmark
-          </button>
-          <button type="button" class="prompt-chip" data-prompt="What are the smaller, specialized, or hobby projects not shown on the main flagship grid?">
-            Hidden / Hobby Projects (7)
+          <button type="button" class="prompt-chip" data-prompt="What are the smaller, coursework, or hobby projects not shown on the main flagship grid?">
+            Additional &amp; Hobby Projects (8)
           </button>
           <button type="button" class="prompt-chip" data-prompt="/help">
             /help
@@ -276,7 +276,7 @@
             id="agentChatInput"
             name="message"
             rows="1"
-            placeholder="Ask anything about Nikunj's AI + Cybersecurity work, 16 projects, internships, or type /archive, /help..."
+            placeholder="Ask anything about Nikunj's AI + Cybersecurity work, 20 projects, internships, or type /archive, /help..."
             required
           ></textarea>
           <button type="submit" class="btn btn-primary btn-send" id="agentSendBtn">
@@ -286,31 +286,31 @@
       </div>
     </section>
 
-    <!-- ================= 03. 9 FLAGSHIP PROJECTS GRID ================= -->
+    <!-- ================= 03. 12 FLAGSHIP PROJECTS GRID ================= -->
     <section id="projects" class="section container">
       <div class="section-header">
         <div class="section-cmd">03 // FLAGSHIP_ENGINEERING_SYSTEMS</div>
         <div class="section-title-row">
           <div>
-            <h2 class="section-title">Flagship Systems Showcase (9 Core Builds)</h2>
+            <h2 class="section-title">Flagship Systems Showcase (12 Core Builds)</h2>
             <p class="section-desc">
-              3 flagship architectures per vertical. Click <strong>[Inspect Architecture]</strong> on any card to view its system pipeline diagram and technical defense specs, or ask the AI Agent above about the 7 additional projects.
+              4 flagship architectures per vertical. Click <strong>[Inspect Architecture]</strong> on any card to view its system pipeline diagram and technical defense specs, or ask the AI Agent above about the 8 additional projects.
             </p>
           </div>
 
           <!-- Filter Tabs (Ordered: ALL -> AI -> CYBERSECURITY -> SYSTEMS) -->
           <div class="filter-tabs" role="tablist" aria-label="Filter flagship projects by engineering vertical">
             <button type="button" role="tab" aria-selected="true" class="filter-tab active" data-filter="all">
-              ALL (9)
+              ALL (12)
             </button>
             <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="ai-data">
-              01. AI &amp; AGENTS (3)
+              01. AI &amp; AGENTS (4)
             </button>
             <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="cyber-sec">
-              02. CYBERSECURITY &amp; VAPT (3)
+              02. CYBERSECURITY &amp; VAPT (4)
             </button>
             <button type="button" role="tab" aria-selected="false" class="filter-tab" data-filter="systems-ml">
-              03. SYSTEMS &amp; ML (3)
+              03. SYSTEMS &amp; ML (4)
             </button>
           </div>
         </div>
@@ -320,18 +320,18 @@
         <!-- Populated by main.js -->
       </div>
 
-      <!-- Compact Pointer to the 7 Additional Projects in the AI Chatbot -->
+      <!-- Compact Pointer to the 8 Additional Projects in the AI Chatbot -->
       <div class="archive-callout">
         <div class="archive-callout-text">
-          <span class="archive-badge">+7 MORE PROJECTS IN AI AGENT MEMORY</span>
+          <span class="archive-badge">+8 MORE PROJECTS IN AI AGENT MEMORY</span>
           <p>
-            Looking for <strong>NIPA Stacked IoT Security Ensemble</strong>, <strong>NetWatch Socket Security Auditor</strong>,
-            <strong>Multiverse RPG Dense Vector Search</strong>, <strong>Digital Scotland Yard (60 FPS Canvas Game)</strong>,
-            <strong>AQI-Forecast LSTM</strong>, <strong>Next Class macOS App</strong>, or <strong>gRPC &amp; GestureDeck</strong>?
+            Looking for <strong>Portable Smart Room IoT &amp; Fog Lab</strong>, <strong>Multiverse RPG &amp; Campus RAG</strong>,
+            <strong>NetWatch Socket Security Auditor</strong>, <strong>Digital Scotland Yard (60 FPS Canvas Game)</strong>,
+            <strong>AQI-Forecast LSTM</strong>, <strong>Next Class macOS App</strong>, <strong>gRPC &amp; GestureDeck</strong>, or <strong>Docker/K8s DevSecOps</strong>?
           </p>
         </div>
         <button type="button" class="btn btn-secondary" id="askArchiveProjectsBtn">
-          <span>Query All 7 in AI Terminal ↑</span>
+          <span>Query All 8 in AI Terminal ↑</span>
         </button>
       </div>
     </section>
@@ -486,7 +486,7 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <span class="status-dot" aria-hidden="true"></span>
-        <span>NIKUNJ GUPTA // AI + CYBERSECURITY COMMAND-CENTER v2.6</span>
+        <span>NIKUNJ GUPTA // AI + CYBERSECURITY COMMAND-CENTER v2.7</span>
       </div>
       <div class="footer-links">
         <a href="mailto:nikunj0123@outlook.com">nikunj0123@outlook.com</a>

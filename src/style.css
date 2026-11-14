@@ -1118,6 +1118,10 @@ textarea:user-valid {
   gap: 1.25rem;
 }
 
+.projects-grid[data-filtered="true"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -1607,6 +1611,7 @@ dialog.cmd-dialog::backdrop {
   .hero-grid,
   .pillars-grid,
   .projects-grid,
+  .projects-grid[data-filtered="true"],
   .timeline-list,
   .skills-grid,
   .edu-cert-grid,

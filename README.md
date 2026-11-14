@@ -1,12 +1,12 @@
-# ⚡ Nikunj Gupta — AI + Cybersecurity Engineering Command-Center & AI Portfolio (`v2.6`)
+# ⚡ Nikunj Gupta — AI + Cybersecurity Engineering Command-Center & AI Portfolio (`v2.7`)
 
 [![Netlify Status](https://img.shields.io/badge/Deploy-Netlify%20Ready-00C7B7?logo=netlify&logoColor=white)](https://app.netlify.com)
 [![Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?logo=cloudflarepages&logoColor=white)](https://pages.cloudflare.com)
 [![Focus](https://img.shields.io/badge/Focus-AI%20%2B%20Cybersecurity-f59e0b)](#core-engineering-identity-3-verticals)
-[![AI Agent](https://img.shields.io/badge/AI%20Agent-Gemini%202.5%20%7C%20NVIDIA%20NIM%20%7C%20Local%20RAG-22d3ee)](#interactive-ai-agent-nikunj-agent-v26)
-[![Tests](https://img.shields.io/badge/Unit%20Tests-7%2F7%20Passing-10b981)](#quick-start--local-development)
+[![AI Agent](https://img.shields.io/badge/AI%20Agent-Gemini%202.5%20%7C%20NVIDIA%20NIM%20%7C%20Local%20RAG-22d3ee)](#interactive-ai-agent-nikunj-agent-v27)
+[![Tests](https://img.shields.io/badge/Unit%20Tests-9%2F9%20Passing-10b981)](#quick-start--local-development)
 
-A zero-dependency **Terminal / Command-Center Engineering Portfolio** and **Serverless AI Agent (`nikunj-agent v2.6`)** built for **Nikunj Gupta** — Final-year Computer Science & Data Science student at **BITS Pilani, Dubai Campus** (`CGPA: 8.6 / 10.0`) focused on the intersection of **AI + Cybersecurity**.
+A zero-dependency **Terminal / Command-Center Engineering Portfolio** and **Serverless AI Agent (`nikunj-agent v2.7`)** built for **Nikunj Gupta** — Final-year Computer Science & Data Science student at **BITS Pilani, Dubai Campus** (`CGPA: 8.6 / 10.0`) focused on the intersection of **AI + Cybersecurity**.
 
 ---
 
@@ -16,15 +16,15 @@ The portfolio is structured around three engineering verticals—highlighting th
 
 | Vertical | Focus Areas | Flagship Systems (Main Grid) |
 | :--- | :--- | :--- |
-| **01 // AI Agents, LLMs & AI Security** | Zero-framework ReAct coding & security agents, deterministic LLM vulnerability triage benchmarks, guardrailed state machines, dense vector RAG | • **Autonomous Local AI Coding Agent & Desktop Runtime (`local-agent`)**<br>• **Evidence-Removal Sensitivity Tester — AI Security Benchmark (`GENAI PROJECT`)**<br>• **AI Support Ticket Triage & Safe Reply Pipeline (`Deriv-Interview`)** |
-| **02 // Cybersecurity, VAPT & Threat Intelligence** | Enterprise VAPT (`1,000+` servers at Jio), OSINT recon orchestration with local LLM security analysts, multi-source CVE/NVD SQL pipelines, IoT NIDS, Perfect Forward Secrecy E2EE | • **Autonomous Attack Surface Manager & 'Friday' AI Copilot (`asm-tool` + `CYBER_MultiTool`)**<br>• **Multi-Class IoT Network Intrusion Detection (`ML-PROJECT` — 264,925 flows)**<br>• **ChatApp: E2EE P2P Cryptographic Suite (`Message` — RSA-2048 + Ephemeral DH)** |
-| **03 // Distributed Systems, ML & Software Engineering** | Linux `AF_XDP` zero-copy kernel-bypass packet capture (`2.0 Gbps`), Kafka + gRPC threat streaming (`73ms` SLA), optimizing C compilers, vision-guided robotics | • **Distributed Real-Time DDoS Detection Pipeline (`LTS-Files` — 2.0 Gbps, 73ms SLA)**<br>• **Vision-Guided Robotic Teleoperation (`HU` — Hiroshima University, <50ms)**<br>• **PLY-Based C-Subset Optimizing Compiler (`CCP`)** |
+| **01 // AI Agents, LLMs & AI Security** | Zero-framework ReAct coding & security agents, deterministic LLM vulnerability triage benchmarks, Decimal + DLP-gated accounting RAG, guardrailed state machines | • **Autonomous Local AI Coding Agent & Desktop Runtime (`local-agent`)**<br>• **Evidence-Removal Sensitivity Tester — AI Security Benchmark (`GENAI PROJECT`)**<br>• **AI Support Ticket Triage & Safe Reply Pipeline (`Deriv-Interview`)**<br>• **Evidence-Grounded AI Accounting Document Assistant (`accounting-document-assistant`)** |
+| **02 // Cybersecurity, VAPT & Threat Intelligence** | Enterprise VAPT (`1,000+` servers at Jio), OSINT recon orchestration with local LLM security analysts, multi-source CVE/NVD SQL pipelines, IoT NIDS & stacked ensembles, PFS E2EE | • **Autonomous Attack Surface Manager & 'Friday' AI Copilot (`asm-tool` + `CYBER_MultiTool`)**<br>• **Multi-Class IoT Network Intrusion Detection (`ML-PROJECT` — 264,925 flows)**<br>• **ChatApp: E2EE P2P Cryptographic Suite (`Message` — RSA-2048 + Ephemeral DH)**<br>• **Network Intrusion Pattern Analysis Stacked Ensemble (`DM-PROJECT`)** |
+| **03 // Distributed Systems, ML & Software Engineering** | Privacy-first local VLM & ArcFace offline media engines, Linux `AF_XDP` kernel-bypass packet capture (`2.0 Gbps`), Kafka + gRPC threat streaming (`73ms` SLA), vision-guided robotics, optimizing C compilers | • **Memory Setup: Local Media Intelligence & Offline Museum (`memory-setup`)**<br>• **Distributed Real-Time DDoS Detection Pipeline (`LTS-Files` — 2.0 Gbps, 73ms SLA)**<br>• **Vision-Guided Robotic Teleoperation (`HU-Robotics-And-Vision` — Hiroshima Univ., <50ms)**<br>• **PLY-Based C-Subset Optimizing Compiler (`CCP`)** |
 
 ---
 
-## 🤖 Interactive AI Agent (`nikunj-agent v2.6`)
+## 🤖 Interactive AI Agent (`nikunj-agent v2.7`)
 
-Embedded directly into the Command-Center page (`#ai-terminal` or via `⌘K`), **`nikunj-agent v2.6`** answers technical and recruiter questions across **all 16 engineering projects** (the **9 Flagship Systems** on the main grid plus **7 Additional & Hobby Projects** including *NIPA Stacked IoT Security Ensemble*, *NetWatch Socket Security Auditor*, *Multiverse RPG Codex Dense Vector Search*, *Digital Scotland Yard*, *AQI-Forecast LSTM*, *Next Class macOS Status Bar App*, and *gRPC / GestureDeck*).
+Embedded directly into the Command-Center page (`#ai-terminal` or via `⌘K`), **`nikunj-agent v2.7`** answers technical and recruiter questions across **all 20 engineering projects** (the **12 Flagship Systems** on the main grid plus **8 Additional, Coursework & Hobby Projects** including *Multiverse RPG & Campus RAG*, *Portable Smart Room IoT & Fog Lab*, *NetWatch Socket Security Auditor*, *Digital Scotland Yard*, *AQI-Forecast LSTM*, *Next Class macOS Status Bar App*, *gRPC / GestureDeck*, and *Docker & Kubernetes DevSecOps Mastery*).
 
 ### 4-Tier Serverless + Local RAG Cascade (`/api/chat`)
 
@@ -68,7 +68,7 @@ portfolio-website/
 │   ├── dev-server.mjs                # Local HTTP server + /api/chat serverless emulator
 │   └── build_sanitized_resumes.py    # Typst compiler script stripping phone numbers & student IDs from public PDFs
 └── tests/
-    └── chatbot.test.mjs              # Automated Node test suite (7/7 tests)
+    └── chatbot.test.mjs              # Automated Node test suite (9/9 tests)
 ```
 
 ---

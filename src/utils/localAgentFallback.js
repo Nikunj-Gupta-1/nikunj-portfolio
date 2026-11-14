@@ -25,10 +25,10 @@ export function generateLocalAgentResponse(rawInput) {
   // 1. Direct CLI / Slash commands
   if (q === "/help" || q === "help") {
     return [
-      "### `nikunj-agent v2.6` — Command Reference",
+      "### `nikunj-agent v2.7` — Command Reference",
       "- `/whoami` — Core **AI + Cybersecurity** profile, 3 verticals (`01. AI Agents`, `02. Cybersecurity & VAPT`, `03. Distributed Systems & ML`) & BITS Pilani education (`8.6 CGPA`)",
-      "- `/projects` — Summary of the **9 Flagship Engineering Systems** across all 3 verticals",
-      "- `/archive` — Inspect the **7 Additional & Hobby Projects** (`NIPA`, `NetWatch`, `Multiverse RPG RAG`, `Scotland Yard`, `AQI-Forecast`, `Next Class`, etc.)",
+      "- `/projects` — Summary of the **12 Flagship Engineering Systems** across all 3 verticals",
+      "- `/archive` — Inspect the **8 Additional & Hobby Projects** (`Multiverse RPG & Campus RAG`, `Smart Room IoT`, `NetWatch`, `Scotland Yard`, `AQI-Forecast`, `Next Class`, `gRPC/GestureDeck`, `Docker/K8s DevSecOps`)",
       "- `/experience` — Internships at **Jio Platforms (VAPT)**, **Leo Technosoft (Threat ML)**, **Hiroshima University (Japan)** & **BITS TAships**",
       "- `/skills` — Full technical stack grouped by domain",
       "- `/resumes` — Direct links to download the 3 privacy-sanitized Resume PDFs",
@@ -83,35 +83,36 @@ export function generateLocalAgentResponse(rawInput) {
     q.includes("hidden") ||
     q.includes("hobby") ||
     q.includes("archive") ||
+    q.includes("all 20") ||
     q.includes("all 16") ||
     q.includes("not on the main")
   ) {
     return [
-      "### Additional, Specialized & Hobby Projects (`7 Indexed Systems`)",
-      "Beyond the 9 flagship systems on the main grid, I hold full technical specs for Nikunj's **7 additional projects**:",
+      `### Additional, Coursework & Hobby Projects (\`${ARCHIVE_PROJECTS.length} Indexed Systems\`)`,
+      `Beyond the ${FLAGSHIP_PROJECTS.length} flagship systems on the main grid, I hold full technical specs for Nikunj's **${ARCHIVE_PROJECTS.length} additional projects**:`,
       "",
       ...ARCHIVE_PROJECTS.map(
         (p, i) =>
           `${i + 1}. **${p.title}** (\`${p.date}\`)\n   - **Stack:** \`${p.stack.join("`, `")}\`\n   - **Highlights:** ${p.summary}`
       ),
       "",
-      "*Ask me about any specific one (e.g., \"Tell me about NIPA Stacked Security Ensemble\", \"How does Digital Scotland Yard prevent cheating?\", or \"Tell me about the Multiverse RPG vector search\") for a deep dive!*"
+      "*Ask me about any specific one (e.g., \"Tell me about Portable Smart Room IoT\", \"How does Digital Scotland Yard prevent cheating?\", or \"Tell me about Multiverse RPG & Campus RAG\") for a deep dive!*"
     ].join("\n");
   }
 
   // Flagship projects overview command
   if (q === "/projects" || q === "projects") {
     return [
-      "### 9 Flagship Engineering Projects (Ordered: AI Agents → Cybersecurity & VAPT → Distributed Systems)",
+      `### ${FLAGSHIP_PROJECTS.length} Flagship Engineering Projects (Ordered: AI Agents → Cybersecurity & VAPT → Distributed Systems)`,
       ...FLAGSHIP_PROJECTS.map(
         (p) => `- **[${p.code}] ${p.title}** (*${p.pillarLabel}*): ${p.subtitle} — \`${p.metrics.slice(0, 2).join(" | ")}\``
       ),
       "",
-      "Type `/archive` to see the **7 additional & hobby projects**, or ask about any project by name!"
+      `Type \`/archive\` to see the **${ARCHIVE_PROJECTS.length} additional & hobby projects**, or ask about any project by name!`
     ].join("\n");
   }
 
-  // Specific Project Matching (Checks all 16 projects: 9 Flagship + 7 Archive)
+  // Specific Project Matching (Checks all 20 projects: 12 Flagship + 8 Archive)
   const allProjects = [
     ...FLAGSHIP_PROJECTS.map((p) => ({ ...p, isFlagship: true })),
     ...ARCHIVE_PROJECTS.map((p) => ({ ...p, isFlagship: false }))
@@ -121,19 +122,23 @@ export function generateLocalAgentResponse(rawInput) {
     { id: "local-agent", terms: ["local-agent", "local agent", "coding agent", "scratchpad", "react loop", "nemotron", "gemma 4"] },
     { id: "evidence-sensitivity-tester", terms: ["evidence-removal", "evidence removal", "sensitivity tester", "osv", "minimumevidencegate", "genai project", "ablation", "vulnerability triage", "vulnerability benchmark"] },
     { id: "ticket-triage-pipeline", terms: ["ticket", "deriv", "11-stage", "state machine", "gemini api", "human_review"] },
+    { id: "accounting-document-assistant", terms: ["accounting", "kema", "decimal", "open-item", "dlp gatekeeper", "tesseract", "citation verifier", "credit note"] },
     { id: "autonomous-asm-platform", terms: ["asm", "attack surface", "friday", "osint", "subfinder", "nuclei", "naabu", "cyber_multitool", "nvd"] },
     { id: "multiclass-iot-nids", terms: ["nids", "264,925", "cic-iot-diad", "ml-project", "7-class", "intrusion detection"] },
     { id: "encrypted-p2p-chat-suite", terms: ["chatapp", "p2p", "diffie-hellman", "encrypted chat", "aes-256", "hmac", "perfect forward secrecy", "traffic padding"] },
+    { id: "nipa-hybrid-datamining", terms: ["nipa", "smote", "anova", "ciciot2023", "dm-project", "stacked ensemble"] },
+    { id: "memory-setup-offline-museum", terms: ["memory setup", "memory_setup", "memory-setup", "offline museum", "moondream", "arcface", "buffalo_l", "kd-tree", "fts5"] },
     { id: "ddos-detection-pipeline", terms: ["ddos", "af_xdp", "af_packet", "kafka", "73ms", "73 ms", "2.0 gbps", "2 gbps", "lts-files", "healthcare predictor"] },
     { id: "hiroshima-robotics-vision", terms: ["hiroshima", "robot", "teleoperation", "coppeliasim", "mediapipe", "inverse kinematics", "hip"] },
     { id: "c-subset-optimizing-compiler", terms: ["compiler", "ply", "lex-yacc", "lalr", "three-address", "tac", "constant folding", "ccp"] },
-    { id: "nipa-hybrid-datamining", terms: ["nipa", "smote", "anova", "ciciot2023", "dm-project", "stacked ensemble"] },
-    { id: "multiverse-rpg-semantic-search", terms: ["multiverse", "rpg", "codex", "semantic", "all-minilm", "negation blindness", "384-d", "llm projects"] },
+    { id: "multiverse-rpg-semantic-search", terms: ["multiverse", "rpg", "codex", "semantic", "all-minilm", "negation blindness", "384-d", "llm projects", "campus rag", "assignment 2"] },
+    { id: "portable-smart-room-iot", terms: ["smart room", "iot", "esp32", "esp8266", "xiao", "openhaystack", "switch flipper", "fog lab", "raspberry pi"] },
     { id: "netwatch-port-dashboard", terms: ["netwatch", "port-dashboard", "port monitoring", "psutil", "lsof", "72-hour"] },
     { id: "scotland-yard-digital", terms: ["scotland yard", "mister x", "board game", "tabletop", "bezier", "suspect possibility cloud", "web audio"] },
     { id: "aqi-forecast-lstm", terms: ["aqi", "air quality", "lstm", "here traffic", "jamfactor"] },
     { id: "next-class-macos-app", terms: ["next class", "timetable", "rumps", "status bar", "py2app"] },
-    { id: "grpc-and-gesturedeck", terms: ["grpc", "protobuf", "gesturedeck", "gesture_control", "50051"] }
+    { id: "grpc-and-gesturedeck", terms: ["grpc", "protobuf", "gesturedeck", "gesture_control", "50051"] },
+    { id: "docker-kubernetes-devsecops", terms: ["docker-kubernetes", "kubernetes mastery", "devsecops"] }
   ];
 
   const matchedProjectIds = projectKeywords
@@ -228,12 +233,12 @@ export function generateLocalAgentResponse(rawInput) {
 
   // General fallback summary with helpful pointers
   return [
-    `I indexed your query against **${PROFILE.name}'s** 16 engineering projects and **AI + Cybersecurity** profile:`,
+    `I indexed your query against **${PROFILE.name}'s** ${FLAGSHIP_PROJECTS.length + ARCHIVE_PROJECTS.length} engineering projects and **AI + Cybersecurity** profile:`,
     "",
-    "- **01. AI Agents, LLMs & AI Security:** Built `local-agent` (pure Python ReAct runtime & macOS desktop app with 2-tier intent routing and 80% context window masking), an `OSV LLM Vulnerability Triage Benchmark` across 720 trials (`MinimumEvidenceGate`), and an 11-stage `Google Gemini` support triage state machine.",
-    "- **02. Cybersecurity, VAPT & Threat Intelligence:** Automated Nessus compliance & API/K8s VAPT across `1,000+` enterprise servers at **Jio Platforms**, unified 11 OSINT CLI tools with the `'Friday'` local LLM security copilot (`asm-tool` + `CYBER_MultiTool` CVE PostgreSQL pipeline), and built a `264,925`-flow IoT NIDS + `RSA/Diffie-Hellman` PFS E2EE chat suite.",
-    "- **03. Distributed Systems, ML & Software Engineering:** Engineered a `2.0 Gbps` Linux `AF_XDP` + `Kafka` + `gRPC` DDoS detection pipeline (`73ms` median alert latency, `99.2%` ensemble accuracy at **Leo Technosoft**), a `30+ FPS` MediaPipe-to-CoppeliaSim robotics controller at **Hiroshima University (Japan)**, and an optimizing `LALR(1) C Compiler`.",
+    "- **01. AI Agents, LLMs & AI Security:** Built `local-agent` (pure Python ReAct runtime & macOS desktop app with 2-tier intent routing and 80% context window masking), `Accounting Document Assistant` (deterministic `Decimal` + 8-pass OCR/table RAG with a local DLP gatekeeper), an `OSV LLM Vulnerability Triage Benchmark` (`MinimumEvidenceGate`), and an 11-stage `Google Gemini` support triage state machine.",
+    "- **02. Cybersecurity, VAPT & Threat Intelligence:** Automated Nessus compliance & API/K8s VAPT across `1,000+` enterprise servers at **Jio Platforms**, unified 11 OSINT CLI tools with the `'Friday'` local LLM security copilot (`asm-tool` + `CYBER_MultiTool` CVE PostgreSQL pipeline), and built `264k`-flow IoT NIDS / `NIPA` stacked ensembles + an `RSA/Diffie-Hellman` PFS E2EE chat suite.",
+    "- **03. Distributed Systems, ML & Software Engineering:** Built `Memory Setup` (offline 5-stage media intelligence engine with `<2.5 GB` RAM VLM, `15k`-city KD-Tree geocoder, ArcFace clustering & SQLite FTS5), a `2.0 Gbps` Linux `AF_XDP` + `Kafka` + `gRPC` DDoS pipeline (`73ms` SLA at **Leo Technosoft**), a `30+ FPS` MediaPipe-to-CoppeliaSim robotics controller at **Hiroshima University (Japan)**, and an optimizing `LALR(1) C Compiler`.",
     "",
-    "*Tip: Ask about a specific project (including hidden ones like `NIPA`, `NetWatch`, `Digital Scotland Yard`, or `Next Class`), or type `/archive`, `/experience`, or `/help`!*"
+    "*Tip: Ask about a specific project (including `Memory Setup`, `Accounting Document Assistant`, `Portable Smart Room IoT`, `NetWatch`, `Digital Scotland Yard`, or `Next Class`), or type `/archive`, `/experience`, or `/help`!*"
   ].join("\n");
 }

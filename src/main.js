@@ -345,7 +345,7 @@ function renderPillars() {
       </div>
       <div class="pillar-actions">
         <button type="button" class="btn btn-secondary btn-sm" data-filter-pillar="${escapeHtml(p.id)}">
-          Filter 3 Flagships ↓
+          Filter 4 Flagships ↓
         </button>
         <button type="button" class="btn btn-ghost btn-sm" data-ask-pillar="${escapeHtml(p.title)}">
           Ask AI Agent &gt;_
@@ -373,6 +373,8 @@ function renderPillars() {
 function renderFlagshipProjects(filter = "all") {
   const grid = document.getElementById("flagshipProjectsGrid");
   if (!grid) return;
+
+  grid.toggleAttribute("data-filtered", filter !== "all");
 
   const filtered =
     filter === "all"
@@ -448,9 +450,14 @@ function openArchitectureDialog(projectId) {
     codeEl.textContent = `${project.code} // ${project.repoPath} // ARCHITECTURE_SPEC`;
   }
 
+  const repoLinkHtml = project.repoUrl
+    ? `<p style="margin:0.5rem 0 0;"><a href="${escapeHtml(project.repoUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Public Repository on GitHub ↗</a></p>`
+    : "";
+
   bodyEl.innerHTML = `
     <h2 id="archDialogTitle" class="dialog-title">${escapeHtml(project.title)}</h2>
     <p class="proj-subtitle">${escapeHtml(project.subtitle)} (${escapeHtml(project.date)})</p>
+    ${repoLinkHtml}
     <div class="proj-metrics-row">
       ${project.metrics.map((m) => `<span class="metric-pill">${escapeHtml(m)}</span>`).join("")}
     </div>
@@ -536,7 +543,7 @@ function appendChatMessage(role, markdownContent, sourceLabel = "") {
   meta.textContent =
     role === "user"
       ? "guest@recruiter"
-      : `nikunj-agent v2.6 ${sourceLabel ? `[${sourceLabel}]` : ""}`;
+      : `nikunj-agent v2.7 ${sourceLabel ? `[${sourceLabel}]` : ""}`;
 
   const bubble = document.createElement("div");
   bubble.className = "chat-bubble";
@@ -559,8 +566,8 @@ function initAgentTerminalGreeting() {
   appendChatMessage(
     "assistant",
     [
-      "### Welcome to `nikunj-agent v2.6` (Command-Center AI)",
-      "I am connected to Nikunj Gupta's complete portfolio memory — including his **9 Flagship Systems**, **7 Additional & Hobby Projects** (`Digital Scotland Yard`, `Multiverse RPG Dense Vector Search`, `NetWatch`, `AQI-Forecast`, `Next Class`, etc.), and his internships at **Jio Platforms**, **Hiroshima University (Japan)**, and **Leo Technosoft**.",
+      "### Welcome to `nikunj-agent v2.7` (Command-Center AI)",
+      "I am connected to Nikunj Gupta's complete portfolio memory — including his **12 Flagship Systems** (featuring `Memory Setup`, `Accounting Document Assistant`, `local-agent`, `ASM`, and `AF_XDP DDoS Pipeline`), **8 Additional & Hobby Projects** (`Portable Smart Room IoT`, `Digital Scotland Yard`, `Multiverse RPG & Campus RAG`, `NetWatch`, `Next Class`, etc.), and his internships at **Jio Platforms**, **Hiroshima University (Japan)**, and **Leo Technosoft**.",
       "",
       "- Click any **Quick Prompt** above, ask a question in plain English, or type `/archive` or `/help`."
     ].join("\n"),

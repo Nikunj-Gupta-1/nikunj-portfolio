@@ -14,21 +14,37 @@ import { handler as netlifyChatHandler } from "../netlify/functions/chat.mjs";
 import { onRequestPost as cloudflareChatHandler } from "../functions/api/chat.js";
 import { renderMarkdown } from "../src/main.js";
 
-test("Portfolio data has 3 equal pillars, 9 flagship projects (3 per pillar), and 7 archive projects", () => {
+test("Portfolio data has 3 equal pillars, 12 flagship projects (4 per pillar), and 8 archive projects", () => {
   assert.equal(PILLARS.length, 3);
-  assert.equal(FLAGSHIP_PROJECTS.length, 9);
-  assert.equal(ARCHIVE_PROJECTS.length, 7);
+  assert.equal(FLAGSHIP_PROJECTS.length, 12);
+  assert.equal(ARCHIVE_PROJECTS.length, 8);
   assert.equal(RESUME_TRACKS.length, 3);
 
   for (const pillar of PILLARS) {
     const count = FLAGSHIP_PROJECTS.filter((p) => p.pillar === pillar.id).length;
-    assert.equal(count, 3, `Expected 3 flagship projects for pillar ${pillar.id}, got ${count}`);
+    assert.equal(count, 4, `Expected 4 flagship projects for pillar ${pillar.id}, got ${count}`);
   }
 });
 
-test("Privacy Guardrail: No phone numbers or student ID exist in portfolioData or System Prompt", () => {
+test("Privacy Guardrail: No phone numbers, student ID, personal paths, or private metrics exist in portfolioData or System Prompt", () => {
   const sysPrompt = buildAgentSystemPrompt();
-  const forbiddenTokens = ["2023A7PS0229U", "814 8234", "7042004636", "+971 50"];
+  const serializedPublic = JSON.stringify({
+    PROFILE,
+    FLAGSHIP_PROJECTS,
+    ARCHIVE_PROJECTS,
+    RESUME_TRACKS
+  });
+  const forbiddenTokens = [
+    "2023A7PS0229U",
+    "814 8234",
+    "7042004636",
+    "+971 50",
+    "/Users/nikunjgupta",
+    "10,146",
+    "67,390",
+    "32,424",
+    "nootch-oc"
+  ];
   for (const token of forbiddenTokens) {
     assert.equal(
       sysPrompt.includes(token),
@@ -36,9 +52,9 @@ test("Privacy Guardrail: No phone numbers or student ID exist in portfolioData o
       `System prompt must not contain sensitive token: ${token}`
     );
     assert.equal(
-      JSON.stringify(PROFILE).includes(token),
+      serializedPublic.includes(token),
       false,
-      `PROFILE must not contain sensitive token: ${token}`
+      `Public portfolio data must not contain sensitive token: ${token}`
     );
   }
 });
@@ -46,9 +62,11 @@ test("Privacy Guardrail: No phone numbers or student ID exist in portfolioData o
 test("Local Agent Fallback answers queries on Flagship, Hidden/Archive Projects, Internships, and Privacy", () => {
   const archiveReply = generateLocalAgentResponse("What are the smaller or hobby projects not on the main grid?");
   assert.match(archiveReply, /Digital Scotland Yard/);
-  assert.match(archiveReply, /Multiverse RPG Codex/);
+  assert.match(archiveReply, /Multiverse RPG/);
+  assert.match(archiveReply, /Portable Smart Room IoT/);
   assert.match(archiveReply, /NetWatch/);
   assert.match(archiveReply, /Next Class/);
+  assert.match(archiveReply, /Docker & Kubernetes/);
 
   const scotlandReply = generateLocalAgentResponse("Tell me about Digital Scotland Yard");
   assert.match(scotlandReply, /60 FPS/);
@@ -62,6 +80,33 @@ test("Local Agent Fallback answers queries on Flagship, Hidden/Archive Projects,
   const privacyReply = generateLocalAgentResponse("What is Nikunj's phone number and student ID?");
   assert.match(privacyReply, /omitted from this public web terminal/);
   assert.doesNotMatch(privacyReply, /814 8234/);
+});
+
+test("Local Agent Fallback answers queries on Memory Setup and Accounting Document Assistant", () => {
+  const memoryReply = generateLocalAgentResponse("Tell me about Memory Setup");
+  assert.match(memoryReply, /Offline Museum/);
+  assert.match(memoryReply, /ArcFace/);
+  assert.match(memoryReply, /2\.5 GB/);
+
+  const accountingReply = generateLocalAgentResponse("How does the accounting document assistant prevent hallucinations?");
+  assert.match(accountingReply, /Decimal/);
+  assert.match(accountingReply, /DLP Gatekeeper/);
+  assert.match(accountingReply, /8-pass/i);
+});
+
+test("Project repository links point to Nikunj-Gupta-1 GitHub repos and omit private repos", () => {
+  const all = [...FLAGSHIP_PROJECTS, ...ARCHIVE_PROJECTS];
+  const withUrl = all.filter((p) => Boolean(p.repoUrl));
+  assert.ok(withUrl.length >= 16);
+  for (const project of withUrl) {
+    assert.match(project.repoUrl, /^https:\/\/github\.com\/Nikunj-Gupta-1\/[A-Za-z0-9_.-]+$/);
+  }
+  const byId = Object.fromEntries(all.map((p) => [p.id, p]));
+  assert.equal(byId["portable-smart-room-iot"].repoUrl, undefined);
+  assert.equal(byId["multiverse-rpg-semantic-search"].repoUrl, undefined);
+  assert.equal(byId["hiroshima-robotics-vision"].repoUrl, undefined);
+  assert.match(byId["memory-setup-offline-museum"].repoUrl, /\/memory-setup$/);
+  assert.match(byId["accounting-document-assistant"].repoUrl, /\/accounting-document-assistant$/);
 });
 
 test("Netlify Serverless Function (/api/chat) handles POST requests and returns structured reply", async () => {
