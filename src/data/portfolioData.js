@@ -6,9 +6,10 @@
 export const PROFILE = {
   name: "Nikunj Gupta",
   handle: "nikunj@command-center",
+  photo: "/assets/profile/nikunj-portrait.jpg",
   headline: "AI Agents & LLMs • Cybersecurity & VAPT • Distributed Systems & ML",
   subheadline:
-    "Final-year Computer Science & Data Science engineer at BITS Pilani Dubai (CGPA: 8.6/10) specializing in the intersection of AI + Cybersecurity — building autonomous security & coding agents, LLM vulnerability triage benchmarks, enterprise VAPT automation across 1,000+ servers, and 2.0 Gbps real-time threat detection pipelines.",
+    "Final-year Computer Science & Data Science engineer at BITS Pilani Dubai (CGPA: 8.6/10) specializing in the intersection of AI + Cybersecurity — building autonomous multi-agent runtimes, neuro-symbolic vulnerability triage benchmarks, enterprise VAPT across 1,000+ servers, and 2.0 Gbps real-time threat pipelines.",
   location: "Dubai, UAE",
   education: {
     institution: "Birla Institute of Technology and Science (BITS Pilani), Dubai Campus",
@@ -50,10 +51,10 @@ export const PILLARS = [
     accent: "cyan",
     badge: "PILLAR 01 // AGENTIC AI & LLMs",
     summary:
-      "Zero-framework ReAct coding & security agents, deterministic LLM vulnerability triage benchmarks, guardrailed enterprise state machines, and pure linear-algebra dense vector retrieval.",
+      "Zero-framework 3-agent coding runtimes, neuro-symbolic LLM vulnerability triage & Apple MLX fine-tuning, guardrailed enterprise state machines, and hybrid BM25 + dense vector RAG.",
     highlights: [
-      "Propositional logic OSV vulnerability benchmark (I ∧ V ∧ R) across 720 LLM trials",
-      "Zero-framework ReAct runtime with 2-tier intent router & 80% context window masking",
+      "TrustGate: Propositional OSV benchmark (I ∧ V ∧ R), 2026 frontier eval & MLX QLoRA (0.0% UPR)",
+      "3-agent local runtime (Planner, Executor, Critic) with Okapi BM25 + vector RAG & HITL gates",
       "Deterministic Decimal + 8-pass OCR financial RAG with local DLP gatekeeper",
       "11-stage logged Gemini state machine with 2-tier Pydantic v2 self-healing retry"
     ]
@@ -66,11 +67,11 @@ export const PILLARS = [
     accent: "amber",
     badge: "PILLAR 02 // CYBERSECURITY & VAPT",
     summary:
-      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM security analysts, multi-source CVE SQL normalization, IoT NIDS, and Perfect Forward Secrecy E2EE.",
+      "Enterprise VAPT across 1,000+ production servers, autonomous OSINT attack-surface orchestration with local LLM analysts, Wazuh/OpenSearch AI SOC labs, IoT NIDS, and Perfect Forward Secrecy E2EE.",
     highlights: [
       "Automated Nessus compliance, Trend Micro SIEM & Burp/Metasploit VAPT at Jio Platforms",
       "11-tool OSINT recon orchestrator with HTML5 Canvas physics map & 'Friday' LLM copilot",
-      "Multi-source CVE/NVD/MITRE/CISA KEV ingestion & CPE normalization into PostgreSQL",
+      "Multi-source CVE/NVD/MITRE/CISA KEV SQL sync & Wazuh 4.14 + OpenRouter AI SOC lab (miniSOC)",
       "264,925-flow CIC-IoT-DIAD2024 & CICIoT2023 XGBoost / stacked NIDS ensembles"
     ]
   },
@@ -82,12 +83,12 @@ export const PILLARS = [
     accent: "emerald",
     badge: "PILLAR 03 // SYSTEMS & ML",
     summary:
-      "Offline local vision/biometric media engines, Linux kernel-bypass packet pipelines, Apache Kafka threat streaming, optimizing C compilers, and real-time computer vision robotic teleoperation.",
+      "Offline local vision/biometric media engines with HTTP 206 streaming, Linux kernel-bypass packet pipelines, custom binary IoT protocols, optimizing C compilers, and robotics teleoperation.",
     highlights: [
-      "Offline 5-stage media intelligence engine (<2.5 GB RAM VLM, ArcFace 512-d, FTS5)",
+      "Memory Setup: Offline 5-stage media engine (<2.5 GB VLM, ArcFace, FTS5, Tailscale/CF share)",
       "2.0 Gbps AF_XDP packet capture + Kafka + gRPC DDoS pipeline with 73ms median SLA",
       "30+ FPS MediaPipe 3D pose tracking driving CoppeliaSim inverse kinematics (<50ms)",
-      "End-to-end LALR(1) C-subset compiler with TAC quadruples, constant folding & DCE"
+      "End-to-end LALR(1) C-subset compiler & RoomFrame v1 custom binary IoT protocol (-98% traffic)"
     ]
   }
 ];
@@ -103,40 +104,39 @@ export const FLAGSHIP_PROJECTS = [
     pillar: "ai-data",
     pillarLabel: "AI Agents & LLMs",
     code: "SYS-01",
-    title: "Autonomous Local AI Coding Agent & Desktop Runtime",
-    subtitle: "Zero-framework Python ReAct engine, macOS desktop GUI, 2-tier intent router & SQLite memory RAG",
+    title: "Autonomous Local Multi-Agent Coding Assistant & Runtime",
+    subtitle: "3-agent collaborative loop (Planner/Executor/Critic), hybrid BM25+vector RAG & dual Desktop/Web GUIs",
     date: "Jul – Nov 2026",
     repoPath: "local-agent/",
     repoUrl: "https://github.com/Nikunj-Gupta-1/local-agent",
-    metrics: ["Zero Frameworks", "80% Context Eviction", "Multi-Provider + Local RAG", "2-Tier Intent Router"],
-    stack: ["Python 3.11+", "Google Gemini 2.5", "NVIDIA NIM (Nemotron 3 Ultra)", "Ollama (Gemma 4)", "Flask SSE", "SQLite Memory RAG"],
+    metrics: ["3-Agent Collaboration", "BM25 + Vector RAG", "19/19 Tests + 5/5 Evals", "Multi-Layer HITL Gates"],
+    stack: ["Python 3.11+", "Ollama (Gemma 4)", "Google Gemini & NVIDIA NIM", "CustomTkinter & Flask SSE", "SQLite (BM25 + Vectors)", "Unittest"],
     summary:
-      "Built an autonomous coding agent and macOS desktop app from scratch in pure Python (no LangChain/AutoGen) featuring a 2-tier prompt intent classifier (0ms `DIRECT` fast-path vs. 20-step `PLAN` DAG decomposition), persistent SQLite long-term memory RAG, sandboxed ReAct tool loops, automated presentation tooling, and a temperature-0.1 satisfaction evaluator.",
+      "Built a zero-framework multi-agent coding assistant and macOS runtime in pure Python featuring explicit `PlannerAgent`, `ExecutorAgent`, and `CriticAgent` collaboration over `CollaborationBus`, a 2-tier `PromptClassifier` (`DIRECT` <1ms vs. `PLAN` DAG), hybrid Okapi BM25 + vector SQLite RAG with `[MEM-...]` citations, Pre-Execution Plan Approval, and dual CustomTkinter desktop + Flask SSE web UIs.",
     bullets: [
-      "Engineered a 2-Tier `PromptClassifier` (`DIRECT` vs. `PLAN`) so conversational/math prompts bypass heavy DAG decomposition while complex engineering tasks trigger hierarchical planning and `ScratchpadManager` (>80% context window eviction).",
-      "Integrated multi-provider streaming (Google Gemini 2.5, NVIDIA NIM `nemotron-3-ultra-550b-a55b` on vLLM V2 with fast-fail 4xx/410 diagnostics, Ollama `gemma4-e4b-64k`, and LM Studio) plus an in-process SQLite semantic/keyword Long-Term Memory store.",
-      "Built a macOS Antigravity/Codex-inspired desktop GUI over Server-Sent Events (SSE) with Safe/Auto/Strict human-in-the-loop `[Authorize]` / `[Reject]` tool cards, `.bak` file rollbacks, live execution interrupts, and Google Slides/deck batch generation scripts."
+      "Separated read-only discovery & `depends_on` DAG decomposition (`PlannerAgent`), sandboxed tool execution (`ExecutorAgent`), and deterministic verification (`CriticAgent`, `temp=0.1`) over `CollaborationBus` with dynamic `replan()`, plus `PromptClassifier` (`DIRECT` <1ms vs. `PLAN`) and `ScratchpadManager` (>80% context eviction).",
+      "Engineered hybrid SQLite Long-Term Memory combining Okapi BM25 (`k1=1.5, b=0.75`), stopword filtering, and Ollama `nomic-embed-text` / 128-d hashed trigram vector similarity over `knowledge/agent_kb.json`, injecting cited `[MEM-xxxxxxxx]` context across Ollama (`gemma4-e4b-64k`), Gemini, NVIDIA NIM (`nemotron-3-ultra-550b-a55b`), and LM Studio.",
+      "Built both a native CustomTkinter desktop GUI and a Flask SSE browser UI supporting Pre-Execution Plan Approval, Safe/Auto/Strict `[Authorize]`/`[Reject]` gates, `ask_user`, mid-run `POST /api/redirect`, `_is_allowed` ancestry guards, `.bak` backups, `19/19` automated `unittest` checks, and `5/5` live Ollama evaluations (`THA 3`)."
     ],
     architecture: `┌──────────────────────────────────────────────────────────────────────────┐
-│ USER PROMPT ──► 2-TIER INTENT CLASSIFIER (core/classifier.py)            │
-│ ├── DIRECT Route (0ms Regex / Fast-Path) ──► Single-Turn Streaming Reply │
-│ └── PLAN Route (Complex Engineering)     ──► Hierarchical DAG Planner    │
+│ USER PROMPT ──► 2-TIER PROMPT CLASSIFIER (core/classifier.py)            │
+│ ├── DIRECT Route (<1ms Regex / Fast-Path) ──► Single-Turn Streaming      │
+│ └── PLAN Route (Complex Engineering)      ──► PlannerAgent DAG Builder   │
 └─────────────────────────────────────┬────────────────────────────────────┘
                                       ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ PERSISTENT SCRATCHPAD + LONG-TERM SQLITE MEMORY RAG (core/memory/)       │
-│ • Dynamic Context Masking: Exposes completed + CURRENT sub-task only     │
-│ • Auto-injects cross-session project decisions & architectural notes     │
+│ COLLABORATION BUS + HYBRID BM25/VECTOR SQLITE RAG (core/memory/)         │
+│ • Okapi BM25 + 128-d Trigram / nomic-embed-text ──► [MEM-...] Citations  │
+│ • Pre-Execution Plan Approval + ScratchpadManager (>80% Context Evict)   │
 └─────────────────────────────────────┬────────────────────────────────────┘
                                       ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ AUTONOMOUS ReAct STREAMING LOOP (Gemini 2.5 / NIM Nemotron 3 / Ollama)   │
-│ • Real-time reasoning stream extraction + maybe_evict() at >80% context  │
-│ • Human-in-the-Loop Safe/Auto/Strict gates: [Authorize] / [Reject] UI    │
+│ EXECUTOR AGENT (Sandboxed Tool Loops) ──► Safe/Auto/Strict HITL Gates    │
+│ • Dual UIs: CustomTkinter Desktop + Flask SSE + mid-run redirect()       │
 └─────────────────────────────────────┬────────────────────────────────────┘
                                       ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ DETERMINISTIC SATISFACTION EVALUATOR (temp = 0.1, up to 4 retries)       │
+│ CRITIC AGENT VERIFIER (temp = 0.1) ──► Satisfied / Retry / Replan DAG    │
 └──────────────────────────────────────────────────────────────────────────┘`
   },
   {
@@ -144,36 +144,33 @@ export const FLAGSHIP_PROJECTS = [
     pillar: "ai-data",
     pillarLabel: "AI + Cybersecurity Eval",
     code: "SYS-02",
-    title: "Evidence-Removal Sensitivity Tester (AI Security Benchmark)",
-    subtitle: "Propositional logic evaluation benchmark testing LLM vulnerability triage under missing evidence",
-    date: "Sep 2026",
+    title: "TrustGate: Evidence-Removal Sensitivity Tester & Neuro-Symbolic Engine",
+    subtitle: "Propositional OSV benchmark (I ∧ V ∧ R), 2026 frontier eval, Apple MLX QLoRA & AST reachability suite",
+    date: "Sep – Nov 2026",
     repoPath: "GENAI PROJECT/",
-    metrics: ["720 Evaluation Trials", "6 Perturbation Conditions", "Zero False Positives (Gate)", "10k Bootstrap CI"],
-    stack: ["Python 3.11+", "Pydantic v2", "Ollama (Gemma 3 / Qwen 3)", "OSV Vulnerability API", "SciPy", "NumPy", "Pytest"],
+    metrics: ["0.0% Gated UPR", "TrustGate-3B MLX LoRA", "1,475 Files AST Scanned", "58/58 Pytest Suite"],
+    stack: ["Python 3.12+", "Pydantic v2", "Apple MLX QLoRA", "FastAPI Web Studio", "TypeScript (VS Code API)", "Ollama & OpenRouter", "OSV API & SARIF 2.1.0"],
     summary:
-      "Scientific AI + Cybersecurity evaluation harness testing whether LLMs in automated vulnerability-triage pipelines erroneously preserve `AFFECTED_CONFIRMED` verdicts when decisive applicability facts are ablated, paired with an external deterministic `MinimumEvidenceGate`.",
+      "Neuro-symbolic AI + Cybersecurity benchmark and triage suite (`TrustGate`) testing whether LLMs erroneously preserve `AFFECTED_CONFIRMED` verdicts when decisive applicability facts (`I ∧ V ∧ R`) are ablated — spanning a 120-case anonymized OSV benchmark, an 864-run 8-setup empirical study, a 2026 7-frontier-model benchmark, local Apple MLX QLoRA fine-tuning (`TrustGate-3B-LoRA`), 2-agent adversarial debate, AST reachability scanning, a 4-tab Web Studio, and a VS Code extension.",
     bullets: [
-      "Formalized vulnerability applicability as a strict conjunction of three indispensable propositions: Package Identity (I), Installed Version (V), and Affected Range (R): Applicability ⟺ I ∧ V ∧ R.",
-      "Synthesized counterfactually anonymized OSV advisories across PyPI, npm, and Maven to eliminate pretraining memorization across 6 controlled perturbation conditions (`FULL`, `REMOVE_DECISIVE`, `REMOVE_DISTRACTOR`, `DISCONFIRM`, `CONFLICT`, `PARAPHRASE_ORDER`).",
-      "Engineered `MinimumEvidenceGate` to verify propositional proof sets prior to verdict emission, alongside 10,000 paired cluster bootstrap resamples and exact McNemar tests with Holm-Bonferroni corrections."
+      "Formalized vulnerability applicability (`I ∧ V ∧ R`: Identity, Installed Version, Affected Range) across 120 counterfactually anonymized OSV advisories (PyPI, npm, Maven) and 6 perturbation conditions, proving `MinimumEvidenceGate` cuts Unsupported Persistence Rate (UPR) to `0.0%` across 864 evaluation trials and 7 frontier cloud models (which still exhibit `22.2%–33.3%` un-gated UPR).",
+      "Fine-tuned `TrustGate-3B-LoRA` locally on Apple Silicon M2 Pro via MLX QLoRA (validation loss reduced `98.1%` from `3.31` to `0.062`), dropping base Llama-3.2-3B un-gated UPR from `72.2%` to `0.0%` and raising Conflict Detection (`CDR`) from `61.1%` to `100.0%` at `$0.00` API cost.",
+      "Shipped production triage tooling: 2-agent prosecutor/skeptic adversarial debate, AST symbol reachability scanner indexing `1,475` files across `20` projects in `3.4s` with SARIF 2.1.0 export, 4-tab FastAPI Web Studio, native TypeScript VS Code Extension (`v2.0.0`), Antigravity plugin, and `58/58` passing `pytest` checks."
     ],
-    architecture: `Real-World OSV Advisories (PyPI / npm / Maven)
+    architecture: `Real-World OSV Advisories + Raw Unstructured Advisories + Source ASTs
+       │
+       ├──► [Counterfactual Benchmark (120 Cases × 6 Variants)]
+       │     (FULL, REMOVE_DECISIVE, REMOVE_DISTRACTOR, DISCONFIRM, CONFLICT, PARAPHRASE)
+       │
+       ├──► [Inference Engines: TrustGate-3B MLX LoRA / Ollama / 2026 Frontier Cloud]
+       │     + [2-Agent Adversarial Debate] + [AST Reachability Indexer (1,475 Files)]
        │
        ▼
-[Counterfactual Cryptographic Alias Anonymizer] (Eliminates LLM Memorization)
+[MinimumEvidenceGate: Verifies (I ∧ V ∧ R) ──► 0.0% Unwarranted Persistence]
        │
-       ├──► 1. FULL (I ∧ V ∧ R + Distractors)     ──► Ground Truth: AFFECTED_CONFIRMED
-       ├──► 2. REMOVE_DECISIVE (Ablate I, V, or R)──► Ground Truth: INSUFFICIENT_EVIDENCE
-       ├──► 3. REMOVE_DISTRACTOR (Drop CVSS/Date) ──► Ground Truth: AFFECTED_CONFIRMED
-       ├──► 4. DISCONFIRM (Safe Fixed Version)    ──► Ground Truth: NOT_AFFECTED_CONFIRMED
-       ├──► 5. CONFLICT (Contradictory Versions)  ──► Ground Truth: CONFLICTING_EVIDENCE
-       └──► 6. PARAPHRASE_ORDER (Surface Permute) ──► Ground Truth: AFFECTED_CONFIRMED
-       │
-       ▼
-[Local LLM Inference (Gemma 3 / Qwen 3) + Pydantic v2 Schema]
-       │
-       ▼
-[MinimumEvidenceGate: Verifies (I ∧ V ∧ R) ──► Guarantees 0% Unwarranted Persistence]`
+       ├──► [4-Tab FastAPI Web Studio]
+       ├──► [VS Code Extension v2.0.0 (Diagnostics, Hover Proof Cards, Quick Fix)]
+       └──► [CLI + SARIF 2.1.0 Export + Antigravity Triage Plugin]`
   },
   {
     id: "ticket-triage-pipeline",
@@ -396,18 +393,18 @@ export const FLAGSHIP_PROJECTS = [
     pillarLabel: "Local Vision AI & Systems",
     code: "SYS-09",
     title: "Memory Setup: Local Media Intelligence & Offline Museum",
-    subtitle: "5-stage offline pipeline, ArcFace 512-d clustering, KD-Tree geocoder & RAM-bounded Ollama VLM",
+    subtitle: "5-stage offline pipeline, ArcFace 512-d clustering, HTTP 206 video museum & <2.5 GB RAM VLM",
     date: "Nov 2026",
     repoPath: "Memory_Setup/",
     repoUrl: "https://github.com/Nikunj-Gupta-1/memory-setup",
-    metrics: ["< 2.5 GB RAM Ceiling", "15k-City KD-Tree Geo", "512-d ArcFace BLAS", "29/29 Offline Tests"],
-    stack: ["Python 3.12", "InsightFace ArcFace", "Ollama (Moondream)", "SQLite FTS5", "PyWebView", "NumPy & SciPy", "Pytest"],
+    metrics: ["< 2.5 GB RAM Ceiling", "15k-City KD-Tree Geo", "HTTP 206 + Remote Share", "44 Offline Pytest Checks"],
+    stack: ["Python 3.12", "InsightFace ArcFace", "Ollama (Moondream)", "SQLite (WAL + FTS5)", "PyWebView Studio", "Tailscale / Cloudflare Tunnel", "Pytest"],
     summary:
-      "Privacy-first, 100% offline media intelligence engine and Offline Museum desktop application organizing arbitrary photo, video, HEIC, and Live Photo folders under a strict two-folder contract (`content/` + `viewer/`) with offline reverse-geocoding, ArcFace facial clustering, memory-bounded Vision AI captions, and SQLite FTS5 search.",
+      "Privacy-first, 100% offline media intelligence engine and Offline Museum desktop application (`Memory Setup Studio`) organizing photos, videos, HEIC, and Live Photos under a strict two-folder contract (`content/` + `viewer/`), combining offline KD-Tree geocoding, ArcFace facial clustering, memory-bounded Vision AI captions, HTTP `206` video streaming, and password-gated Remote Family Share.",
     bullets: [
-      "Engineered a 5-stage deterministic pipeline with magic-byte sniffing, SHA-256 deduplication, Live Photo companion pairing, offline 3D ECEF `cKDTree` reverse-geocoding (15k world cities, 150 km Haversine cutoff), and a 15.0 GiB free-disk safety floor.",
-      "Built vectorized NumPy BLAS Leader Centroid clustering (`thresh=0.48`) over 512-d InsightFace ArcFace ResNet-50 embeddings alongside a high-precision document/homework quarantine classifier.",
-      "Solved upstream `llama-server` host cache bloat via a single-worker `MemoryBoundedOllamaClient` (`cache_prompt: false`, `LLAMA_ARG_CACHE_RAM=0`, Whisper 50-item / Turbo 200-item runner recycling + RSS watchdog), wrapped in a native macOS/Windows PyWebView Control Center (`29/29` offline pytest checks passing)."
+      "Engineered an incremental-safe 5-stage pipeline over a single consolidated SQLite schema (`catalog.sqlite`) with magic-byte sniffing, SHA-256 dedup, Live Photo pairing, offline 3D ECEF `cKDTree` reverse-geocoding (15k world cities, 150 km Haversine cutoff), and a 15.0 GiB free-disk safety floor.",
+      "Built vectorized NumPy BLAS Leader Centroid clustering (`thresh=0.48`) over 512-d InsightFace ArcFace ResNet-50 embeddings with non-destructive People merge/rename curation and a high-precision document/homework quarantine classifier.",
+      "Solved `llama-server` host cache bloat via a single-worker `MemoryBoundedOllamaClient` (`cache_prompt: false`, `LLAMA_ARG_CACHE_RAM=0`, Whisper 50-item / Turbo 200-item runner recycling + RSS watchdog), packaged in a native PyWebView Studio with mobile-responsive Photo/Video Museum (`HTTP 206`) and zero-terminal Tailscale / Cloudflare Quick Tunnel Remote Share (`401` CSP gate, `429` rate limit, `44` offline tests)."
     ],
     architecture: `[Unsorted Media / SD Card] ──► [Stage 1-3: Magic Sniffer + Live Photo Pairing + SHA-256]
                                               │
@@ -421,7 +418,7 @@ export const FLAGSHIP_PROJECTS = [
                  │                                (cache_prompt:false, <2.5 GB RAM Watchdog)
                  └────────────────────────────┬────────────────────────────┘
                                               ▼
-[Stage 5: SQLite FTS5 + Anti-Clobber Museum Server + PyWebView Desktop Control Center]`
+[Stage 5: Unified SQLite FTS5 + HTTP 206 Video/Photo Museum + PyWebView Studio + Tailscale/CF Share]`
   },
   {
     id: "ddos-detection-pipeline",
@@ -534,31 +531,43 @@ export const FLAGSHIP_PROJECTS = [
 ];
 
 /**
- * 7 Additional Specialized, Coursework & Hobby Projects
- * Indexed deeply in the AI Chatbot + accessible via the `ls ./archive` CLI drawer
+ * 9 Additional Specialized, Coursework & Hobby Projects
+ * Indexed deeply in the AI Chatbot + accessible via the `/archive` CLI command
  */
 export const ARCHIVE_PROJECTS = [
   {
+    id: "mini-soc-ai-lab",
+    pillar: "cyber-sec",
+    title: "miniSOC: AI-Assisted Security Operations Center Lab",
+    repoPath: "miniSOC/",
+    repoUrl: "https://github.com/Nikunj-Gupta-1/miniSOC",
+    date: "Nov 2026",
+    stack: ["Python 3 (stdlib)", "Wazuh 4.14 All-in-One", "OpenSearch", "Sysmon", "PowerShell", "OpenRouter API", "VirtualBox"],
+    metrics: ["2-VM Host-Only SOC Lab", "4 Reversible Attack Demos", "$0.00 Dry-Run + SHA-256 Cache", "10/10 Unit Tests"],
+    summary:
+      "Isolated 2-VM VirtualBox SOC lab pairing Wazuh 4.14 All-in-One (Wazuh Manager + OpenSearch Indexer + Dashboard) on Ubuntu with a Windows Evaluation VM (Sysmon + Wazuh Agent), PowerShell/bash VM provisioning scripts, 4 reversible attack simulations (`Event 4625` brute-force, Base64 PowerShell Sysmon `Event 1`, EICAR, `Event 4698` scheduled task), a NIST Incident Report template, and a zero-dependency Python OpenRouter AI alert explainer (`--live`, `--min-level 7`, alert dedup, SHA-256 cache, `--dry-run`, `10/10` unittest)."
+  },
+  {
     id: "multiverse-rpg-semantic-search",
     pillar: "ai-data",
-    title: "Multiverse RPG Codex Dense Vector Search & Campus Services RAG",
-    repoPath: "LLM PROJECTS/Assignment-1 & Assignment-2/",
+    title: "LLM Coursework Suite: Multiverse RPG Retrieval, Campus RAG & THA 3 Eval",
+    repoPath: "LLM PROJECTS/Assignment-1, assignment 2 & Assignment-3/",
     date: "Sep – Nov 2026",
-    stack: ["Python 3.11+", "PyTorch", "Sentence-Transformers (all-MiniLM-L6-v2)", "NumPy", "Pandas", "Jupyter"],
-    metrics: ["384-d Dense Vectors", "< 1 ms Cosine Ranking", "135 Curated Lore Items", "Campus RAG Suite"],
+    stack: ["Python 3.11+", "PyTorch", "Sentence-Transformers (all-MiniLM-L6-v2)", "Ollama (Gemma 4)", "Typst", "NumPy & Pandas"],
+    metrics: ["384-d Dense Vectors (<1 ms)", "135 Curated Lore Items", "5/5 Live THA 3 Evals", "6-Page Typst Report"],
     summary:
-      "Two LLM retrieval coursework systems (Private Repo): (1) an end-to-end dense vector semantic retrieval engine embedding 135 hand-annotated RPG items across 5 realms and 7 categories into 384-d `all-MiniLM-L6-v2` vectors with pure NumPy/PyTorch cosine ranking (>0.62 similarity on zero-keyword queries) plus a 22KB analysis of transformer 'negation blindness', and (2) an automated Campus Event Announcement Generator & Student Services RAG Assistant."
+      "Three-part LLM coursework suite (Private Repo): (1) dense vector semantic retrieval embedding 135 hand-annotated RPG items across 5 realms into 384-d `all-MiniLM-L6-v2` vectors with pure NumPy/PyTorch cosine ranking (>0.62 similarity on zero-keyword queries) plus an analysis of transformer 'negation blindness'; (2) Campus Event Announcement Generator & Student Services RAG; and (3) `Assignment-3` THA 3 6-page Typst report + `run_evals.py` passing `5/5` live Ollama (`gemma4-e4b-64k`) multi-agent scenarios for `local-agent`."
   },
   {
     id: "portable-smart-room-iot",
     pillar: "systems-ml",
-    title: "Portable Smart Room IoT Devices & Fog/AWS Telemetry Lab",
+    title: "Portable Smart Room IoT & RoomFrame v1 (RFv1) Binary Protocol Suite",
     repoPath: "IOT/",
     date: "Sep – Nov 2026",
-    stack: ["Python", "Raspberry Pi 4", "ESP32 & ESP8266", "Seeed XIAO nRF52840", "Ollama & Whisper", "BLE / MQTT"],
-    metrics: ["Zero Electrical Rewiring", "100% Local AI Hub", "4 Edge Microcontrollers", "MQTT / AWS Telemetry"],
+    stack: ["Python 3.12", "C99", "Raspberry Pi 4", "ESP32 & ESP8266", "Seeed XIAO nRF52840", "ChaCha20-Poly1305 AEAD", "BLE / WebSockets / UDP"],
+    metrics: ["-98.07% Idle Traffic", "ESP32 Voice RAM -98.66%", "65,534 Device Address Space", "24/24 Pytest Suite"],
     summary:
-      "Modular retrofit smart-room hardware and fog/cloud IoT suite (Private Repo) uniting a local Mac Ollama/Moondream/Whisper AI hub, Raspberry Pi 4 Camera & BLE sentry, ESP32 Classic Bluetooth A2DP wireless audio gateway, Seeed XIAO nRF52840 Sense double-tap/OpenHaystack beacon, and NodeMCU ESP8266 SG90 light-switch flipper with DHT-22 & MQ-4 safety monitoring."
+      "Modular retrofit smart-room hardware and custom protocol suite (Private Repo) evolving from an HTTP/MQTT fog lab into `RoomFrame v1` (`RFv1` v4.3.0) — an 18-byte transport-agnostic binary protocol across UDP, WebSockets, 1 Mbaud UART, and 24-byte native BLE beacons with RFC 8439 ChaCha20-Poly1305 AEAD security, Direct Mac BLE audio bridge, dark-glassmorphic command dashboard + local speaker fallback, solid 3D CAD renders, IEEE conference papers, and `24/24` passing tests."
   },
   {
     id: "netwatch-port-dashboard",
@@ -697,17 +706,16 @@ export const SKILL_GROUPS = [
     category: "Generative AI, Security Agents & LLMs",
     pillar: "ai-data",
     items: [
-      "Autonomous ReAct Agents",
-      "AI Security & Vulnerability Triage",
-      "Tool Calling & Sandboxing",
-      "Context Window Masking",
-      "Pydantic v2 Structured Outputs",
-      "Hybrid RAG & SQLite FTS5",
+      "Multi-Agent Orchestration (Planner/Executor/Critic)",
+      "AI Security & Neuro-Symbolic Triage (TrustGate)",
+      "Apple Silicon MLX QLoRA Fine-Tuning",
+      "Hybrid RAG (Okapi BM25 + Vector & SQLite FTS5)",
+      "Pydantic v2 Structured Outputs & HITL Gates",
       "Local DLP Guardrails & Citation Verification",
-      "Google Gemini API",
+      "Google Gemini API & OpenRouter",
       "NVIDIA NIM (Nemotron 3)",
-      "Ollama & Local VLMs (Moondream)",
-      "Sentence-Transformers"
+      "Ollama & Local VLMs (Gemma 4 / Moondream)",
+      "Sentence-Transformers & 2-Agent Debate"
     ]
   },
   {
@@ -716,11 +724,12 @@ export const SKILL_GROUPS = [
     items: [
       "Tenable Nessus (Enterprise VAPT)",
       "Burp Suite & Metasploit",
+      "Wazuh 4.14, OpenSearch & Sysmon SIEM",
       "Trend Micro SIEM / Endpoint",
       "OSINT Recon (subfinder, naabu, nuclei, nmap)",
+      "AST Reachability & SARIF 2.1.0 Scanning",
       "CVE / NVD / CISA KEV Pipelines",
-      "RSA-2048 & Ephemeral Diffie-Hellman (PFS)",
-      "AES-256-CBC & HMAC-SHA256",
+      "RSA-2048, Ephemeral DH (PFS) & ChaCha20-Poly1305",
       "Network Intrusion Detection (NIDS)",
       "Docker & Kubernetes RBAC Auditing"
     ]
@@ -748,10 +757,10 @@ export const SKILL_GROUPS = [
       "Linux AF_XDP / AF_PACKET",
       "Apache Kafka",
       "gRPC & Protocol Buffers",
-      "FastAPI, Flask & PyWebView",
+      "FastAPI, Flask SSE & PyWebView",
       "SQL (PostgreSQL & SQLite WAL/FTS5)",
-      "PLY Compiler (Lex-Yacc)",
-      "Raspberry Pi, ESP32 & BLE/MQTT",
+      "Custom Binary Protocols (RoomFrame v1) & BLE",
+      "PLY Compiler (Lex-Yacc) & Raspberry Pi / ESP32",
       "TypeScript / React / Next.js"
     ]
   }
@@ -829,17 +838,17 @@ Your job is to answer recruiter, hiring manager, and engineer questions about Ni
 - PRIVACY GUARDRAIL: Never share or invent any phone numbers or university student IDs. Direct users to email (${PROFILE.links.email}) or LinkedIn.
 
 === 3 CORE ENGINEERING VERTICALS (IN PRIORITY ORDER) ===
-1. AI Agents, LLMs & AI Security (Autonomous ReAct agents, LLM OSV vulnerability benchmarks, Gemini/Pydantic state machines, deterministic Decimal + DLP-gated Accounting RAG)
-2. Cybersecurity, VAPT & Threat Intelligence (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with 'Friday' local LLM copilot, multi-source CVE/NVD SQL pipelines, 264k-row IoT NIDS & NIPA stacked ensembles, RSA+DH PFS E2EE chat)
-3. Distributed Systems, ML & Software Engineering (Memory Setup offline VLM/ArcFace/FTS5 desktop engine, 2.0 Gbps Linux AF_XDP DDoS packet capture + Kafka + gRPC 73ms pipeline, 30+ FPS robotics vision, LALR(1) C compiler)
+1. AI Agents, LLMs & AI Security (Zero-framework 3-agent coding runtime with hybrid BM25+vector RAG, TrustGate neuro-symbolic OSV benchmark + 2026 frontier eval + Apple MLX QLoRA fine-tuning + AST reachability scanner, Gemini/Pydantic state machines, deterministic Decimal + DLP-gated Accounting RAG)
+2. Cybersecurity, VAPT & Threat Intelligence (Jio Platforms 1,000+ server VAPT, 11-tool OSINT ASM with 'Friday' local LLM copilot, multi-source CVE/NVD SQL pipelines, miniSOC Wazuh 4.14 + OpenSearch + OpenRouter AI triage lab, 264k-row IoT NIDS & NIPA stacked ensembles, RSA+DH PFS E2EE chat)
+3. Distributed Systems, ML & Software Engineering (Memory Setup offline VLM/ArcFace/FTS5/HTTP-206 video museum & remote share, 2.0 Gbps Linux AF_XDP DDoS packet capture + Kafka + gRPC 73ms pipeline, RoomFrame v1 custom binary IoT protocol, 30+ FPS robotics vision, LALR(1) C compiler)
 
 === PROFESSIONAL EXPERIENCE & RESEARCH ===
 ${expText}
 
-=== 12 FLAGSHIP PROJECTS (SHOWN ON MAIN PORTFOLIO GRID) ===
+=== ${FLAGSHIP_PROJECTS.length} FLAGSHIP PROJECTS (SHOWN ON MAIN PORTFOLIO GRID) ===
 ${flagshipText}
 
-=== 8 ADDITIONAL / SPECIALIZED & HOBBY PROJECTS (INDEXED IN YOUR MEMORY) ===
+=== ${ARCHIVE_PROJECTS.length} ADDITIONAL / SPECIALIZED & HOBBY PROJECTS (INDEXED IN YOUR MEMORY) ===
 ${archiveText}
 
 === CERTIFICATIONS & LEADERSHIP ===
@@ -848,6 +857,183 @@ ${LEADERSHIP_AND_CERTS.map((c) => `• ${c}`).join("\n")}
 === RESPONSE STYLE GUIDELINES ===
 1. Keep answers crisp, well-structured (use bullet points and inline code backticks for metrics like \`73ms\`, \`2.0 Gbps\`, \`1,000+ servers\`, \`8.6/10 CGPA\`, \`AF_XDP\`, \`<2.5 GB RAM\`), and grounded strictly in the facts above.
 2. Emphasize Nikunj's unique strength at the intersection of **AI + Cybersecurity** whenever relevant.
-3. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main 12-card grid, highlight the 8 additional projects (Multiverse RPG & Campus RAG, Portable Smart Room IoT & Fog Lab, NetWatch Socket Auditor, Digital Scotland Yard, AQI-Forecast LSTM, Next Class macOS app, gRPC/GestureDeck, and Docker/K8s DevSecOps Mastery).
+3. When asked about "smaller", "other", "hidden", or "hobby" projects not on the main ${FLAGSHIP_PROJECTS.length}-card grid, highlight the ${ARCHIVE_PROJECTS.length} additional projects (miniSOC AI SOC Lab, LLM Coursework Suite & THA 3 Evals, Portable Smart Room IoT & RoomFrame v1, NetWatch Socket Auditor, Digital Scotland Yard, AQI-Forecast LSTM, Next Class macOS app, gRPC/GestureDeck, and Docker/K8s DevSecOps Mastery).
 4. If asked how to hire or contact Nikunj, provide his email (${PROFILE.links.email}), LinkedIn, GitHub, and mention the 3 role-tailored Resume PDFs available in the Resume section.`;
 }
+
+export const FEATURED_PROJECT_IDS = [
+  "local-agent",
+  "evidence-sensitivity-tester",
+  "accounting-document-assistant",
+  "autonomous-asm-platform",
+  "memory-setup-offline-museum",
+  "ddos-detection-pipeline",
+  "multiclass-iot-nids",
+  "portable-smart-room-iot"
+];
+
+export const PROJECT_MEDIA = {
+  "local-agent": {
+    cover: "/assets/projects/local-agent-arch.jpg",
+    gallery: [
+      { src: "/assets/projects/local-agent-ui.jpg", caption: "Desktop App: Pre-Execution Plan Approval & Safe/Auto/Strict HITL Gate" },
+      { src: "/assets/projects/local-agent-arch.jpg", caption: "System Architecture: 2-Tier Router, Multi-Provider AI & Hybrid SQLite RAG" }
+    ]
+  },
+  "evidence-sensitivity-tester": {
+    cover: "/assets/projects/trustgate-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/trustgate-cover.jpg", caption: "TrustGate: Propositional Minimum Evidence Gate (I ∧ V ∧ R)" },
+      { src: "/assets/projects/trustgate-benchmark.png", caption: "2026 Cross-Lab Hallucination Audit (27 Setups · 2,916 Runs)" },
+      { src: "/assets/projects/trustgate-lora.png", caption: "Apple Silicon MLX QLoRA Training Loss Curve (-98.1%)" },
+      { src: "/assets/projects/trustgate-arch.png", caption: "Deterministic Evidence-Gated Vulnerability Triage Architecture" }
+    ]
+  },
+  "ticket-triage-pipeline": {
+    cover: "/assets/projects/ticket-triage-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/ticket-triage-cover.jpg", caption: "11-Stage Gemini State Machine & 0.65 Confidence Routing Gate" }
+    ]
+  },
+  "accounting-document-assistant": {
+    cover: "/assets/projects/accounting-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/accounting-cover.jpg", caption: "8-Pass PDF/OCR Table Ingestion, Python Decimal Audit & DLP Gatekeeper" }
+    ]
+  },
+  "autonomous-asm-platform": {
+    cover: "/assets/projects/asm-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/asm-cover.jpg", caption: "11-Tool OSINT Recon Graph & 'Friday' Local LLM Analyst" }
+    ]
+  },
+  "multiclass-iot-nids": {
+    cover: "/assets/projects/iot-nids-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/iot-nids-cover.jpg", caption: "7-Class IoT Anomaly Detection Engine (264,925 Flow Records)" },
+      { src: "/assets/projects/iot-nids-f1.png", caption: "Optimized XGBoost Per-Class F1-Scores (0.98 DoS / 0.89 DDoS)" }
+    ]
+  },
+  "encrypted-p2p-chat-suite": {
+    cover: "/assets/projects/chatapp-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/chatapp-cover.jpg", caption: "RSA-2048 Signed Ephemeral Diffie-Hellman (PFS) + Encrypt-then-MAC" }
+    ]
+  },
+  "nipa-hybrid-datamining": {
+    cover: "/assets/projects/nipa-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/nipa-cover.jpg", caption: "Random Forest + XGBoost + Logistic Regression Stacked Meta-Learner" }
+    ]
+  },
+  "memory-setup-offline-museum": {
+    cover: "/assets/projects/memory-setup-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/memory-setup-cover.jpg", caption: "Offline 5-Stage Media Engine: ArcFace 512-d, KD-Tree Geo & VLM Museum" }
+    ]
+  },
+  "ddos-detection-pipeline": {
+    cover: "/assets/projects/ddos-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/ddos-cover.jpg", caption: "2.0 Gbps Linux AF_XDP Ring Buffer + Kafka + gRPC Ensemble Pipeline" },
+      { src: "/assets/projects/ddos-perf.png", caption: "DDoS Ensemble Confusion Matrix & Precision/Recall Performance" }
+    ]
+  },
+  "hiroshima-robotics-vision": {
+    cover: "/assets/projects/robotics-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/robotics-cover.jpg", caption: "30+ FPS MediaPipe 3D Pose & Gesture Teleoperation in CoppeliaSim (<50ms)" }
+    ]
+  },
+  "c-subset-optimizing-compiler": {
+    cover: "/assets/projects/compiler-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/compiler-cover.jpg", caption: "6-Phase PLY LALR(1) Compiler, TAC Optimization & Register Assembler" }
+    ]
+  },
+  "mini-soc-ai-lab": {
+    visualKind: "minisoc",
+    gallery: []
+  },
+  "multiverse-rpg-semantic-search": {
+    cover: "/assets/projects/rpg-rag-cover.jpg",
+    gallery: [
+      { src: "/assets/projects/rpg-rag-cover.jpg", caption: "384-d Dense Vector Retrieval Codex & THA 3 Live Agent Evals" }
+    ]
+  },
+  "portable-smart-room-iot": {
+    cover: "/assets/projects/roomframe-hero.jpg",
+    gallery: [
+      { src: "/assets/projects/roomframe-hero.jpg", caption: "RoomFrame v1 (RFv1) Custom Binary Smart-Room Hardware Fleet" },
+      { src: "/assets/projects/roomframe-arch.png", caption: "5-Node Hybrid P2P Bus & Autonomous Raspberry Pi 4 Relay Topology" }
+    ]
+  },
+  "netwatch-port-dashboard": {
+    visualKind: "netwatch",
+    gallery: []
+  },
+  "scotland-yard-digital": {
+    visualKind: "scotland",
+    gallery: []
+  },
+  "aqi-forecast-lstm": {
+    visualKind: "aqi",
+    gallery: [
+      { src: "/assets/projects/aqi-chart.png", caption: "PyTorch LSTM AQI Forecast: Mode A Baseline vs Mode B Traffic Telemetry" }
+    ]
+  },
+  "next-class-macos-app": {
+    visualKind: "nextclass",
+    gallery: []
+  },
+  "grpc-and-gesturedeck": {
+    visualKind: "gesturedeck",
+    gallery: []
+  },
+  "docker-kubernetes-devsecops": {
+    visualKind: "devsecops",
+    gallery: []
+  }
+};
+
+export const SKILL_PROJECT_MAP = {
+  "Multi-Agent Orchestration (Planner/Executor/Critic)": ["local-agent", "multiverse-rpg-semantic-search"],
+  "AI Security & Neuro-Symbolic Triage (TrustGate)": ["evidence-sensitivity-tester", "accounting-document-assistant"],
+  "Apple Silicon MLX QLoRA Fine-Tuning": ["evidence-sensitivity-tester"],
+  "Hybrid RAG (Okapi BM25 + Vector & SQLite FTS5)": ["local-agent", "accounting-document-assistant", "memory-setup-offline-museum"],
+  "Pydantic v2 Structured Outputs & HITL Gates": ["local-agent", "ticket-triage-pipeline", "evidence-sensitivity-tester"],
+  "Local DLP Guardrails & Citation Verification": ["accounting-document-assistant"],
+  "Google Gemini API & OpenRouter": ["local-agent", "ticket-triage-pipeline", "mini-soc-ai-lab", "evidence-sensitivity-tester"],
+  "NVIDIA NIM (Nemotron 3)": ["local-agent"],
+  "Ollama & Local VLMs (Gemma 4 / Moondream)": ["memory-setup-offline-museum", "local-agent", "autonomous-asm-platform", "portable-smart-room-iot"],
+  "Sentence-Transformers & 2-Agent Debate": ["multiverse-rpg-semantic-search", "accounting-document-assistant", "evidence-sensitivity-tester"],
+  "Tenable Nessus (Enterprise VAPT)": ["autonomous-asm-platform"],
+  "Burp Suite & Metasploit": ["autonomous-asm-platform"],
+  "Wazuh 4.14, OpenSearch & Sysmon SIEM": ["mini-soc-ai-lab"],
+  "Trend Micro SIEM / Endpoint": ["mini-soc-ai-lab"],
+  "OSINT Recon (subfinder, naabu, nuclei, nmap)": ["autonomous-asm-platform"],
+  "AST Reachability & SARIF 2.1.0 Scanning": ["evidence-sensitivity-tester"],
+  "CVE / NVD / CISA KEV Pipelines": ["autonomous-asm-platform", "evidence-sensitivity-tester"],
+  "RSA-2048, Ephemeral DH (PFS) & ChaCha20-Poly1305": ["encrypted-p2p-chat-suite", "portable-smart-room-iot"],
+  "Network Intrusion Detection (NIDS)": ["multiclass-iot-nids", "nipa-hybrid-datamining", "ddos-detection-pipeline"],
+  "Docker & Kubernetes RBAC Auditing": ["docker-kubernetes-devsecops", "ddos-detection-pipeline"],
+  "PyTorch (LSTM / DNN)": ["aqi-forecast-lstm", "multiverse-rpg-semantic-search"],
+  "XGBoost & LightGBM": ["ddos-detection-pipeline", "multiclass-iot-nids", "nipa-hybrid-datamining"],
+  "Scikit-learn & Stacked Ensembles": ["nipa-hybrid-datamining", "multiclass-iot-nids", "ddos-detection-pipeline"],
+  "InsightFace ArcFace (512-d Biometrics)": ["memory-setup-offline-museum"],
+  "Tesseract OCR & pdfplumber": ["accounting-document-assistant"],
+  "ANOVA F-Test & SMOTE": ["nipa-hybrid-datamining"],
+  "Pandas, NumPy & SciPy (KD-Tree)": ["memory-setup-offline-museum", "evidence-sensitivity-tester", "multiclass-iot-nids"],
+  "OpenCV 4 & MediaPipe": ["hiroshima-robotics-vision", "grpc-and-gesturedeck"],
+  "CoppeliaSim & Inverse Kinematics": ["hiroshima-robotics-vision"],
+  "Python 3.12 (Advanced)": ["local-agent", "memory-setup-offline-museum", "evidence-sensitivity-tester", "ddos-detection-pipeline"],
+  "Linux AF_XDP / AF_PACKET": ["ddos-detection-pipeline"],
+  "Apache Kafka": ["ddos-detection-pipeline"],
+  "gRPC & Protocol Buffers": ["ddos-detection-pipeline", "grpc-and-gesturedeck"],
+  "FastAPI, Flask SSE & PyWebView": ["local-agent", "memory-setup-offline-museum", "netwatch-port-dashboard", "evidence-sensitivity-tester"],
+  "SQL (PostgreSQL & SQLite WAL/FTS5)": ["memory-setup-offline-museum", "accounting-document-assistant", "autonomous-asm-platform", "netwatch-port-dashboard"],
+  "Custom Binary Protocols (RoomFrame v1) & BLE": ["portable-smart-room-iot"],
+  "PLY Compiler (Lex-Yacc) & Raspberry Pi / ESP32": ["c-subset-optimizing-compiler", "portable-smart-room-iot"],
+  "TypeScript / React / Next.js": ["scotland-yard-digital", "evidence-sensitivity-tester"]
+};
+

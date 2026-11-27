@@ -12,12 +12,12 @@ import { generateLocalAgentResponse } from "../src/utils/localAgentFallback.js";
 import { stripReasoningTags, resolveNvidiaModel } from "../src/server/chatCore.js";
 import { handler as netlifyChatHandler } from "../netlify/functions/chat.mjs";
 import { onRequestPost as cloudflareChatHandler } from "../functions/api/chat.js";
-import { renderMarkdown } from "../src/main.js";
+import { renderMarkdown } from "../src/utils/markdown.js";
 
-test("Portfolio data has 3 equal pillars, 12 flagship projects (4 per pillar), and 8 archive projects", () => {
+test("Portfolio data has 3 equal pillars, 12 flagship projects (4 per pillar), and 9 archive projects", () => {
   assert.equal(PILLARS.length, 3);
   assert.equal(FLAGSHIP_PROJECTS.length, 12);
-  assert.equal(ARCHIVE_PROJECTS.length, 8);
+  assert.equal(ARCHIVE_PROJECTS.length, 9);
   assert.equal(RESUME_TRACKS.length, 3);
 
   for (const pillar of PILLARS) {
@@ -61,12 +61,21 @@ test("Privacy Guardrail: No phone numbers, student ID, personal paths, or privat
 
 test("Local Agent Fallback answers queries on Flagship, Hidden/Archive Projects, Internships, and Privacy", () => {
   const archiveReply = generateLocalAgentResponse("What are the smaller or hobby projects not on the main grid?");
+  assert.match(archiveReply, /miniSOC/);
   assert.match(archiveReply, /Digital Scotland Yard/);
   assert.match(archiveReply, /Multiverse RPG/);
-  assert.match(archiveReply, /Portable Smart Room IoT/);
+  assert.match(archiveReply, /RoomFrame v1/);
   assert.match(archiveReply, /NetWatch/);
   assert.match(archiveReply, /Next Class/);
   assert.match(archiveReply, /Docker & Kubernetes/);
+
+  const miniSocReply = generateLocalAgentResponse("Tell me about miniSOC and Wazuh");
+  assert.match(miniSocReply, /Wazuh 4\.14/);
+  assert.match(miniSocReply, /OpenSearch/);
+
+  const trustGateReply = generateLocalAgentResponse("Tell me about TrustGate MLX QLoRA and AST reachability");
+  assert.match(trustGateReply, /TrustGate-3B-LoRA/);
+  assert.match(trustGateReply, /0\.0%/);
 
   const scotlandReply = generateLocalAgentResponse("Tell me about Digital Scotland Yard");
   assert.match(scotlandReply, /60 FPS/);
@@ -87,6 +96,7 @@ test("Local Agent Fallback answers queries on Memory Setup and Accounting Docume
   assert.match(memoryReply, /Offline Museum/);
   assert.match(memoryReply, /ArcFace/);
   assert.match(memoryReply, /2\.5 GB/);
+  assert.match(memoryReply, /HTTP 206/);
 
   const accountingReply = generateLocalAgentResponse("How does the accounting document assistant prevent hallucinations?");
   assert.match(accountingReply, /Decimal/);
@@ -97,7 +107,7 @@ test("Local Agent Fallback answers queries on Memory Setup and Accounting Docume
 test("Project repository links point to Nikunj-Gupta-1 GitHub repos and omit private repos", () => {
   const all = [...FLAGSHIP_PROJECTS, ...ARCHIVE_PROJECTS];
   const withUrl = all.filter((p) => Boolean(p.repoUrl));
-  assert.ok(withUrl.length >= 16);
+  assert.ok(withUrl.length >= 17);
   for (const project of withUrl) {
     assert.match(project.repoUrl, /^https:\/\/github\.com\/Nikunj-Gupta-1\/[A-Za-z0-9_.-]+$/);
   }
@@ -105,6 +115,7 @@ test("Project repository links point to Nikunj-Gupta-1 GitHub repos and omit pri
   assert.equal(byId["portable-smart-room-iot"].repoUrl, undefined);
   assert.equal(byId["multiverse-rpg-semantic-search"].repoUrl, undefined);
   assert.equal(byId["hiroshima-robotics-vision"].repoUrl, undefined);
+  assert.match(byId["mini-soc-ai-lab"].repoUrl, /\/miniSOC$/);
   assert.match(byId["memory-setup-offline-museum"].repoUrl, /\/memory-setup$/);
   assert.match(byId["accounting-document-assistant"].repoUrl, /\/accounting-document-assistant$/);
 });
